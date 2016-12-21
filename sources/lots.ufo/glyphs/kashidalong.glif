@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kashidalong" format="2">
+  <advance width="1139"/>
+  <outline>
+    <contour>
+      <point x="-59" y="31" type="qcurve" smooth="yes"/>
+      <point x="-59" y="189" type="line" smooth="yes"/>
+      <point x="-59" y="221"/>
+      <point x="-18" y="221" type="qcurve" smooth="yes"/>
+      <point x="1155" y="221" type="line" smooth="yes"/>
+      <point x="1198" y="221"/>
+      <point x="1198" y="191" type="qcurve" smooth="yes"/>
+      <point x="1198" y="28" type="line" smooth="yes"/>
+      <point x="1198" y="19"/>
+      <point x="1159" y="0"/>
+      <point x="1140" y="0" type="qcurve" smooth="yes"/>
+      <point x="-1" y="0" type="line" smooth="yes"/>
+      <point x="-59" y="0"/>
+    </contour>
+  </outline>
+</glyph>
