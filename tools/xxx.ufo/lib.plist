@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>public.glyphOrder</key>
+	<array>
+		<string>arWaw.fina</string>
+		<string>arKaf.fina</string>
+		<string>arBeh.medi</string>
+		<string>arReh.fina</string>
+		<string>ar2Dot.above</string>
+		<string>arGaf.medi</string>
+		<string>arHah.medi</string>
+		<string>arLam.init</string>
+		<string>arSad.init</string>
+		<string>arMeem.init</string>
+		<string>arHah.fina</string>
+		<string>arFeh.medi</string>
+		<string>arGaf.fina</string>
+		<string>arKaf.medi</string>
+		<string>arTah.fina</string>
+		<string>ar3Dot.above</string>
+		<string>arKaf.init</string>
+		<string>arDal.fina</string>
+		<string>ar1Dot.below</string>
+		<string>arNoon.fina</string>
+		<string>arMeem.medi</string>
+		<string>arHeh.fina</string>
+		<string>arAin.fina</string>
+		<string>arAlef.fina</string>
+		<string>arLam.fina</string>
+		<string>arSad.medi</string>
+		<string>arTah.init</string>
+		<string>arSad.fina</string>
+		<string>arAin.init</string>
+		<string>arBeh.init</string>
+		<string>arYeh.fina</string>
+		<string>arKeheh.fina</string>
+		<string>arHeh.init</string>
+		<string>arFeh.fina</string>
+		<string>arFeh.init</string>
+		<string>arAin.medi</string>
+		<string>arBeh.fina</string>
+		<string>ar2Dot.below</string>
+		<string>arSeen.fina</string>
+		<string>arHah.init</string>
+		<string>arTah.medi</string>
+		<string>ar1Dot.above</string>
+		<string>arGaf.init</string>
+		<string>arHeh.medi</string>
+		<string>ar3IDot.below</string>
+		<string>arSeen.medi</string>
+		<string>arSeen.init</string>
+		<string>arAlef.isol</string>
+		<string>arMeem.fina</string>
+	</array>
+</dict>
+</plist>
