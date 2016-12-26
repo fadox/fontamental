@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
 from defcon import Font, Color, Glyph
 from argl import *
 import shutil
