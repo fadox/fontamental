@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diKasratan" format="1">
+  <advance width="0.8231707317072505"/>
+  <unicode hex="064D"/>
+  <note>
+    uni064D
+  </note>
+  <outline>
+    <contour>
+      <point x="-85.0" y="-204.9878048780488" type="curve"/>
+      <point x="63.0" y="-120.98780487804879" type="line" smooth="yes"/>
+      <point x="74.0" y="-114.98780487804879"/>
+      <point x="80.0" y="-100.98780487804879"/>
+      <point x="80.0" y="-78.98780487804879" type="curve"/>
+      <point x="-53.0" y="-155.9878048780488" type="line" smooth="yes"/>
+      <point x="-81.0" y="-171.9878048780488"/>
+      <point x="-85.0" y="-180.9878048780488"/>
+    </contour>
+    <contour>
+      <point x="-83.17682926829275" y="-132.06097560975604" type="curve"/>
+      <point x="64.82317073170725" y="-48.06097560975604" type="line" smooth="yes"/>
+      <point x="75.82317073170725" y="-42.06097560975604"/>
+      <point x="81.82317073170725" y="-28.060975609756042"/>
+      <point x="81.82317073170725" y="-6.060975609756042" type="curve"/>
+      <point x="-51.17682926829275" y="-83.06097560975604" type="line" smooth="yes"/>
+      <point x="-79.17682926829275" y="-99.06097560975604"/>
+      <point x="-83.17682926829275" y="-108.06097560975604"/>
+    </contour>
+    <contour>
+      <point x="3.7519333729920845" y="0.9129982153478977" type="move" name="_markBelow"/>
+    </contour>
+    <contour>
+      <point x="1.9259369422960617" y="0.9129982153478977" type="move" name="_markBelowDot"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:20:22 +0000</string>
+    </dict>
+  </lib>
+</glyph>

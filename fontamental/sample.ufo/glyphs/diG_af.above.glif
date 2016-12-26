@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diGaf.above" format="1">
+  <note>
+    arGaf.above
+  </note>
+  <outline>
+    <contour>
+      <point x="-44" y="80" type="line"/>
+      <point x="-118" y="56" type="line"/>
+      <point x="-132" y="13" type="line" smooth="yes"/>
+      <point x="-137" y="-2"/>
+      <point x="-140" y="-12"/>
+      <point x="-140" y="-19" type="curve"/>
+      <point x="-129" y="-14"/>
+      <point x="-86" y="0"/>
+      <point x="-11" y="23" type="curve" smooth="yes"/>
+      <point x="121" y="64" type="line"/>
+      <point x="130" y="71"/>
+      <point x="143" y="108"/>
+      <point x="143" y="129" type="curve"/>
+      <point x="142" y="138" type="line"/>
+      <point x="67" y="114" type="line"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="move" name="_gafAbove"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>1.0</real>
+        <real>1.0</real>
+        <real>0.0</real>
+        <real>1.0</real>
+      </array>
+      <key>public.markColor</key>
+      <string>0.99687,1,0.55607,1</string>
+    </dict>
+  </lib>
+</glyph>

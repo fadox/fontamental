@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arBeh.init" format="1">
+  <advance width="262"/>
+  <note>
+    arBeh.init
+  </note>
+  <outline>
+    <contour>
+      <point x="210" y="41"/>
+      <point x="225" y="83"/>
+      <point x="234" y="125" type="curve" smooth="yes"/>
+      <point x="243" y="167"/>
+      <point x="248" y="209"/>
+      <point x="248" y="256" type="curve" smooth="yes"/>
+      <point x="248" y="269"/>
+      <point x="244" y="292"/>
+      <point x="237" y="318" type="curve"/>
+      <point x="229" y="344"/>
+      <point x="219" y="371"/>
+      <point x="208" y="395" type="curve" smooth="yes"/>
+      <point x="196" y="419"/>
+      <point x="184" y="435"/>
+      <point x="172" y="442" type="curve"/>
+      <point x="161" y="426"/>
+      <point x="149" y="400"/>
+      <point x="137" y="373" type="curve" smooth="yes"/>
+      <point x="125" y="346"/>
+      <point x="114" y="320"/>
+      <point x="109" y="304" type="curve"/>
+      <point x="112" y="300"/>
+      <point x="116" y="293"/>
+      <point x="123" y="284" type="curve" smooth="yes"/>
+      <point x="130" y="275"/>
+      <point x="137" y="264"/>
+      <point x="144" y="253" type="curve" smooth="yes"/>
+      <point x="158" y="230"/>
+      <point x="170" y="207"/>
+      <point x="170" y="194" type="curve" smooth="yes"/>
+      <point x="170" y="191"/>
+      <point x="170" y="189"/>
+      <point x="170" y="186" type="curve" smooth="yes"/>
+      <point x="170" y="183"/>
+      <point x="169" y="181"/>
+      <point x="166" y="180" type="curve"/>
+      <point x="-2.0" y="180.0" type="line"/>
+      <point x="-2.0" y="0.0" type="line"/>
+      <point x="190" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="75.71646341463384" y="563.0121951219512" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="99.56707317073165" y="503.1189024390244" type="move" name="smallVAbove"/>
+    </contour>
+    <contour>
+      <point x="156.16158536585363" y="549.7317073170732" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="40.44817073170748" y="430.8384146341464" type="move" name="hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="105.68597560975604" y="-130.44512195121933" type="move" name="dotBelow"/>
+    </contour>
+    <contour>
+      <point x="142.2835365853657" y="-130.39024390243912" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="111.79268292682923" y="-32.40243902439033" type="move" name="ringBelow"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+    </dict>
+  </lib>
+</glyph>

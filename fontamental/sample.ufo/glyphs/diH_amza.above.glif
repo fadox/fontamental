@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diHamza.above" format="1">
+  <unicode hex="0654"/>
+  <note>
+    uni0654
+  </note>
+  <outline>
+    <contour>
+      <point x="36" y="98" type="line"/>
+      <point x="11" y="99" type="line"/>
+      <point x="-12" y="102" type="line"/>
+      <point x="-21" y="105"/>
+      <point x="-28" y="109"/>
+      <point x="-31" y="112" type="curve"/>
+      <point x="-37" y="115"/>
+      <point x="-39" y="119"/>
+      <point x="-38" y="123" type="curve"/>
+      <point x="-30" y="133" type="line"/>
+      <point x="-27" y="136" type="line"/>
+      <point x="-25" y="137" type="line"/>
+      <point x="-22" y="138" type="line"/>
+      <point x="-14" y="139" type="line"/>
+      <point x="-9" y="139"/>
+      <point x="-3" y="137"/>
+      <point x="2" y="133" type="curve"/>
+      <point x="16" y="119" type="line"/>
+      <point x="21" y="126"/>
+      <point x="24" y="133"/>
+      <point x="27" y="138" type="curve"/>
+      <point x="32" y="152" type="line"/>
+      <point x="33" y="163" type="line"/>
+      <point x="33" y="179"/>
+      <point x="17" y="188"/>
+      <point x="2" y="188" type="curve" smooth="yes"/>
+      <point x="-30" y="188"/>
+      <point x="-70" y="128"/>
+      <point x="-70" y="89" type="curve" smooth="yes"/>
+      <point x="-70" y="72"/>
+      <point x="-67" y="66"/>
+      <point x="-51" y="59" type="curve"/>
+      <point x="-27" y="52" type="line"/>
+      <point x="-63" y="12" type="line"/>
+      <point x="-63" y="9" type="line"/>
+      <point x="-61" y="1" type="line"/>
+      <point x="-59" y="-1"/>
+      <point x="-57" y="-2"/>
+      <point x="-56" y="-1" type="curve"/>
+      <point x="-40" y="13" type="line"/>
+      <point x="-27" y="23" type="line"/>
+      <point x="-22" y="28"/>
+      <point x="-17" y="31"/>
+      <point x="-12" y="33" type="curve"/>
+      <point x="-3" y="38" type="line"/>
+      <point x="4" y="41"/>
+      <point x="10" y="44"/>
+      <point x="17" y="47" type="curve"/>
+      <point x="45" y="54" type="line"/>
+      <point x="58" y="70" type="line" smooth="yes"/>
+      <point x="64" y="77"/>
+      <point x="68" y="86"/>
+      <point x="70" y="97" type="curve"/>
+      <point x="57" y="98" type="line"/>
+    </contour>
+    <contour>
+      <point x="0" y="1" type="move" name="_hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="-12.578494310725318" y="210.0307224132498" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="-13" y="201" type="move" name="markAbove_2"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+    </dict>
+  </lib>
+</glyph>

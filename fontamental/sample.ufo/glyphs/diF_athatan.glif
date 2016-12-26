@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diFathatan" format="1">
+  <unicode hex="064B"/>
+  <outline>
+    <contour>
+      <point x="-92.28048780487802" y="75.06097560975627" type="curve"/>
+      <point x="55.71951219512198" y="159.06097560975627" type="line" smooth="yes"/>
+      <point x="66.71951219512198" y="165.06097560975627"/>
+      <point x="72.71951219512198" y="179.06097560975627"/>
+      <point x="72.71951219512198" y="201.06097560975627" type="curve"/>
+      <point x="-60.28048780487802" y="124.06097560975627" type="line" smooth="yes"/>
+      <point x="-88.28048780487802" y="108.06097560975627"/>
+      <point x="-92.28048780487802" y="99.06097560975627"/>
+    </contour>
+    <contour>
+      <point x="-92" y="7" type="curve"/>
+      <point x="56" y="91" type="line" smooth="yes"/>
+      <point x="67" y="97"/>
+      <point x="73" y="111"/>
+      <point x="73" y="133" type="curve"/>
+      <point x="-60" y="56" type="line" smooth="yes"/>
+      <point x="-88" y="40"/>
+      <point x="-92" y="31"/>
+    </contour>
+    <contour>
+      <point x="-1" y="0" type="move" name="_markAbove"/>
+    </contour>
+    <contour>
+      <point x="-1.9055807555026831" y="-0.9055807555025694" type="move" name="_markAboveDot"/>
+    </contour>
+  </outline>
+</glyph>

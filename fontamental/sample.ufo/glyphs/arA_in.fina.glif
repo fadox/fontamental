@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arAin.fina" format="1">
+  <advance width="396"/>
+  <note>
+    arAin.fina
+  </note>
+  <outline>
+    <contour>
+      <point x="274" y="180" type="line"/>
+      <point x="266" y="182" type="line"/>
+      <point x="258" y="186" type="line"/>
+      <point x="253" y="192" type="line"/>
+      <point x="261" y="199" type="line"/>
+      <point x="265" y="203" type="line"/>
+      <point x="274" y="207"/>
+      <point x="275" y="207"/>
+      <point x="283" y="207" type="curve"/>
+      <point x="296" y="237" type="line"/>
+      <point x="305" y="262" type="line"/>
+      <point x="308" y="269"/>
+      <point x="309" y="275"/>
+      <point x="309" y="280" type="curve"/>
+      <point x="310" y="289" type="line"/>
+      <point x="310" y="296" type="line" smooth="yes"/>
+      <point x="310" y="340"/>
+      <point x="291" y="360"/>
+      <point x="248" y="389" type="curve"/>
+      <point x="212" y="406"/>
+      <point x="185" y="415"/>
+      <point x="167" y="415" type="curve"/>
+      <point x="150" y="412" type="line"/>
+      <point x="134" y="407" type="line"/>
+      <point x="115" y="398"/>
+      <point x="104" y="393"/>
+      <point x="101" y="390" type="curve"/>
+      <point x="57" y="325"/>
+      <point x="65" y="337"/>
+      <point x="49" y="249" type="curve"/>
+      <point x="52" y="246"/>
+      <point x="57" y="245"/>
+      <point x="62" y="244" type="curve"/>
+      <point x="75" y="240" type="line"/>
+      <point x="105" y="233" type="line"/>
+      <point x="116" y="227" type="line"/>
+      <point x="125" y="217" type="line"/>
+      <point x="64" y="144"/>
+      <point x="19" y="55"/>
+      <point x="19" y="-32" type="curve" smooth="yes"/>
+      <point x="19" y="-82"/>
+      <point x="23" y="-122"/>
+      <point x="31" y="-151" type="curve"/>
+      <point x="64" y="-240"/>
+      <point x="110" y="-265"/>
+      <point x="162" y="-276" type="curve" smooth="yes"/>
+      <point x="184" y="-281" type="line"/>
+      <point x="196" y="-281" type="line"/>
+      <point x="237" y="-283" type="line"/>
+      <point x="281" y="-270"/>
+      <point x="365" y="-172"/>
+      <point x="360" y="-152" type="curve"/>
+      <point x="355" y="-151"/>
+      <point x="350" y="-150"/>
+      <point x="344" y="-150" type="curve"/>
+      <point x="325" y="-149" type="line"/>
+      <point x="230" y="-143" type="line"/>
+      <point x="143" y="-130"/>
+      <point x="80" y="-67"/>
+      <point x="80" y="8" type="curve" smooth="yes"/>
+      <point x="80" y="19"/>
+      <point x="81" y="31"/>
+      <point x="84" y="43" type="curve"/>
+      <point x="99" y="77"/>
+      <point x="109" y="96"/>
+      <point x="113" y="100" type="curve"/>
+      <point x="140" y="124" type="line"/>
+      <point x="151" y="132" type="line"/>
+      <point x="163" y="139" type="line"/>
+      <point x="177" y="91" type="line"/>
+      <point x="189" y="58" type="line"/>
+      <point x="210" y="19"/>
+      <point x="221" y="0"/>
+      <point x="224" y="0" type="curve" smooth="yes"/>
+      <point x="400" y="0" type="line"/>
+      <point x="400" y="180" type="line"/>
+    </contour>
+    <contour>
+      <point x="147.95731707317077" y="565.0579268292684" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="55.89939024390242" y="593.9298780487804" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="105.80792682926813" y="-338.6310975609756" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="203" y="-59" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+    </dict>
+  </lib>
+</glyph>
