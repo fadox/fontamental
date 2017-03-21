@@ -1,0 +1,11 @@
+setup.py
+fontamental/__init__.py
+fontamental/aragl.py
+fontamental/maxify.py
+fontamental/minify.py
+fontamental.egg-info/PKG-INFO
+fontamental.egg-info/SOURCES.txt
+fontamental.egg-info/dependency_links.txt
+fontamental.egg-info/not-zip-safe
+fontamental.egg-info/requires.txt
+fontamental.egg-info/top_level.txt

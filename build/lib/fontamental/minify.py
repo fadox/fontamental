@@ -2,33 +2,19 @@
 # encoding: utf-8
 
 from defcon import Font, Color, Glyph
-from aragl import *
+from argl import *
+import shutil
 import copy
 import os
 
 class MinifyUFO():
-    def __init__(self, source, mask):
+    def __init__(self, source):
         self.sUFO = source
         self.UFO = Font()
         self.layers = {}
-        if mask is not None:
-            self.applyMask(mask)
+
         sampleUfo = os.path.join(os.path.dirname(__file__), 'sample.ufo')
         self.sampleUFO = Font(sampleUfo)
-
-    def applyMask(self, mask):
-        assert os.path.isfile(mask)
-        with open(mask) as f:
-            lines = f.read()
-            splitRaw = lines.split("\n")
-            for line in splitRaw:
-                try:
-                    lp = line.split()
-                    rawName = lp[0]
-                    maskName = lp[1]
-                    RAWN2M[rawName] = maskName
-                except:
-                    pass
 
     def build(self):
         self.copyFontInfo()
@@ -57,26 +43,7 @@ class MinifyUFO():
         for glf in RAWN2C:
             layer = 0
             glfSrc = RAWN2C[glf].split(',')
-            if glf == 'arAsterisk':
-                m = 1
-            if glf in RAWN2M:
-                try:
-                    mgName = [RAWN2M[glf]]
-                    glyph = Glyph()
-                    glyph.copyDataFromGlyph(self.sUFO[mgName[0]])
-                    glyph.name = glf
-                    glyph.unicode = None
-                    glyph.anchors = []
-                    glyph.decomposeAllComponents()
-                    if layer > 0:
-                        currentLayer = self.getLayer(layer)
-                        currentLayer.insertGlyph(glyph)
-                    else:
-                        self.UFO.insertGlyph(glyph)
-                    layer += 1
-                    print(g + ' found :)' + '  L ' + str(layer))
-                except:
-                    pass
+
             for g in glfSrc:
                 try:
                     gCode = AGL2UV[g]
@@ -95,7 +62,7 @@ class MinifyUFO():
                     layer += 1
                     print(g + ' found :)' + '  L ' + str(layer))
                 except:
-                    print('x'*13 + g + ' not found in font')
+                    print('         ' + g + ' not found in font')
                 glyph = None
             if layer == 0:
                 self.UFO.newGlyph(glf)

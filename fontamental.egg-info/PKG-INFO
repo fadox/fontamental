@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: fontamental
+Version: 0.5.0
+Summary: Extract fundamental glyphs from a font, and expand the result to new font
+Home-page: https://github.com/fadox/fontamental
+Author: Abbas Majeed
+Author-email: fadox@gmx.net
+License: Simplified BSD
+Description: UNKNOWN
+Keywords: fontamental
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4

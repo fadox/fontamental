@@ -1,6 +1,32 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+# Arabic Glyphs dict{}, Production glyph name : unicode value
+AGL2UV = {}
+
+# Arabic Glyphs dict{}, unicode value : production glyph name
+UV2AGL = {}
+
+# Arabic Glyphs dict{}, production glyph name : equivalent master glyph names
+AGL2FEA = {}
+
+# Master Font Glyphs dict{}, unicode hex : master glyph name
+RAWU2N = {}
+
+# Master Font Glyphs dict{}, master glyph name : unicode hex
+RAWN2U = {}
+
+# Master Font Glyphs dict{}, master glyph name : production glyph name
+RAWN2G = {}
+
+# Master Font Glyphs dict{}, master glyph name : search sequence
+RAWN2C = {}
+
+RAWN2M = {}
+"""
+Producton Font Glyphs
+"""
+
 _arglText = """\
 # -----------------------------------------------------------
 # Copyright 1997, 2017 Fadox.
@@ -41,560 +67,556 @@ _arglText = """\
 #END
 
 #Hamza
-uni0621:0621
-uni0621.isol:FE80
+uni0621 0621 arHamza.isol
+uni0621.isol FE80 arHamza.isol
 
 #Alef Mamduda
-uni0622:0622
-uni0622.isol:FE81
-uni0622.fina:FE82
+uni0622 0622 arAlef.isol,diMadda
+uni0622.isol FE81 arAlef.isol,diMadda
+uni0622.fina FE82 arAlef.fina,diMadda
 
 #Alef Hamza
-uni0623:0623
-uni0623.isol:FE83
-uni0623.fina:FE84
+uni0623 0623 arAlefShort.isol,diHamza.above
+uni0623.isol FE83 arAlefShort.isol,diHamza.above
+uni0623.fina FE84 arAlefShort.fina,diHamza.above
 
 #Waw Hamza
-uni0624:0624
-uni0624.isol:FE85
-uni0624.fina:FE86
+uni0624 0624 arWaw.isol,diHamza
+uni0624.isol FE85 arWaw.isol,diHamza
+uni0624.fina FE86 arWaw.fina,diHamza
 
 #Alef Maksura
-uni0625:0625
-uni0625.isol:FE87
-uni0625.fina:FE88
+uni0625 0625 arAlef.isol,diHamza.below
+uni0625.isol FE87 arAlef.isol,diHamza.below
+uni0625.fina FE88 arAlef.fina,diHamza.below
 
 #Alef Maqsura
-uni0626:0626
-uni0626.isol:FE89
-uni0626.fina:FE8A
-uni0626.init:FE8B
-uni0626.medi:FE8C
+uni0626 0626 arYeh.isol,diHamza
+uni0626.isol FE89 arYeh.isol,diHamza
+uni0626.fina FE8A arYeh.fina,diHamza
+uni0626.init FE8B arBeh.init,diHamza
+uni0626.medi FE8C arBeh.medi,diHamza
 
 #Alef
-uni0627:0627
-uni0627.isol:FE8D
-uni0627.fina:FE8E
+uni0627 0627 arAlef.isol
+uni0627.isol FE8D arAlef.isol
+uni0627.fina FE8E arAlef.fina
 
 #Alef Short
-uniEE30:EE30
-uniEE31:EE31
+uniEE30 EE30 arAlefShort.isol
+uniEE31 EE31 arAlefShort.fina
 
 #Baa
-uni0628:0628
-uni0628.isol:FE8F
-uni0628.fina:FE90
-uni0628.init:FE91
-uni0628.medi:FE92
+uni0628 0628 arBeh.isol,di1Dot.below
+uni0628.isol FE8F arBeh.isol,di1Dot.below
+uni0628.fina FE90 arBeh.fina,di1Dot.below
+uni0628.init FE91 arBeh.init,di1Dot.below
+uni0628.medi FE92 arBeh.medi,di1Dot.below
 
 #Taa Marbuta
-uni0629:0629
-uni0629.isol:FE93
-uni0629.fina:FE94
+uni0629 0629 arHeh.isol,di2Dot.above
+uni0629.isol FE93 arHeh.isol,di2Dot.above
+uni0629.fina FE94 arHeh.fina,di2Dot.above
 
 #Taa
-uni062A:062A
-uni062A.isol:FE95
-uni062A.fina:FE96
-uni062A.init:FE97
-uni062A.medi:FE98
+uni062A 062A arBeh.isol,di2Dot.above
+uni062A.isol FE95 arBeh.isol,di2Dot.above
+uni062A.fina FE96 arBeh.fina,di2Dot.above
+uni062A.init FE97 arBeh.init,di2Dot.above
+uni062A.medi FE98 arBeh.medi,di2Dot.above
 
 #thaa
-uni062B:062B
-uni062B.isol:FE99
-uni062B.fina:FE9A
-uni062B.init:FE9B
-uni062B.medi:FE9C
+uni062B 062B arBeh.isol,di3Dot.above
+uni062B.isol FE99 arBeh.isol,di3Dot.above
+uni062B.fina FE9A arBeh.fina,di3Dot.above
+uni062B.init FE9B arBeh.init,di3Dot.above
+uni062B.medi FE9C arBeh.medi,di3Dot.above
 
 #Jeem
-uni062C:062C
-uni062C.isol:FE9D
-uni062C.fina:FE9E
-uni062C.init:FE9F
-uni062C.medi:FEA0
+uni062C 062C arHah.isol,di1Dot.below
+uni062C.isol FE9D arHah.isol,di1Dot.below
+uni062C.fina FE9E arHah.fina,di1Dot.below
+uni062C.init FE9F arHah.init,di1Dot.below
+uni062C.medi FEA0 arHah.medi,di1Dot.below
 
 #Hah
-uni062D:062D
-uni062D.isol:FEA1
-uni062D.fina:FEA2
-uni062D.init:FEA3
-uni062D.medi:FEA4
+uni062D 062D arHah.isol
+uni062D.isol FEA1 arHah.isol
+uni062D.fina FEA2 arHah.fina
+uni062D.init FEA3 arHah.init
+uni062D.medi FEA4 arHah.medi
 
 #Khah
-uni062E:062E
-uni062E.isol:FEA5
-uni062E.fina:FEA6
-uni062E.init:FEA7
-uni062E.medi:FEA8
+uni062E 062E arHah.isol,di1Dot.above
+uni062E.isol FEA5 arHah.isol,di1Dot.above
+uni062E.fina FEA6 arHah.fina,di1Dot.above
+uni062E.init FEA7 arHah.init,di1Dot.above
+uni062E.medi FEA8 arHah.medi,di1Dot.above
 
 #Dal
-uni062F:062F
-uni062F.isol:FEA9
-uni062F.fina:FEAA
+uni062F 062F arDal.isol
+uni062F.isol FEA9 arDal.isol
+uni062F.fina FEAA arDal.fina
 
 #Thal
-uni0630:0630
-uni0630.isol:FEAB
-uni0630.fina:FEAC
+uni0630 0630 arDal.isol,di1Dot.above
+uni0630.isol FEAB arDal.isol,di1Dot.above
+uni0630.fina FEAC arDal.fina,di1Dot.above
 
 #Raa
-uni0631:0631
-uni0631.isol:FEAD
-uni0631.fina:FEAE
+uni0631 0631 arReh.isol
+uni0631.isol FEAD arReh.isol
+uni0631.fina FEAE arReh.fina
 
 #Zai
-uni0632:0632
-uni0632.isol:FEAF
-uni0632.fina:FEB0
+uni0632 0632 arReh.isol,di1Dot.above
+uni0632.isol FEAF arReh.isol,di1Dot.above
+uni0632.fina FEB0 arReh.fina,di1Dot.above
 
 #Seen
-uni0633:0633
-uni0633.isol:FEB1
-uni0633.fina:FEB2
-uni0633.init:FEB3
-uni0633.medi:FEB4
+uni0633 0633 arSeen.isol
+uni0633.isol FEB1 arSeen.isol
+uni0633.fina FEB2 arSeen.fina
+uni0633.init FEB3 arSeen.init
+uni0633.medi FEB4 arSeen.medi
 
 #Sheen
-uni0634:0634
-uni0634.isol:FEB5
-uni0634.fina:FEB6
-uni0634.init:FEB7
-uni0634.medi:FEB8
+uni0634 0634 arSeen.isol,di3Dot.above
+uni0634.isol FEB5 arSeen.isol,di3Dot.above
+uni0634.fina FEB6 arSeen.fina,di3Dot.above
+uni0634.init FEB7 arSeen.init,di3Dot.above
+uni0634.medi FEB8 arSeen.medi,di3Dot.above
 
 #Saad
-uni0635:0635
-uni0635.isol:FEB9
-uni0635.fina:FEBA
-uni0635.init:FEBB
-uni0635.medi:FEBC
+uni0635 0635 arSad.isol
+uni0635.isol FEB9 arSad.isol
+uni0635.fina FEBA arSad.fina
+uni0635.init FEBB arSad.init
+uni0635.medi FEBC arSad.medi
 
 #Daad
-uni0636:0636
-uni0636.isol:FEBD
-uni0636.fina:FEBE
-uni0636.init:FEBF
-uni0636.medi:FEC0
+uni0636 0636 arSad.isol,di1Dot.above
+uni0636.isol FEBD arSad.isol,di1Dot.above
+uni0636.fina FEBE arSad.fina,di1Dot.above
+uni0636.init FEBF arSad.init,di1Dot.above
+uni0636.medi FEC0 arSad.medi,di1Dot.above
 
 #Taah
-uni0637:0637
-uni0637.isol:FEC1
-uni0637.fina:FEC2
-uni0637.init:FEC3
-uni0637.medi:FEC4
+uni0637 0637 arTah.isol
+uni0637.isol FEC1 arTah.isol
+uni0637.fina FEC2 arTah.fina
+uni0637.init FEC3 arTah.init
+uni0637.medi FEC4 arTah.medi
 
 #Daah
-uni0638:0638
-uni0638.isol:FEC5
-uni0638.fina:FEC6
-uni0638.init:FEC7
-uni0638.medi:FEC8
+uni0638 0638 arTah.isol,di1Dot.above
+uni0638.isol FEC5 arTah.isol,di1Dot.above
+uni0638.fina FEC6 arTah.fina,di1Dot.above
+uni0638.init FEC7 arTah.init,di1Dot.above
+uni0638.medi FEC8 arTah.medi,di1Dot.above
 
 #A'ain
-uni0639:0639
-uni0639.isol:FEC9
-uni0639.fina:FECA
-uni0639.init:FECB
-uni0639.medi:FECC
+uni0639 0639 arAin.isol
+uni0639.isol FEC9 arAin.isol
+uni0639.fina FECA arAin.fina
+uni0639.init FECB arAin.init
+uni0639.medi FECC arAin.medi
 
 #Ghain
-uni063A:063A
-uni063A.isol:FECD
-uni063A.fina:FECE
-uni063A.init:FECF
-uni063A.medi:FED0
+uni063A 063A arAin.isol,di1Dot.above
+uni063A.isol FECD arAin.isol,di1Dot.above
+uni063A.fina FECE arAin.fina,di1Dot.above
+uni063A.init FECF arAin.init,di1Dot.above
+uni063A.medi FED0 arAin.medi,di1Dot.above
 
 #Faa
-uni0641:0641
-uni0641.isol:FED1
-uni0641.fina:FED2
-uni0641.init:FED3
-uni0641.medi:FED4
+uni0641 0641 arFeh.isol,di1Dot.above
+uni0641.isol FED1 arFeh.isol,di1Dot.above
+uni0641.fina FED2 arFeh.fina,di1Dot.above
+uni0641.init FED3 arFeh.init,di1Dot.above
+uni0641.medi FED4 arFeh.medi,di1Dot.above
 
 #Qaaf
-uni0642:0642
-uni0642.isol:FED5
-uni0642.fina:FED6
-uni0642.init:FED7
-uni0642.medi:FED8
+uni0642 0642 arQaf.isol,di2Dot.above
+uni0642.isol FED5 arQaf.isol,di2Dot.above
+uni0642.fina FED6 arQaf.fina,di2Dot.above
+uni0642.init FED7 arFeh.init,di2Dot.above
+uni0642.medi FED8 arFeh.medi,di2Dot.above
 
 #Kaaf
-uni0643:0643
-uni0643.isol:FED9
-uni0643.fina:FEDA
-uni0643.init:FEDB
-uni0643.medi:FEDC
+uni0643 0643 arKaf.isol
+uni0643.isol FED9 arKaf.isol
+uni0643.fina FEDA arKaf.fina
+uni0643.init FEDB arKaf.init
+uni0643.medi FEDC arKaf.medi
 
 #Laam
-uni0644:0644
-uni0644.isol:FEDD
-uni0644.fina:FEDE
-uni0644.init:FEDF
-uni0644.medi:FEE0
+uni0644 0644 arLam.isol
+uni0644.isol FEDD arLam.isol
+uni0644.fina FEDE arLam.fina
+uni0644.init FEDF arLam.init
+uni0644.medi FEE0 arLam.medi
 
 #Meem
-uni0645:0645
-uni0645.isol:FEE1
-uni0645.fina:FEE2
-uni0645.init:FEE3
-uni0645.medi:FEE4
+uni0645 0645 arMeem.isol
+uni0645.isol FEE1 arMeem.isol
+uni0645.fina FEE2 arMeem.fina
+uni0645.init FEE3 arMeem.init
+uni0645.medi FEE4 arMeem.medi
 
 #Noon
-uni0646:0646
-uni0646.isol:FEE5
-uni0646.fina:FEE6
-uni0646.init:FEE7
-uni0646.medi:FEE8
+uni0646 0646 arNoon.isol,di1Dot.above
+uni0646.isol FEE5 arNoon.isol,di1Dot.above
+uni0646.fina FEE6 arNoon.fina,di1Dot.above
+uni0646.init FEE7 arBeh.init,di1Dot.above
+uni0646.medi FEE8 arBeh.medi,di1Dot.above
 
 #Heh
-uni0647:0647
-uni0647.isol:FEE9
-uni0647.fina:FEEA
-uni0647.init:FEEB
-uni0647.medi:FEEC
+uni0647 0647 arHeh.isol
+uni0647.isol FEE9 arHeh.isol
+uni0647.fina FEEA arHeh.fina
+uni0647.init FEEB arHeh.init
+uni0647.medi FEEC arHeh.medi
 
 #Waw
-uni0648:0648
-uni0648.isol:FEED
-uni0648.fina:FEEE
+uni0648 0648 arWaw.isol
+uni0648.isol FEED arWaw.isol
+uni0648.fina FEEE arWaw.fina
 
 #Aleef Maqsuar
-uni0649:0649
-uni0649.isol:FEEF
-uni0649.fina:FEF0
+uni0649 0649 arYeh.isol
+uni0649.isol FEEF arYeh.isol
+uni0649.fina FEF0 arYeh.fina
 
 #Yaa
-uni064A:064A
-uni064A.isol:FEF1
-uni064A.fina:FEF2
-uni064A.init:FEF3
-uni064A.medi:FEF4
+uni064A 064A arYeh.isol,di2Dot.below
+uni064A.isol FEF1 arYeh.isol,di2Dot.below
+uni064A.fina FEF2 arYeh.fina,di2Dot.below
+uni064A.init FEF3 arBeh.init,di2Dot.below
+uni064A.medi FEF4 arBeh.medi,di2Dot.below
 
 #Raw Baa
-uni066E:066E
-uni066E.isol:E6E0
-uni066E.fina:E6E1
-uni066E.init:E6E2
-uni066E.medi:E6E3
+uni066E 066E arBeh.isol
+uni066E.isol E6E0 arBeh.isol
+uni066E.fina E6E1 arBeh.fina
+uni066E.init E6E2 arBeh.init
+uni066E.medi E6E3 arBeh.medi
 
 #Raw Qaaf
-uni066F:066F
-uni066F.isol:E6F0
-uni066F.fina:E6F1
-uni066F.init:E6F2
-uni066F.medi:E6F3
+uni066F 066F arQaf.isol
+uni066F.isol E6F0 arQaf.isol
+uni066F.fina E6F1 arQaf.fina
+uni066F.init E6F2 arFeh.init
+uni066F.medi E6F3 arFeh.medi
 
 #Alef Wasla
-uni0671:0671
-uni0671.isol:FB50
-uni0671.fina:FB51
+uni0671 0671 arAlefShort.isol,diWasla
+uni0671.isol FB50 arAlefShort.isol,diWasla
+uni0671.fina FB51 arAlefShort.fina,diWasla
 
 #Pee
-uni067E:067E
-uni067E.isol:FB56
-uni067E.fina:FB57
-uni067E.init:FB58
-uni067E.medi:FB59
+uni067E 067E arBeh.isol,di3IDot.below
+uni067E.isol FB56 arBeh.isol,di3IDot.below
+uni067E.fina FB57 arBeh.fina,di3IDot.below
+uni067E.init FB58 arBeh.init,di3IDot.below
+uni067E.medi FB59 arBeh.medi,di3IDot.below
 
 #Chee
-uni0686:0686
-uni0686.isol:FB7A
-uni0686.fina:FB7B
-uni0686.init:FB7C
-uni0686.medi:FB7D
+uni0686 0686 arHah.isol,di3IDot.below
+uni0686.isol FB7A arHah.isol,di3IDot.below
+uni0686.fina FB7B arHah.fina,di3IDot.below
+uni0686.init FB7C arHah.init,di3IDot.below
+uni0686.medi FB7D arHah.medi,di3IDot.below
 
 #Djahl
-uni068E:068E
-uni068E.isol:FB86
-uni068E.fina:FB87
+uni068E 068E arDal.isol,di3Dot.above
+uni068E.isol FB86 arDal.isol,di3Dot.above
+uni068E.fina FB87 arDal.fina,di3Dot.above
 
 #Raa V
-uni0695:0695
-uni0695.isol:E950
-uni0695.fina:E951
+uni0695 0695 arReh.isol,diSmallV.below
+uni0695.isol E950 arReh.isol,diSmallV.below
+uni0695.fina E951 arReh.fina,diSmallV.below
 
 #Jhee
-uni0698:0698
-uni0698.isol:FB8A
-uni0698.fina:FB8B
+uni0698 0698 arReh.isol,di3Dot.above
+uni0698.isol FB8A arReh.isol,di3Dot.above
+uni0698.fina FB8B arReh.fina,di3Dot.above
 
 #Raw Faa
-uni06A1:06A1
-uni06A1.isol:EA10
-uni06A1.fina:EA11
-uni06A1.init:EA12
-uni06A1.medi:EA13
+uni06A1 06A1 arFeh.isol
+uni06A1.isol EA10 arFeh.isol
+uni06A1.fina EA11 arFeh.fina
+uni06A1.init EA12 arFeh.init
+uni06A1.medi EA13 arFeh.medi
 
 #Vee
-uni06A4:06A4
-uni06A4.isol:FB6A
-uni06A4.fina:FB6B
-uni06A4.init:FB6C
-uni06A4.medi:FB6D
+uni06A4 06A4 arFeh.isol,di3Dot.above
+uni06A4.isol FB6A arFeh.isol,di3Dot.above
+uni06A4.fina FB6B arFeh.fina,di3Dot.above
+uni06A4.init FB6C arFeh.init,di3Dot.above
+uni06A4.medi FB6D arFeh.medi,di3Dot.above
 
 #Keheh
-uni06A9:06A9
-uni06A9.isol:FB8E
-uni06A9.fina:FB8F
-uni06A9.init:FB90
-uni06A9.medi:FB91
+uni06A9 06A9 arKeheh.isol
+uni06A9.isol FB8E arKeheh.isol
+uni06A9.fina FB8F arKeheh.fina
+uni06A9.init FB90 arKaf.init
+uni06A9.medi FB91 arKaf.medi
 
 #Gaf
-uni06AF:06AF
-uni06AF.isol:FB92
-uni06AF.fina:FB93
-uni06AF.init:FB94
-uni06AF.medi:FB95
+uni06AF 06AF arKeheh.isol,diGaf.above
+uni06AF.isol FB92 arKeheh.isol,diGaf.above
+uni06AF.fina FB93 arKeheh.fina,diGaf.above
+uni06AF.init FB94 arKaf.init,diGaf.above
+uni06AF.medi FB95 arKaf.medi,diGaf.above
 
 #Lamm V
-uni06B5:06B5
-uni06B5.isol:EB50
-uni06B5.fina:EB51
-uni06B5.init:EB52
-uni06B5.medi:EB53
+uni06B5 06B5 arLam.isol,diSmallV.above
+uni06B5.isol EB50 arLam.isol,diSmallV.above
+uni06B5.fina EB51 arLam.fina,diSmallV.above
+uni06B5.init EB52 arLam.init,diSmallV.above
+uni06B5.medi EB53 arLam.medi,diSmallV.above
 
 #Raw Noon
-uni06BA:06BA
-uni06BA.isol:FB9E
-uni06BA.fina:FB9F
-uni06BA.init:EBA2
-uni06BA.medi:EBA3
+uni06BA 06BA arNoon.isol
+uni06BA.isol FB9E arNoon.isol
+uni06BA.fina FB9F arNoon.fina
+uni06BA.init EBA2 arBeh.init
+uni06BA.medi EBA3 arBeh.medi
 
 #Noon Ring
-uni06BC:06BC
-uni06BC.isol:EBC0
-uni06BC.fina:EBC1
-uni06BC.init:EBC2
-uni06BC.medi:EBC3
+uni06BC 06BC arNoon.isol,di1Dot.above,diRing.below
+uni06BC.isol EBC0 arNoon.isol,di1Dot.above,diRing.below
+uni06BC.fina EBC1 arNoon.fina,di1Dot.above,diRing.below
+uni06BC.init EBC2 arBeh.init,di1Dot.above,diRing.below
+uni06BC.medi EBC3 arBeh.medi,di1Dot.above,diRing.below
 
 #Heh Doshanbah
-uni06BE:06BE
-uni06BE.isol:FBAA
-uni06BE.fina:FBAB
-uni06BE.init:FBAC
-uni06BE.medi:FBAD
+uni06BE 06BE arHehDo.isol
+uni06BE.isol FBAA arHehDo.isol
+uni06BE.fina FBAB arHehDo.fina
+uni06BE.init FBAC arHeh.init
+uni06BE.medi FBAD arHeh.medi
 
 #Heh Hamza
-uni06C0:06C0
-uni06C0.isol:FBA4
-uni06C0.fina:FBA5
+uni06C0 06C0 arHeh.isol,diHamza
+uni06C0.isol FBA4 arHeh.isol,diHamza
+uni06C0.fina FBA5 arHeh.fina,diHamza
 
 #Waw V
-uni06C6:06C6
-uni06C6.isol:FBD9
-uni06C6.fina:FBDA
+uni06C6 06C6 arWaw.isol,diSmallV.above
+uni06C6.isol FBD9 arWaw.isol,diSmallV.above
+uni06C6.fina FBDA arWaw.fina,diSmallV.above
 
 #Waw 2 Dot
-uni06CA:06CA
-uni06CA.isol:ECA0
-uni06CA.fina:ECA1
+uni06CA 06CA arWaw.isol,di2Dot.above
+uni06CA.isol ECA0 arWaw.isol,di2Dot.above
+uni06CA.fina ECA1 arWaw.fina,di2Dot.above
 
 #Waw 3 Dot
-uni06CB:06CB
-uni06CB.isol:FBDE
-uni06CB.fina:FBDF
+uni06CB 06CB arWaw.isol,di3Dot.above
+uni06CB.isol FBDE arWaw.isol,di3Dot.above
+uni06CB.fina FBDF arWaw.fina,di3Dot.above
 
 #Farsi Yaa
-uni06CC:06CC
-uni06CC.isol:FBFC
-uni06CC.fina:FBFD
-uni06CC.init:FBFE
-uni06CC.medi:FBFF
+uni06CC 06CC arYeh.isol
+uni06CC.isol FBFC arYeh.isol
+uni06CC.fina FBFD arYeh.fina
+uni06CC.init FBFE arBeh.intt,di2Dot.below
+uni06CC.medi FBFF arBeh.medi,di2Dot.below
 
 #Yaa V
-uni06CE:06CE
-uni06CE.isol:ECE0
-uni06CE.fina:ECE1
-uni06CE.init:ECE2
-uni06CE.medi:ECE3
+uni06CE 06CE arYeh.isol,diSmallV.above
+uni06CE.isol ECE0 arYeh.isol,diSmallV.above
+uni06CE.fina ECE1 arYeh.fina,diSmallV.above
+uni06CE.init ECE2 arBeh.init,di2Dot.below,diSmallV.above
+uni06CE.medi ECE3 arBeh.medi,di2Dot.below,diSmallV.above
 
 #Yaa Vertical Dots
-uni06D0:06D0
-uni06D0.isol:FBE4
-uni06D0.fina:FBE5
-uni06D0.init:FBE6
-uni06D0.medi:FBE7
+uni06D0 06D0 arYeh.isol,di2VDot.below
+uni06D0.isol FBE4 arYeh.isol,di2VDot.below
+uni06D0.fina FBE5 arYeh.fina,di2VDot.below
+uni06D0.init FBE6 arBeh.init,di2VDot.below
+uni06D0.medi FBE7 arBeh.medi,di2VDot.below
 
 #Kurdish Bzwin
-uni06D5:06D5
-uni06D5.isol:ED50
-uni06D5.fina:ED51
+uni06D5 06D5 arHeh.isol
+uni06D5.isol ED50 arHeh.isol
+uni06D5.fina ED51 arHeh.fina
 
 #Arabic Numbers
-uni0660:0660
-uni0661:0661
-uni0662:0662
-uni0663:0663
-uni0664:0664
-uni0665:0665
-uni0666:0666
-uni0667:0667
-uni0668:0668
-uni0669:0669
+uni0660 0660 dig0
+uni0661 0661 dig1
+uni0662 0662 dig2
+uni0663 0663 dig3
+uni0664 0664 dig4
+uni0665 0665 dig5
+uni0666 0666 dig6
+uni0667 0667 dig7
+uni0668 0668 dig8
+uni0669 0669 dig9
 
 #Farsi Numbers
-uni06F0:06F0
-uni06F1:06F1
-uni06F2:06F2
-uni06F3:06F3
-uni06F4:06F4
-uni06F5:06F5
-uni06F6:06F6
-uni06F7:06F7
-uni06F8:06F8
-uni06F9:06F9
+uni06F0 06F0 dig0
+uni06F1 06F1 dig1
+uni06F2 06F2 dig2
+uni06F3 06F3 dig3
+uni06F4 06F4 dig4Farsi
+uni06F5 06F5 dig5Farsi
+uni06F6 06F6 dig6Farsi
+uni06F7 06F7 dig7
+uni06F8 06F8 dig8
+uni06F9 06F9 dig9
 
 #Arabic Lam Alef Legatur
-uni06440627.isol:FEFB
-uni06440627.fina:FEFC
-uni06440622.isol:FEF5
-uni06440622.fina:FEF6
-uni06440623.isol:FEF7
-uni06440623.fina:FEF8
-uni06440625.isol:FEF9
-uni06440625.fina:FEFA
-uni06B50627.isol:EFFB
-uni06B50627.fina:EFFC
-uni06B5EE31.isol:EFFD
-uni06B5EE31.fina:EFFE
+uni06440627.isol FEFB legLA.isol
+uni06440627.fina FEFC legLA.fina
+uni06440622.isol FEF5 legLAShort.isol,diMadda
+uni06440622.fina FEF6 legLAShort.fina,diMadda
+uni06440623.isol FEF7 legLAShort.isol,diHamza.above
+uni06440623.fina FEF8 legLAShort.fina,diHamza.above
+uni06440625.isol FEF9 legLA.isol,diHamza.below
+uni06440625.fina FEFA legLA.fina,diHamza.below
+uni06B50627.isol EFFB legLA.isol,diSmallV.above
+uni06B50627.fina EFFC legLA.fina,diSmallV.above
 
 #
 # Arabic Legatures
 #
 
 #allah
-uniFDF2:FDF2
-uniFDFA:FDFA
+uniFDF2 FDF2 legAllah
+uniFDFA FDFA legSalah
 
 #--BE.fina
-uni066E0649.fina:EE55
+uni066E0649.fina EE55 legBE.fina
 
 #--MG.init
-uni0645062D.init:FCCF
-uni0645062C.init:FCCE
-uni0645062E.init:FCD0
+uni0645062D.init FCCF legMG.init
+uni0645062C.init FCCE
+uni0645062E.init FCD0
 
 #--MM.init
-uni06450645.init:FCD1
+uni06450645.init FCD1 legMM.init
 
 #--LMG.init
-uni06440645062D.init:FD88
+uni06440645062D.init FD88 legLMG.init
 
 #--LM.isol
-uni06440645.isol:FC42
+uni06440645.isol FC42 legLM.isol
 
 #--LG.init
-uni0644062D.init:FCCA
-uni0644062E.init:FCCB
-uni0644062C.init:FCC9
+uni0644062D.init FCCA legLG.init
+uni0644062E.init FCCB
+uni0644062C.init FCC9
 
 #--LG.isol
-uni0644062D.isol:FC40
-uni0644062C.isol:FC3F
-uni0644062E.isol:FC41
+uni0644062D.isol FC40 legLG.isol
+uni0644062C.isol FC3F
+uni0644062E.isol FC41
 
 #--LE.isol
-uni06440649.isol:FC43
-uni0644064A.isol:FC44
+uni06440649.isol FC43 legLE.isol
+uni0644064A.isol FC44
 
 #--LE.fina
-uni06440649.fina:FC86
-uni0644064A.fina:FC87
+uni06440649.fina FC86 legLE.fina
+uni0644064A.fina FC87
 
 #--GM.init
-uni062D0645.init:FCAA
-uni062E0645.init:FCAC
-uni062C0645.init:FCA8
+uni062D0645.init FCAA legGM.init
+uni062E0645.init FCAC
+uni062C0645.init FCA8
 
 #--BE.isol
-uni066E0649.isol:EE54
-uni0628064A.isol:FC0A
-uni062A064A.isol:FC10
+uni066E0649.isol EE54 legBE.isol
+uni0628064A.isol FC0A
+uni062A064A.isol FC10
 
 #--BG.init
-uni066E062D.init:EE58
-uni064A062D.init:FCDB
-uni064A062C.init:FCDA
-uni064A062E.init:FCDC
+uni066E062D.init EE58 legBG.init
+uni064A062D.init FCDB
+uni064A062C.init FCDA
+uni064A062E.init FCDC
 
 #--BM.init
-uni066E0645.init:EE57
-uni062A0645.init:FCA4
+uni066E0645.init EE57 legBM.init
+uni062A0645.init FCA4
 
 #--BM.isol
-uni066E0645.isol:EE56
+uni066E0645.isol EE56 legBM.isol
 
 #--BN.fina
-uni066E06BA.fina:EE53
-uni064A0646.fina:FC94
+uni066E06BA.fina EE53 legBN.fina
+uni064A0646.fina FC94
 
 #--BR.fina
-uni066E0631.fina:EE52
-uni06280631.fina:FC6A
-uni062A0631.fina:FC70
+uni066E0631.fina EE52 legBR.fina
+uni06280631.fina FC6A
+uni062A0631.fina FC70
 
 #--FE.isol
-uni06A10649.isol:EE50
-uni064A0649.isol:FC32
+uni06A10649.isol EE50 legFE.isol
+uni064A0649.isol FC32
 
 #--SM.init
-uni06330645.init:FC80
+uni06330645.init FC80 leSM.init
 
 #--LM.init
-uni06440645.init:FCCC
+uni06440645.init FCCC legLM.init
 
 # Punctation
-uni0640:0640
-uni060C:060C
-uni061B:061B
-uni061F:061F
-uni066D:066D
-uni066A:066A
-uni066C:066C
-uni066B:066B
-uni06D4:06D4
-uniFD3E:FD3E
-uniFD3F:FD3F
+uni0640 0640 arKashida
+uni060C 060C arComma
+uni061B 061B arSemicolon
+uni061F 061F arQuestion
+uni066D 066D arAsterisk
+uni066A 066A arPercent
+uni066C 066C arThousandsep
+uni066B 066B arDecimal
+uni06D4 06D4 arFullStop
+uniFD3E FD3E arOrnateLeft
+uniFD3F FD3F arOrnateRight
+
 
 # Tanqeet
-uniFBB2:FBB2
-uniFBB3:FBB3
-uniFBB4:FBB4
-uniFBB5:FBB5
-uniFBB6:FBB6
-uniFBB9:FBB9
-uniFBBD:FBBD
-uniFBBE:FBBE
-uniFBBF:FBBF
-uni065A:065A
-uniEE0A:EE0A
-uniEE07:EE07
-uniEE0C:EE0C
-uniFBB7:FBB7
-uniFBB8:FBB8
-uniFBBA:FBBA
-uniFBBB:FBBB
-uniFBC0:FBC0
+uniFBB2 FBB2 di1Dot.above
+uniFBB3 FBB3 di1Dot.below
+uniFBB4 FBB4 di2Dot.above
+uniFBB5 FBB5 di2Dot.below
+uniFBB6 FBB6 di3Dot.above
+uniFBB7 FBB7 di3Dot.below
+uniFBB8 FBB8 di3IDot.above
+uniFBB9 FBB9 di3IDot.below
+uniFBBA FBBA di4Dot.above
+uniFBBB FBBB di4Dot.below
+uniFBBD FBBD di2VDot.above
+uniFBBE FBBE di2VDot.below
+uniFBBF FBBF di4Dot.below
+uniFBC0 FBC0 diTah.above
+
 
 #diacritic
-uniEE0B:EE0B
-uniEE0A:EE0A
-uni065A:065A
-uniEE0C:EE0C
-uniEE07:EE07
-uniFBBF:FBBF
-uni064E:064E
-uni0650:0650
-uni0651:0651
-uni064B:064B
-uni064C:064C
-uni064F:064F
-uni0652:0652
-uni064D:064D
-uni0653:0653
-uni0654:0654
-uni0655:0655
-uni0670:0670
-uni0656:0656
+uniEE0B EE0B diGaf.above
+uniEE0A EE0A diHamza
+uni065A 065A diSmallV.above
+uniEE0C EE0C diSmallV.below
+uniEE07 EE07 diWasla
+uniFBBF FBBF diRing.below
+uni064E 064E diFatha
+uni0650 0650 diKasra
+uni0651 0651 diShadda
+uni064B 064B diFathatan
+uni064C 064C diDammatan
+uni064F 064F diDamma
+uni0652 0652 diSukun
+uni064D 064D diKasratan
+uni0653 0653 diMadda
+uni0654 0654 diHamza.above
+uni0655 0655 diHamza.below
+uni0670 0670 diLonga.above
+uni0656 0656 diLonga.below
 
 """
 
@@ -602,38 +624,78 @@ uni0656:0656
 class ARGLError(Exception):
     pass
 
-
-AGL2UV = {}
-UV2AGL = {}
-
-
 def _builddicts():
-    import re
-
-    lines = _arglText.splitlines()
-
-    parseARGL_RE = re.compile("(.*):([A-Za-z_0-9.]+)$")
-
-    for line in lines:
+    for line in _arglText.splitlines():
         if not line or line[:1] == '#':
             continue
-        m = parseARGL_RE.match(line)
-        if not m:
-            raise ARGLError("syntax error in glyphlist.txt: %s" % repr(line[:20]))
-        unicode = m.group(2)
+
+        splitRaw = line.split()
+
+        if len(splitRaw) < 2:
+            continue
+
+        unicode = splitRaw[1]
         assert len(unicode) == 4
         unicode = int(unicode, 16)
-        glyphName = m.group(1)
+        glyphName = splitRaw[0]
         if glyphName in AGL2UV:
             # the above table contains identical duplicates
             assert AGL2UV[glyphName] == unicode
         else:
             AGL2UV[glyphName] = unicode
+            try:
+                AGL2FEA[glyphName] = splitRaw[2].split(",")
+            except:
+                pass
         UV2AGL[unicode] = glyphName
 _builddicts()
 
 
+
+
+
+"""
+Master Font Glyphs
+"""
+
 _arglRaw = """\
+# -----------------------------------------------------------
+# Copyright 1997, 2017 Fadox.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or
+# without modification, are permitted provided that the
+# following conditions are met:
+#
+# Redistributions of source code must retain the above
+# copyright notice, this list of conditions and the following
+# disclaimer.
+#
+# Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following
+# disclaimer in the documentation and/or other materials
+# provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+# CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# -----------------------------------------------------------
+# Name:          Arabic Glyph List For Ali Uni Fonts
+# Table version: 1.0
+# Date:          December 10, 2016
+# URL:           http://fadox.net
+#
+#END
 
 # Arabic Isol glyphs
 0621 arHamza.isol uni0621 uni0621,uni0621.isol
@@ -807,15 +869,8 @@ FBBB di4Dot.below uniFBBB
 FBBD di2VDot.above uniFBBD uniFBBD,uni06D0.init
 FBBE di2VDot.below uniFBBE uniFBBE,uni06D0.init
 FBC0 diTah.above uniFBC0
-
-
-
 """
 
-RAWU2N = {}
-RAWN2U = {}
-RAWN2G = {}
-RAWN2C = {}
 
 def _buildraws():
     for line in _arglRaw.splitlines():
@@ -843,3 +898,4 @@ def _buildraws():
 
 
 _buildraws()
+m = 1
