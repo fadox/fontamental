@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
+import sys, os
+sys.path.append(os.path.abspath('../'))
+
 
 from defcon import Font
 from fontamental.minify import MinifyUFO
@@ -12,10 +15,11 @@ def main(source, mask = None):
     return mini.build()
 
 if __name__  == "__main__":
-    path = "/hub/sandbox/sources/"
+    path = "/hub/ali-uni/sources/Ali-Uni_Samik/src/"
     sourcePaths = ["", "lots.ufo", "adobe.ufo", "ali.ufo", 'old.ufo','old_alwand.ufo','raw_hasan.ufo']
-    fontName = sourcePaths[6]
+    fontName = sourcePaths[3]
     sourceFont = Font(path + fontName)
+    print(sourceFont)
     mask = path + 'old_ali.mask'
     ufo = main(sourceFont, mask)
 

@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 from defcon import Font, Color, Glyph
-from aragl import *
+from fontamental.aragl import *
 import copy
 import os
 
