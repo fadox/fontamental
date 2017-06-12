@@ -118,12 +118,22 @@ uni0629 0629 arHeh.isol,di2Dot.above
 uni0629.isol FE93 arHeh.isol,di2Dot.above
 uni0629.fina FE94 arHeh.fina,di2Dot.above
 
+
 #Taa
 uni062A 062A arBeh.isol,di2Dot.above
 uni062A.isol FE95 arBeh.isol,di2Dot.above
 uni062A.fina FE96 arBeh.fina,di2Dot.above
 uni062A.init FE97 arBeh.init,di2Dot.above
 uni062A.medi FE98 arBeh.medi,di2Dot.above
+
+
+#TTeh
+uni0679 0679 arBeh.isol,diTah.above
+uni0679.isol FB66 arBeh.isol,diTah.above
+uni0679.fina FB67 arBeh.fina,diTah.above
+uni0679.init FB68 arBeh.init,diTah.above
+uni0679.medi FB69 arBeh.medi,diTah.above
+
 
 #thaa
 uni062B 062B arBeh.isol,di3Dot.above
@@ -157,6 +167,11 @@ uni062E.medi FEA8 arHah.medi,di1Dot.above
 uni062F 062F arDal.isol
 uni062F.isol FEA9 arDal.isol
 uni062F.fina FEAA arDal.fina
+
+#DDal
+uni0688 0688 arDal.isol,diTah.above
+uni0688.isol FB88 arDal.isol,diTah.above
+uni0688.fina FB88 arDal.fina,diTah.above
 
 #Thal
 uni0630 0630 arDal.isol,di1Dot.above
@@ -489,6 +504,63 @@ uni06B50627.fina EFFC legLA.fina,diSmallV.above
 uniFDF2 FDF2 legAllah
 uniFDFA FDFA legSalah
 
+
+# Punctation
+uni0640 0640 arKashida
+uni060C 060C arComma
+uni061B 061B arSemicolon
+uni061F 061F arQuestion
+uni066D 066D arAsterisk
+uni066A 066A arPercent
+uni066C 066C arThousandsep
+uni066B 066B arDecimal
+uni06D4 06D4 arFullStop
+uniFD3E FD3E arOrnateLeft
+uniFD3F FD3F arOrnateRight
+
+
+# Tanqeet
+uniFBB2 FBB2 di1Dot.above
+uniFBB3 FBB3 di1Dot.below
+uniFBB4 FBB4 di2Dot.above
+uniFBB5 FBB5 di2Dot.below
+uniFBB6 FBB6 di3Dot.above
+uniFBB7 FBB7 di3Dot.below
+uniFBB8 FBB8 di3IDot.above
+uniFBB9 FBB9 di3IDot.below
+uniFBBA FBBA di4Dot.above
+uniFBBB FBBB di4Dot.below
+uniFBBD FBBD di2VDot.above
+uniFBBE FBBE di2VDot.below
+uniFBBF FBBF di4Dot.below
+uni0615 0615 diTah.above
+
+
+#diacritic
+uniEE0B EE0B diGaf.above
+uniEE0A EE0A diHamza
+uni065A 065A diSmallV.above
+uniEE0C EE0C diSmallV.below
+uniEE07 EE07 diWasla
+uniFBBF FBBF diRing.below
+uni064E 064E diFatha
+uni0650 0650 diKasra
+uni0651 0651 diShadda
+uni064B 064B diFathatan
+uni064C 064C diDammatan
+uni064F 064F diDamma
+uni0652 0652 diSukun
+uni064D 064D diKasratan
+uni0653 0653 diMadda
+uni0654 0654 diHamza.above
+uni0655 0655 diHamza.below
+uni0670 0670 diLonga.above
+uni0656 0656 diLonga.below
+
+"""
+
+# Ignored legator, TODO, remove
+"""
 #--BE.fina
 uni066E0649.fina EE55 legBE.fina
 
@@ -565,61 +637,7 @@ uni06330645.init FC80 leSM.init
 
 #--LM.init
 uni06440645.init FCCC legLM.init
-
-# Punctation
-uni0640 0640 arKashida
-uni060C 060C arComma
-uni061B 061B arSemicolon
-uni061F 061F arQuestion
-uni066D 066D arAsterisk
-uni066A 066A arPercent
-uni066C 066C arThousandsep
-uni066B 066B arDecimal
-uni06D4 06D4 arFullStop
-uniFD3E FD3E arOrnateLeft
-uniFD3F FD3F arOrnateRight
-
-
-# Tanqeet
-uniFBB2 FBB2 di1Dot.above
-uniFBB3 FBB3 di1Dot.below
-uniFBB4 FBB4 di2Dot.above
-uniFBB5 FBB5 di2Dot.below
-uniFBB6 FBB6 di3Dot.above
-uniFBB7 FBB7 di3Dot.below
-uniFBB8 FBB8 di3IDot.above
-uniFBB9 FBB9 di3IDot.below
-uniFBBA FBBA di4Dot.above
-uniFBBB FBBB di4Dot.below
-uniFBBD FBBD di2VDot.above
-uniFBBE FBBE di2VDot.below
-uniFBBF FBBF di4Dot.below
-uniFBC0 FBC0 diTah.above
-
-
-#diacritic
-uniEE0B EE0B diGaf.above
-uniEE0A EE0A diHamza
-uni065A 065A diSmallV.above
-uniEE0C EE0C diSmallV.below
-uniEE07 EE07 diWasla
-uniFBBF FBBF diRing.below
-uni064E 064E diFatha
-uni0650 0650 diKasra
-uni0651 0651 diShadda
-uni064B 064B diFathatan
-uni064C 064C diDammatan
-uni064F 064F diDamma
-uni0652 0652 diSukun
-uni064D 064D diKasratan
-uni0653 0653 diMadda
-uni0654 0654 diHamza.above
-uni0655 0655 diHamza.below
-uni0670 0670 diLonga.above
-uni0656 0656 diLonga.below
-
 """
-
 
 class ARGLError(Exception):
     pass
@@ -779,25 +797,25 @@ FEFD legLAShort.isol uni0644EE31.isol uni0644EE31.isol,uni06440623.isol,uni06440
 FEFE legLAShort.fina uni0644EE31.fina uni0644EE31.fina,uni06440623.fina,uni06440622.fina
 
 #Arabic Legaturess
-EE55 legBE.fina uni066E0649.fina uni066E0649.fina
-FCCF legMG.init uni0645062D.init uni0645062D.init,uni0645062C.init,uni0645062E.init
-FCD1 legMM.init uni06450645.init uni06450645.init
-FD88 legLMG.init uni06440645062D.init uni06440645062D.init
-FC42 legLM.isol uni06440645.isol uni06440645.isol
-FCC1 legLG.init uni0644062D.init uni0644062D.init,uni0644062E.init,uni0644062C.init
-FC40 legLG.isol uni0644062D.isol uni0644062D.isol,uni0644062C.isol,uni0644062E.isol
-FC43 legLE.isol uni06440649.isol uni06440649.isol,uni0644064A.isol
-FC86 legLE.fina uni06440649.fina uni06440649.fina,uni0644064A.fina
-FCAA legGM.init uni062D0645.init uni062D0645.init,uni062E0645.init,uni062C0645.init
-EE54 legBE.isol uni066E0649.isol uni066E0649.isol,uni0628064A.isol,uni062A064A.isol
-EE58 legBG.init uni066E062D.init uni066E062D.init,uni064A062D.init,uni064A062C.init,uni064A062E.init
-EE57 legBM.init uni066E0645.init uni066E0645.init,uni062A0645.init
-EE56 legBM.isol uni066E0645.isol uni066E0645.isol
-EE53 legBN.fina uni066E06BA.fina uni066E06BA.fina,uni064A0646.fina
-EE52 legBR.fina uni066E0631.fina uni066E0631.fina,uni06280631.fina,uni062A0631.fina
-EE50 legFE.isol uni06A10649.isol uni06A10649.isol,uni064A0649.isol
-FC80 legSM.init uni06330645.init uni06330645.init
-FCCC legLM.init uni06440645.init uni06440645.init
+#EE55 legBE.fina uni066E0649.fina uni066E0649.fina
+#FCCF legMG.init uni0645062D.init uni0645062D.init,uni0645062C.init,uni0645062E.init
+#FCD1 legMM.init uni06450645.init uni06450645.init
+#FD88 legLMG.init uni06440645062D.init uni06440645062D.init
+#FC42 legLM.isol uni06440645.isol uni06440645.isol
+#FCC1 legLG.init uni0644062D.init uni0644062D.init,uni0644062E.init,uni0644062C.init
+#FC40 legLG.isol uni0644062D.isol uni0644062D.isol,uni0644062C.isol,uni0644062E.isol
+#FC43 legLE.isol uni06440649.isol uni06440649.isol,uni0644064A.isol
+#FC86 legLE.fina uni06440649.fina uni06440649.fina,uni0644064A.fina
+#FCAA legGM.init uni062D0645.init uni062D0645.init,uni062E0645.init,uni062C0645.init
+#EE54 legBE.isol uni066E0649.isol uni066E0649.isol,uni0628064A.isol,uni062A064A.isol
+#EE58 legBG.init uni066E062D.init uni066E062D.init,uni064A062D.init,uni064A062C.init,uni064A062E.init
+#EE57 legBM.init uni066E0645.init uni066E0645.init,uni062A0645.init
+#EE56 legBM.isol uni066E0645.isol uni066E0645.isol
+#EE53 legBN.fina uni066E06BA.fina uni066E06BA.fina,uni064A0646.fina
+#EE52 legBR.fina uni066E0631.fina uni066E0631.fina,uni06280631.fina,uni062A0631.fina
+#EE50 legFE.isol uni06A10649.isol uni06A10649.isol,uni064A0649.isol
+#FC80 legSM.init uni06330645.init uni06330645.init
+#FCCC legLM.init uni06440645.init uni06440645.init
 FDF2 legAllah uniFDF2 uniFDF2
 FDFA legSalah uniFDFA uniFDFA
 
@@ -868,7 +886,7 @@ FBBA di4Dot.above uniFBBA
 FBBB di4Dot.below uniFBBB
 FBBD di2VDot.above uniFBBD uniFBBD,uni06D0.init
 FBBE di2VDot.below uniFBBE uniFBBE,uni06D0.init
-FBC0 diTah.above uniFBC0
+0615 diTah.above uni0615
 """
 
 

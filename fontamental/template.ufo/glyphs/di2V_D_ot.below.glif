@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="di2VDot.below" format="1">
+  <note>
+    ar2VDot.below
+  </note>
+  <outline>
+    <contour>
+      <point x="36.3780487804878" y="-186.7682926829268"/>
+      <point x="41.3780487804878" y="-180.7682926829268"/>
+      <point x="49.3780487804878" y="-170.7682926829268" type="curve" smooth="yes"/>
+      <point x="60.3780487804878" y="-157.7682926829268"/>
+      <point x="71.3780487804878" y="-143.7682926829268"/>
+      <point x="84.3780487804878" y="-135.7682926829268" type="curve"/>
+      <point x="60.3780487804878" y="-111.76829268292681" type="line"/>
+      <point x="43.3780487804878" y="-97.76829268292681" type="line"/>
+      <point x="17.378048780487802" y="-76.76829268292681" type="line"/>
+      <point x="40.3780487804878" y="-46.76829268292681" type="line"/>
+      <point x="68.3780487804878" y="-13.768292682926813"/>
+      <point x="84.3780487804878" y="3.2317073170731874"/>
+      <point x="87.3780487804878" y="4.231707317073187" type="curve"/>
+      <point x="46.3780487804878" y="41.23170731707319" type="line" smooth="yes"/>
+      <point x="23.378048780487802" y="62.23170731707319"/>
+      <point x="5.378048780487802" y="76.23170731707319"/>
+      <point x="-7.621951219512198" y="82.23170731707319" type="curve"/>
+      <point x="-19.621951219512198" y="69.23170731707319" type="line"/>
+      <point x="-34.6219512195122" y="51.23170731707319" type="line"/>
+      <point x="-52.6219512195122" y="26.231707317073187" type="line"/>
+      <point x="-77.6219512195122" y="-12.768292682926813" type="line"/>
+      <point x="-54.6219512195122" y="-33.76829268292681" type="line"/>
+      <point x="-17.621951219512198" y="-64.76829268292681" type="line"/>
+      <point x="-28.621951219512198" y="-75.76829268292681"/>
+      <point x="-42.6219512195122" y="-93.76829268292681"/>
+      <point x="-59.6219512195122" y="-118.76829268292681" type="curve" smooth="yes"/>
+      <point x="-81.6219512195122" y="-151.7682926829268" type="line"/>
+      <point x="-33.6219512195122" y="-193.7682926829268" type="line"/>
+      <point x="7.378048780487802" y="-227.7682926829268" type="line"/>
+      <point x="34.3780487804878" y="-189.7682926829268" type="line" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="3.246951219512198" y="-348.0121951219512" type="move" name="markBelowDot"/>
+    </contour>
+    <contour>
+      <point x="0" y="-1" type="move" name="_dotBelow"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>1.0</real>
+        <real>1.0</real>
+        <real>0.0</real>
+        <real>1.0</real>
+      </array>
+      <key>public.markColor</key>
+      <string>0.99687,1,0.55607,1</string>
+    </dict>
+  </lib>
+</glyph>

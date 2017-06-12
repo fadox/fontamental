@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arYeh.fina" format="1">
+  <advance width="507"/>
+  <note>
+    arYeh.fina
+  </note>
+  <outline>
+    <contour>
+      <point x="275" y="180" type="line"/>
+      <point x="268" y="173"/>
+      <point x="259" y="155"/>
+      <point x="247" y="126" type="curve"/>
+      <point x="232" y="83"/>
+      <point x="223" y="54"/>
+      <point x="219" y="38" type="curve"/>
+      <point x="271" y="30" type="line"/>
+      <point x="300" y="25" type="line"/>
+      <point x="318" y="23" type="line"/>
+      <point x="347" y="15"/>
+      <point x="367" y="-5"/>
+      <point x="371" y="-29" type="curve"/>
+      <point x="365" y="-35"/>
+      <point x="347" y="-40"/>
+      <point x="316" y="-43" type="curve"/>
+      <point x="305" y="-46" type="line"/>
+      <point x="291" y="-47" type="line"/>
+      <point x="271" y="-49" type="line"/>
+      <point x="225" y="-50" type="line"/>
+      <point x="199" y="-48" type="line"/>
+      <point x="176" y="-42" type="line"/>
+      <point x="156" y="-32" type="line"/>
+      <point x="138" y="-19" type="line"/>
+      <point x="118" y="1"/>
+      <point x="108" y="27"/>
+      <point x="108" y="59" type="curve" smooth="yes"/>
+      <point x="108" y="120"/>
+      <point x="119" y="168"/>
+      <point x="167" y="243" type="curve"/>
+      <point x="163" y="253" type="line"/>
+      <point x="144" y="241"/>
+      <point x="124" y="221"/>
+      <point x="104" y="194" type="curve" smooth="yes"/>
+      <point x="45" y="113"/>
+      <point x="17" y="48"/>
+      <point x="17" y="-28" type="curve" smooth="yes"/>
+      <point x="17" y="-128"/>
+      <point x="72" y="-189"/>
+      <point x="197" y="-189" type="curve"/>
+      <point x="217" y="-187" type="line"/>
+      <point x="242" y="-183" type="line"/>
+      <point x="300" y="-168" type="line"/>
+      <point x="343" y="-153"/>
+      <point x="368" y="-142"/>
+      <point x="376" y="-135" type="curve"/>
+      <point x="413" y="-92"/>
+      <point x="429" y="-50"/>
+      <point x="438" y="-27" type="curve" smooth="yes"/>
+      <point x="448" y="0" type="line"/>
+      <point x="510" y="0" type="line"/>
+      <point x="510" y="180" type="line"/>
+    </contour>
+    <contour>
+      <point x="120.39329268292704" y="305.9542682926831" type="move" name="hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="190.80792682926813" y="377.3871951219512" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="227.32926829268285" y="322.28353658536594" type="move" name="smallVAbove"/>
+    </contour>
+    <contour>
+      <point x="98.28963414634154" y="-274.04573170731703" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="211.25609756097583" y="-278.9390243902441" type="move" name="dotBelow"/>
+    </contour>
+    <contour>
+      <point x="173" y="348" type="move" name="dotAbove"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+    </dict>
+  </lib>
+</glyph>

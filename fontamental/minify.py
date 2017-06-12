@@ -13,8 +13,8 @@ class MinifyUFO():
         self.layers = {}
         if mask is not None:
             self.applyMask(mask)
-        sampleUfo = os.path.join(os.path.dirname(__file__), 'sample.ufo')
-        self.sampleUFO = Font(sampleUfo)
+        templateUFO = os.path.join(os.path.dirname(__file__), 'template.ufo')
+        self.templateUFO = Font(templateUFO)
 
     def applyMask(self, mask):
         assert os.path.isfile(mask)
@@ -104,7 +104,7 @@ class MinifyUFO():
         factor = self.getFactorOfUPM()
         for g in self.UFO:
             try:
-                sampleGlyph = self.sampleUFO[g.name]
+                sampleGlyph = self.templateUFO[g.name]
                 g.anchors = copy.deepcopy(sampleGlyph.anchors)
                 for point in g.anchors:
                     point.x *= factor

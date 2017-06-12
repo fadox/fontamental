@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arKashida" format="1">
+  <advance width="204"/>
+  <unicode hex="0640"/>
+  <note>
+    uni0640
+  </note>
+  <outline>
+    <contour>
+      <point x="-4" y="179" type="line"/>
+      <point x="-4" y="0" type="line"/>
+      <point x="208" y="0" type="line"/>
+      <point x="208" y="179" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-11-29 18:08:22 +0000</string>
+    </dict>
+  </lib>
+</glyph>
