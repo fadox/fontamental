@@ -58,7 +58,9 @@ class MinifyUFO():
         for glf in RAWN2C:
             layer = 0
             glfSrc = RAWN2C[glf].split(',')
-            if glf == 'arAsterisk':
+            #if glf == 'arAsterisk':
+            #    m = 1
+            if glf == 'arHeh.medi':
                 m = 1
             if glf in RAWN2M:
                 try:

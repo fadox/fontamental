@@ -299,6 +299,16 @@ uni0647.fina FEEA arHeh.fina
 uni0647.init FEEB arHeh.init
 uni0647.medi FEEC arHeh.medi
 
+#Heh2
+uni06C1.fina FBA7 arHeh.fina2
+uni06C1.init FBA8 arHeh.init2
+uni06C1.medi FBA9 arHeh.medi2
+
+#Yeh2
+uni06D2.isol 06D2 arYeh.isol2
+uni06D2.fina FBAF arYeh.fina2
+
+
 #Waw
 uni0648 0648 arWaw.isol
 uni0648.isol FEED arWaw.isol
@@ -581,6 +591,8 @@ def _builddicts():
         if len(splitRaw) < 2:
             continue
 
+        if splitRaw[0] == 'uni06C1.fina':
+            m = 1
         unicode = splitRaw[1]
         assert len(unicode) == 4
         unicode = int(unicode, 16)
@@ -714,6 +726,14 @@ FEE4 arMeem.medi uni0645.medi uni0645.medi
 FEEA arHeh.fina uni0647.fina uni0647.fina,uni0629.fina,uni06C0.fina,uni06D5.fina
 FEEB arHeh.init uni0647.init uni0647.init
 FEEC arHeh.medi uni0647.medi uni0647.medi
+
+FBA7 arHeh.fina2 uni06C1.fina uni06C1.fina uniFBA7,uni06C2.fina,uni06C3.fina
+FBA8 arHeh.init2 uni06C1.init uni06C1.init uniFBA8
+FBA9 arHeh.medi2 uni06C1.medi uni06C1.medi uniFBA9
+
+06D2 arYeh.isol2 uni06D2.isol uni06D2.isol uni06D2,uni06D3
+FBAF arYeh.fina2 uni06D2.fina uni06D2.fina uniFBAF,uniFBB1  
+
 FEEE arWaw.fina uni0648.fina uni0648.fina,uni0624.fina,uni06C6.fina,uni06CA.fina,uni06CB.fina
 FEF0 arYeh.fina uni0649.fina uni0649.fina,uni064A.fina,uni06CE.fina,uni06D0.fina
 EE31 arAlefShort.fina uniEE31 uniEE31,uni0623.fina,uni0622.fina
