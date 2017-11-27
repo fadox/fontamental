@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from defcon import Font, Color, Glyph
+from defcon import Font, Color, Glyph, Contour
 from fontamental.aragl import *
 import copy
 import os
@@ -27,26 +27,31 @@ class MaxifyUFO():
         subs = self.getSubsets()
 
         for gName, pgNames in subs.items():
-
+            if gName == 'uni0688':
+                m = 1
             try:
                 baseGlyph = self.UFO[pgNames[0]]
 
                 if not gName in self.UFO.keys():
                     glyph = self.addGlyph(gName, baseGlyph)
 
-                for partName in pgNames[1:]:
-                    partGlyph = self.UFO[partName]
-                    partAnchors = [a.name.replace("_", "", 1) for a in partGlyph.anchors if a.name.startswith("_")]
-                    baseAnchors = [a.name for a in baseGlyph.anchors if not a.name.startswith("_")]
-                    anchorName = set(baseAnchors).intersection(partAnchors)
-                    assert len(anchorName) > 0, (pgNames[0], partName, partAnchors, baseAnchors)
-                    anchorName = list(anchorName)[0]
-                    partAnchor = [a for a in partGlyph.anchors if a.name == "_" + anchorName][0]
-                    baseAnchor = [a for a in baseGlyph.anchors if a.name == anchorName][0]
-                    xoff = baseAnchor.x - partAnchor.x
-                    yoff = baseAnchor.y - partAnchor.y
-                    self.addComponent(glyph, partName, xoff, yoff)
-                    self.updateAnchors(glyph, partGlyph, xoff, yoff)
+                if len(pgNames) == 1:
+                    pass
+                else:
+                    for partName in pgNames[1:]:
+                        partGlyph = self.UFO[partName]
+                        partAnchors = [a.name.replace("_", "", 1) for a in partGlyph.anchors if a.name.startswith("_")]
+                        baseAnchors = [a.name for a in baseGlyph.anchors if not a.name.startswith("_")]
+                        anchorName = set(baseAnchors).intersection(partAnchors)
+                        assert len(anchorName) > 0, (pgNames[0], partName, partAnchors, baseAnchors)
+                        anchorName = list(anchorName)[0]
+                        partAnchor = [a for a in partGlyph.anchors if a.name == "_" + anchorName][0]
+                        baseAnchor = [a for a in baseGlyph.anchors if a.name == anchorName][0]
+                        xoff = baseAnchor.x - partAnchor.x
+                        yoff = baseAnchor.y - partAnchor.y
+                        self.addComponent(glyph, partName, xoff, yoff)
+                        self.updateAnchors(glyph, partGlyph, xoff, yoff)
+                        del baseAnchor, baseAnchors, a, xoff, yoff, partGlyph, anchorName
 
             except:
                 pass
@@ -86,7 +91,10 @@ class MaxifyUFO():
                 gUnicode = int(RAWN2U[g.name], 16)
                 g.name = gName
                 g.unicode = gUnicode
-                self.UFO.insertGlyph(g)
+                ng = copy.deepcopy(g)
+                #ng.clearAnchors()
+                self.addAnchors(ng,g)
+                self.UFO.insertGlyph(ng)
 
     def addComponent(self, glyph, name, xoff=0, yoff=0):
         component = glyph.instantiateComponent()
@@ -99,12 +107,19 @@ class MaxifyUFO():
         if len(anchors):
             for anchor in anchors:
                 if anchor.name in ['markAbove', 'markBelow', 'markAbove_1', 'markAbove_2', 'markBelow_1',
-                                   'markBelow_2']:
-                    anc = glyph.instantiateAnchor()
-                    anc.x = anchor.x
-                    anc.y = anchor.y
-                    anc.name = anchor.name
-                    glyph.appendAnchor(anc)
+                                   'markBelow_2','_markAbove', '_markBelow', '_markAbove_1', '_markAbove_2',
+                                   '_markBelow_1',  '_markBelow_2'#, '_markAboveDot','_markBelowDot','markAboveDot','markBelowDot'
+                                    ]:
+                    #anc = glyph.instantiateAnchor()
+                    #anc.x = anchor.x
+                    #anc.y = anchor.y
+                    #anc.name = anchor.name
+                    #glyph.appendAnchor(anc)
+
+                    c = Contour()
+                    c.addPoint((anchor.x, anchor.y), name=anchor.name, segmentType="move")
+                    glyph.appendContour(c)
+
                 else:
                     continue
 

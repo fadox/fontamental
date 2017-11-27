@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diSmallV.below" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="151.421" y="5.11117" type="line"/>
+      <point x="71.4206" y="-75.8888"/>
+      <point x="35.4206" y="-131.889"/>
+      <point x="25.4206" y="-168.889" type="curve"/>
+      <point x="22.4206" y="-168.889" type="line"/>
+      <point x="11.4206" y="-143.889"/>
+      <point x="-33.5794" y="-85.8888"/>
+      <point x="-118.579" y="0.111171" type="curve"/>
+      <point x="-132.579" y="0.111171" type="line"/>
+      <point x="-167.579" y="-99.8888" type="line"/>
+      <point x="-79.5794" y="-177.889"/>
+      <point x="-13.5794" y="-253.889"/>
+      <point x="3.42062" y="-299.889" type="curve"/>
+      <point x="31.4206" y="-288.889" type="line"/>
+      <point x="49.4206" y="-242.889"/>
+      <point x="95.4206" y="-166.889"/>
+      <point x="183.421" y="-78.8888" type="curve"/>
+      <point x="176.421" y="-46.8888"/>
+      <point x="168.421" y="-22.8888"/>
+      <point x="157.421" y="5.11117" type="curve"/>
+    </contour>
+    <contour>
+      <point x="1.27731" y="1.06112" type="move" name="_smallVBelow"/>
+    </contour>
+  </outline>
+</glyph>

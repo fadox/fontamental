@@ -112,6 +112,7 @@ uni0628.isol FE8F arBeh.isol,di1Dot.below
 uni0628.fina FE90 arBeh.fina,di1Dot.below
 uni0628.init FE91 arBeh.init,di1Dot.below
 uni0628.medi FE92 arBeh.medi,di1Dot.below
+uniFE91.yeh EE91 arBeh.init.yeh,di1Dot.below
 
 #Taa Marbuta
 uni0629 0629 arHeh.isol,di2Dot.above
@@ -171,7 +172,7 @@ uni062F.fina FEAA arDal.fina
 #DDal
 uni0688 0688 arDal.isol,diTah.above
 uni0688.isol FB88 arDal.isol,diTah.above
-uni0688.fina FB88 arDal.fina,diTah.above
+uni0688.fina FB89 arDal.fina,diTah.above
 
 #Thal
 uni0630 0630 arDal.isol,di1Dot.above
@@ -182,6 +183,11 @@ uni0630.fina FEAC arDal.fina,di1Dot.above
 uni0631 0631 arReh.isol
 uni0631.isol FEAD arReh.isol
 uni0631.fina FEAE arReh.fina
+
+#RReh
+uni0691 0691 arReh.isol,diTah.above
+uni0691.isol FB8C arReh.isol,diTah.above
+uni0691.fina FB8D arReh.fina,diTah.above
 
 #Zai
 uni0632 0632 arReh.isol,di1Dot.above
@@ -316,6 +322,8 @@ uni066E.isol E6E0 arBeh.isol
 uni066E.fina E6E1 arBeh.fina
 uni066E.init E6E2 arBeh.init
 uni066E.medi E6E3 arBeh.medi
+uniFBE8 FBE8 arBeh.init
+uniFBE9 FBE9 arBeh.medi
 
 #Raw Qaaf
 uni066F 066F arQaf.isol
@@ -559,85 +567,6 @@ uni0656 0656 diLonga.below
 
 """
 
-# Ignored legator, TODO, remove
-"""
-#--BE.fina
-uni066E0649.fina EE55 legBE.fina
-
-#--MG.init
-uni0645062D.init FCCF legMG.init
-uni0645062C.init FCCE
-uni0645062E.init FCD0
-
-#--MM.init
-uni06450645.init FCD1 legMM.init
-
-#--LMG.init
-uni06440645062D.init FD88 legLMG.init
-
-#--LM.isol
-uni06440645.isol FC42 legLM.isol
-
-#--LG.init
-uni0644062D.init FCCA legLG.init
-uni0644062E.init FCCB
-uni0644062C.init FCC9
-
-#--LG.isol
-uni0644062D.isol FC40 legLG.isol
-uni0644062C.isol FC3F
-uni0644062E.isol FC41
-
-#--LE.isol
-uni06440649.isol FC43 legLE.isol
-uni0644064A.isol FC44
-
-#--LE.fina
-uni06440649.fina FC86 legLE.fina
-uni0644064A.fina FC87
-
-#--GM.init
-uni062D0645.init FCAA legGM.init
-uni062E0645.init FCAC
-uni062C0645.init FCA8
-
-#--BE.isol
-uni066E0649.isol EE54 legBE.isol
-uni0628064A.isol FC0A
-uni062A064A.isol FC10
-
-#--BG.init
-uni066E062D.init EE58 legBG.init
-uni064A062D.init FCDB
-uni064A062C.init FCDA
-uni064A062E.init FCDC
-
-#--BM.init
-uni066E0645.init EE57 legBM.init
-uni062A0645.init FCA4
-
-#--BM.isol
-uni066E0645.isol EE56 legBM.isol
-
-#--BN.fina
-uni066E06BA.fina EE53 legBN.fina
-uni064A0646.fina FC94
-
-#--BR.fina
-uni066E0631.fina EE52 legBR.fina
-uni06280631.fina FC6A
-uni062A0631.fina FC70
-
-#--FE.isol
-uni06A10649.isol EE50 legFE.isol
-uni064A0649.isol FC32
-
-#--SM.init
-uni06330645.init FC80 leSM.init
-
-#--LM.init
-uni06440645.init FCCC legLM.init
-"""
 
 class ARGLError(Exception):
     pass

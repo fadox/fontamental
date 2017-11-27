@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="di4Dot.above" format="1">
+  <advance width="451"/>
+  <outline>
+    <contour>
+      <point x="-3.66049" y="23.4244" type="line"/>
+      <point x="36.3395" y="-15.5756"/>
+      <point x="75.3395" y="-54.5756"/>
+      <point x="113.34" y="-95.5756" type="curve"/>
+      <point x="152.34" y="-65.5756"/>
+      <point x="185.34" y="-31.5756"/>
+      <point x="211.34" y="6.4244" type="curve"/>
+      <point x="181.34" y="47.4244"/>
+      <point x="143.34" y="89.4244"/>
+      <point x="97.3395" y="130.424" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-217.66" y="14.4244" type="line"/>
+      <point x="-177.66" y="-24.5756"/>
+      <point x="-138.66" y="-63.5756"/>
+      <point x="-100.66" y="-104.576" type="curve"/>
+      <point x="-61.6605" y="-74.5756"/>
+      <point x="-28.6605" y="-40.5756"/>
+      <point x="-2.6605" y="-2.5756" type="curve"/>
+      <point x="-32.6605" y="38.4244"/>
+      <point x="-70.6605" y="80.4244"/>
+      <point x="-116.66" y="121.424" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-38.6605" y="251.424" type="line"/>
+      <point x="1.3395" y="212.424"/>
+      <point x="40.3395" y="173.424"/>
+      <point x="78.3395" y="132.424" type="curve"/>
+      <point x="117.34" y="162.424"/>
+      <point x="150.34" y="196.424"/>
+      <point x="176.34" y="234.424" type="curve"/>
+      <point x="146.34" y="275.424"/>
+      <point x="108.34" y="317.424"/>
+      <point x="62.3395" y="358.424" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-252.66" y="242.424" type="line"/>
+      <point x="-212.66" y="203.424"/>
+      <point x="-173.66" y="164.424"/>
+      <point x="-135.66" y="123.424" type="curve"/>
+      <point x="-96.6605" y="153.424"/>
+      <point x="-63.6605" y="187.424"/>
+      <point x="-37.6605" y="225.424" type="curve"/>
+      <point x="-67.6605" y="266.424"/>
+      <point x="-105.66" y="308.424"/>
+      <point x="-151.66" y="349.424" type="curve"/>
+    </contour>
+    <contour>
+      <point x="3.41333" y="12.7707" type="move" name="_dotAbove"/>
+    </contour>
+    <contour>
+      <point x="-38.6605" y="613.517" type="move" name="markAboveDot"/>
+    </contour>
+  </outline>
+</glyph>

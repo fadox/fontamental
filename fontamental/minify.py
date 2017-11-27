@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from defcon import Font, Color, Glyph
+from defcon import Font, Color, Glyph, Contour
+from defcon.objects.point import Point
 from fontamental.aragl import *
 import copy
 import os
@@ -105,17 +106,19 @@ class MinifyUFO():
         for g in self.UFO:
             try:
                 sampleGlyph = self.templateUFO[g.name]
-                g.anchors = copy.deepcopy(sampleGlyph.anchors)
-                for point in g.anchors:
-                    point.x *= factor
-                    point.y *= factor
+                for point in sampleGlyph.anchors:
+                    xVal = point.x * factor
+                    yVal = point.y * factor
+                    c = Contour()
+                    c.addPoint((point.x, point.y), name=point.name, segmentType="move")
+                    g.appendContour(c)
             except:
                 pass
 
     def getFactorOfUPM(self):
-        standardUPM = 1000
+        standardUPM = 2048
         sourceFontUPM = self.UFO.info.unitsPerEm
-        factor = int(sourceFontUPM) / int(standardUPM)
+        factor = int(standardUPM) / int(sourceFontUPM)
         return factor
 
     def sortGlyphs(self):

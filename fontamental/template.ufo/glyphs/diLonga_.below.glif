@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diLonga.below" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="-6.37902" y="-6.06146" type="line"/>
+      <point x="-79.379" y="-107.061" type="line"/>
+      <point x="-58.379" y="-194.061"/>
+      <point x="-45.379" y="-271.061"/>
+      <point x="-45.379" y="-350.061" type="curve"/>
+      <point x="-28.379" y="-356.061" type="line"/>
+      <point x="-8.37902" y="-330.061"/>
+      <point x="9.62098" y="-303.061"/>
+      <point x="24.621" y="-275.061" type="curve"/>
+      <point x="28.621" y="-266.061"/>
+      <point x="29.621" y="-256.061"/>
+      <point x="29.621" y="-245.061" type="curve" smooth="yes"/>
+      <point x="29.621" y="-179.061"/>
+      <point x="23.621" y="-107.061"/>
+      <point x="7.62098" y="-12.0615" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-2" y="-4" type="move" name="_markBelow"/>
+    </contour>
+    <contour>
+      <point x="-2" y="-2" type="move" name="_markBelowDot"/>
+    </contour>
+  </outline>
+</glyph>

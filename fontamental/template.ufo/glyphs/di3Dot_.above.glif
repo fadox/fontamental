@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="di3Dot.above" format="1">
+  <advance width="451"/>
+  <outline>
+    <contour>
+      <point x="-0.097561" y="20.1463" type="line"/>
+      <point x="39.9024" y="-18.8537"/>
+      <point x="78.9024" y="-57.8537"/>
+      <point x="116.902" y="-98.8537" type="curve"/>
+      <point x="155.902" y="-68.8537"/>
+      <point x="188.902" y="-34.8537"/>
+      <point x="214.902" y="3.14634" type="curve"/>
+      <point x="184.902" y="44.1463"/>
+      <point x="146.902" y="86.1463"/>
+      <point x="100.902" y="127.146" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-211.098" y="11.1463" type="line"/>
+      <point x="-171.098" y="-27.8537"/>
+      <point x="-132.098" y="-66.8537"/>
+      <point x="-94.0976" y="-107.854" type="curve"/>
+      <point x="-55.0976" y="-77.8537"/>
+      <point x="-22.0976" y="-43.8537"/>
+      <point x="3.90244" y="-5.85366" type="curve"/>
+      <point x="-26.0976" y="35.1463"/>
+      <point x="-64.0976" y="77.1463"/>
+      <point x="-110.098" y="118.146" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-127.098" y="227.146" type="line"/>
+      <point x="-87.0976" y="188.146"/>
+      <point x="-48.0976" y="149.146"/>
+      <point x="-10.0976" y="108.146" type="curve"/>
+      <point x="28.9024" y="138.146"/>
+      <point x="61.9024" y="172.146"/>
+      <point x="87.9024" y="210.146" type="curve"/>
+      <point x="57.9024" y="251.146"/>
+      <point x="19.9024" y="293.146"/>
+      <point x="-26.0976" y="334.146" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-24.0122" y="592.878" type="move" name="markAboveDot"/>
+    </contour>
+    <contour>
+      <point x="6.9878" y="-2.80488" type="move" name="_dotAbove"/>
+    </contour>
+  </outline>
+</glyph>

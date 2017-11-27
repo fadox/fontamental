@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diGaf.above" format="1">
+  <advance width="770"/>
+  <outline>
+    <contour>
+      <point x="296.713" y="166.963" type="line"/>
+      <point x="291.713" y="172.963" type="line"/>
+      <point x="91.7134" y="113.963"/>
+      <point x="-94.2866" y="48.9634"/>
+      <point x="-254.287" y="-26.0366" type="curve"/>
+      <point x="-266.287" y="-54.0366"/>
+      <point x="-275.287" y="-80.0366"/>
+      <point x="-281.287" y="-106.037" type="curve"/>
+      <point x="-276.287" y="-111.037" type="line"/>
+      <point x="-120.287" y="-36.0366"/>
+      <point x="54.7134" y="26.9634"/>
+      <point x="248.713" y="86.9634" type="curve"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="move" name="_gafAbove"/>
+    </contour>
+  </outline>
+</glyph>
