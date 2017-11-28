@@ -299,10 +299,23 @@ uni0647.fina FEEA arHeh.fina
 uni0647.init FEEB arHeh.init
 uni0647.medi FEEC arHeh.medi
 
-#Heh2
+#Heh Goal
+uni06C1 06C1 arHeh.isol
+uni06C1.isol FBA6 arHeh.isol
 uni06C1.fina FBA7 arHeh.fina2
 uni06C1.init FBA8 arHeh.init2
 uni06C1.medi FBA9 arHeh.medi2
+
+
+#Heh Goal Hamza
+uni06C2 06C2 arHeh.isol,diHamza
+uni06C2.isol EEA4 arHeh.isol,diHamza
+uni06C2.fina EEA5 arHeh.fina2,diHamza
+
+#Teh Marbuta Goal
+uni06C3 06C3 arHeh.isol,di2Dot.above
+uni06C3.isol EEA6 arHeh.isol,di2Dot.above
+uni06C3.fina EEA6 arHeh.fina2,di2Dot.above
 
 #Yeh2
 uni06D2.isol 06D2 arYeh.isol2
@@ -700,6 +713,7 @@ FE8E arAlef.fina uni0627.fina uni0627.fina,uni0623.fina,uni0625.fina,uni0622.fin
 FEA2 arHah.fina uni062D.fina uni062D.fina,uni062E.fina,uni062C.fina,uni0686.fina
 FEA3 arHah.init uni062D.init uni062D.init,uni062E.init,uni062C.init,uni0686.init
 FEA4 arHah.medi uni062D.medi uni062D.medi,uni062E.medi,uni062C.medi,uni0686.medi
+
 FEAA arDal.fina uni062F.fina uni062F.fina,uni0630.fina,uni068E.fina
 FEAE arReh.fina uni0631.fina uni0631.fina,uni0632.fina,uni0695.fina,uni0698.fina
 FEB2 arSeen.fina uni0633.fina uni0633.fina,uni0634.fina
