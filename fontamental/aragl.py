@@ -317,7 +317,11 @@ uni06C3 06C3 arHeh.isol,di2Dot.above
 uni06C3.isol EEA6 arHeh.isol,di2Dot.above
 uni06C3.fina EEA6 arHeh.fina2,di2Dot.above
 
-#Yeh2
+#Yeh Barree Hamza
+uni06D3.isol 06D3 arYeh.isol2,diHamza
+uni06D3.fina FBB1 arYeh.fina2,diHamza
+
+#Yeh Barree
 uni06D2.isol 06D2 arYeh.isol2
 uni06D2.fina FBAF arYeh.fina2
 
@@ -526,6 +530,8 @@ uni06440625.isol FEF9 legLA.isol,diHamza.below
 uni06440625.fina FEFA legLA.fina,diHamza.below
 uni06B50627.isol EFFB legLA.isol,diSmallV.above
 uni06B50627.fina EFFC legLA.fina,diSmallV.above
+uni06440671.isol EFFD legLAShort.isol,diWasla
+uni06440671.fina EFFE legLAShort.fina,diWasla
 
 #
 # Arabic Legatures
