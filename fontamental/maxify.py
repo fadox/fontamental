@@ -27,7 +27,7 @@ class MaxifyUFO():
         subs = self.getSubsets()
 
         for gName, pgNames in subs.items():
-            if gName == 'uni0688':
+            if gName == 'shaddaFatha':
                 m = 1
             try:
                 baseGlyph = self.UFO[pgNames[0]]
@@ -88,6 +88,9 @@ class MaxifyUFO():
         for g in self.sUFO:
             if g.name in RAWN2U:
                 gName = RAWN2G[g.name]
+                if gName == "space":
+                    m = 1
+                print(gName)
                 gUnicode = int(RAWN2U[g.name], 16)
                 g.name = gName
                 g.unicode = gUnicode

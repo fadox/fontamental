@@ -22,6 +22,7 @@ RAWN2G = {}
 # Master Font Glyphs dict{}, master glyph name : search sequence
 RAWN2C = {}
 
+# Master Font Glyphs dict{}, master glyph name : mask
 RAWN2M = {}
 """
 Producton Font Glyphs
@@ -518,6 +519,8 @@ uni06F6 06F6 dig6Farsi
 uni06F7 06F7 dig7
 uni06F8 06F8 dig8
 uni06F9 06F9 dig9
+uni06F4.urd E6F4 dig4Urdu
+uni06F7.urd E6F7 dig7Urdu
 
 #Arabic Lam Alef Legatur
 uni06440627.isol FEFB legLA.isol
@@ -544,16 +547,25 @@ uniFDFA FDFA legSalah
 
 # Punctation
 uni0640 0640 arKashida
-uni060C 060C arComma
-uni061B 061B arSemicolon
-uni061F 061F arQuestion
-uni066D 066D arAsterisk
-uni066A 066A arPercent
-uni066C 066C arThousandsep
-uni066B 066B arDecimal
-uni06D4 06D4 arFullStop
-uniFD3E FD3E arOrnateLeft
-uniFD3F FD3F arOrnateRight
+uni060C 060C maComma
+uni061B 061B maSemicolon
+uni061F 061F maQuestion
+uni066D 066D maAsterisk
+uni066A 066A maPercent
+uni066C 066C maThousandsep
+uni066B 066B maDecimal
+uni06D4 06D4 maFullStop
+uniFD3E FD3E maOrnateLeft
+uniFD3F FD3F maOrnateRight
+
+
+#FD3E maOrnateLeft uniFD3E uniFD3E
+#FD3F maOrnateRight uniFD3F uniFD3F
+#E07B maBraceleft  braceleft.ar
+#E07D maBraceright braceright.ar
+#E05B maBracketleft bracketleft.ar
+#E05D maBracketright bracketright.ar
+
 
 
 # Tanqeet
@@ -593,6 +605,28 @@ uni0654 0654 diHamza.above
 uni0655 0655 diHamza.below
 uni0670 0670 diLonga.above
 uni0656 0656 diLonga.below
+
+#LegaDiacritic
+shaddaFatha FC60 diShadda,diFatha
+
+
+NULL 0000 NULL
+CR 000D CR
+space 0020 space
+base 25CC wsBase
+ZWNJ 200C wsZwnj
+ZWJ 200D wsZwj
+lrm 200E wsLrm
+rlm 200F wsRlm
+lre 202a wsLre
+rle 202b wsRle
+pdf 202c wsPdf
+lro 202d wsLro
+rlo 202e wsRlo
+enspace 2002 wsEnspace
+emspace 2003 wsEmspace
+thinspace 2009 wsThinspace
+hairspace 200a wsHairspace
 
 """
 
@@ -674,6 +708,26 @@ _arglRaw = """\
 # URL:           http://fadox.net
 #
 #END
+
+# Spacing
+0000 Null NULL NULL
+000D CR CR CR
+25CC wsBase base base
+0020 space space space
+200C wsZwnj ZWNJ ZWNJ
+200D wsZwj ZWJ ZWJ
+200E wsLrm lrm lrm
+200F wsRlm rlm rlm
+202a wsLre lre lre
+202b wsRle rle rle
+202c wsPdf pdf pdf
+202d wsLro lro lro
+202e wsRlo rlo rlo
+2002 wsEnspace enspace enspace
+2003 wsEmspace emspace emspace
+2009 wsThinspace thinsapce thinspace
+200a wsHairspace hairspcae hairspace
+
 
 # Arabic Isol glyphs
 0621 arHamza.isol uni0621 uni0621,uni0621.isol
@@ -791,22 +845,32 @@ FDFA legSalah uniFDFA uniFDFA
 
 # Punctation
 0640 arKashida uni0640
-060C arComma uni060C
-061B arSemicolon uni061B
-061F arQuestion uni061F
-066D arAsterisk uni066D
-066A arPercent uni066A
-066C arThousandsep uni066C
-066B arDecimal uni066B
-06D4 arFullStop uni06D4
-FD3E arOrnateLeft uniFD3E uniFD3E
-FD3F arOrnateRight uniFD3F uniFD3F
 
+060C maComma uni060C
+061B maSemicolon uni061B
+061F maQuestion uni061F
+06D4 maFullStop uni06D4
+
+066D maAsterisk uni066D
+066A maPercent uni066A
+066C maThousandsep uni066C
+066B maDecimal uni066B
+
+FD3E maOrnateLeft uniFD3E uniFD3E
+FD3F maOrnateRight uniFD3F uniFD3F
+E07B maBraceleft  braceleft.ar
+E07D maBraceright braceright.ar
+E05B maBracketleft bracketleft.ar
+E05D maBracketright bracketright.ar
+E028 maParenleft parenleft.ar ﻿parenleft.ar,parenleft
+E029 maParentright parenright.ar ﻿parenright.ar,parenright
 
 #Farsi Numbers
 06F4 dig4Farsi uni06F4
 06F5 dig5Farsi uni06F5
 06F6 dig6Farsi uni06F6
+E6F4 dig4Urdu uni06F4.urd
+E6F7 dig7Urdu uni06F7.urd
 
 #Arabic Numbers
 0660 dig0 uni0660
@@ -827,7 +891,7 @@ EE0A diHamza uniEE0A uniEE0A,uni0626.medi,uni0624.isol,uni0624.fina
 065A diSmallV.above uni065A uni065A,uni06C6,uni06C6.isol
 EE0C diSmallV.below uniEE0C uniEE0C,uni0595,uni0595.isol
 EE07 diWasla uniEE07 uniEE07,uni0671,uni0671.isol
-FBBF diRing.below uniFBBF uniFBBF,uni06BC.init,uni0652
+FBBF diRing.below uniFBBF uniFBBF,ring,uni06BC.init,uni0652
 064E diFatha uni064E
 0650 diKasra uni0650
 0651 diShadda uni0651

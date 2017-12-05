@@ -7,15 +7,17 @@ from fontamental.aragl import *
 import copy
 import os
 
+
 class MinifyUFO():
-    def __init__(self, source, mask):
+    def __init__(self, source, mask, template=None):
         self.sUFO = source
         self.UFO = Font()
         self.layers = {}
         if mask is not None:
             self.applyMask(mask)
-        templateUFO = os.path.join(os.path.dirname(__file__), 'template.ufo')
-        self.templateUFO = Font(templateUFO)
+        if template is None:
+            template = os.path.join(os.path.dirname(__file__), 'template.ufo')
+        self.templateUFO = Font(template)
 
     def applyMask(self, mask):
         assert os.path.isfile(mask)
@@ -43,9 +45,8 @@ class MinifyUFO():
         if layerName not in self.layers.keys():
             newLayer = self.UFO.layers.newLayer(layerName)
             newLayer.color = Color("0,1,0,1")
-            self.layers.update({layerName:newLayer})
+            self.layers.update({layerName: newLayer})
         return self.layers[layerName]
-
 
     def copyFontInfo(self):
         data = self.sUFO.getDataForSerialization()
@@ -58,10 +59,8 @@ class MinifyUFO():
         for glf in RAWN2C:
             layer = 0
             glfSrc = RAWN2C[glf].split(',')
-            #if glf == 'arAsterisk':
+            #if glf == 'arHeh.medi':
             #    m = 1
-            if glf == 'arHeh.medi':
-                m = 1
             if glf in RAWN2M:
                 try:
                     mgName = [RAWN2M[glf]]
@@ -98,7 +97,7 @@ class MinifyUFO():
                     layer += 1
                     print(g + ' found :)' + '  L ' + str(layer))
                 except:
-                    print('x'*13 + g + ' not found in font')
+                    print('x' * 13 + g + ' not found in font')
                 glyph = None
             if layer == 0:
                 self.UFO.newGlyph(glf)
@@ -108,11 +107,15 @@ class MinifyUFO():
         for g in self.UFO:
             try:
                 sampleGlyph = self.templateUFO[g.name]
+                g.anchors = copy.deepcopy(sampleGlyph.anchors)
+                for point in g.anchors:
+                    point.x *= factor
+                    point.y *= factor
                 for point in sampleGlyph.anchors:
                     xVal = point.x * factor
                     yVal = point.y * factor
                     c = Contour()
-                    c.addPoint((point.x, point.y), name=point.name, segmentType="move")
+                    c.addPoint((xVal, yVal), name=point.name, segmentType="move")
                     g.appendContour(c)
             except:
                 pass
