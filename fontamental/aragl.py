@@ -608,7 +608,20 @@ uni0656 0656 diLonga.below
 
 #LegaDiacritic
 shaddaFatha FC60 diShadda,diFatha
+shaddaFathatan EC60 diShadda,diFathatan
+shaddaAlefabove FC63 diShadda,diLonga.above
+shaddaDamma FC61 diShadda,diDamma
+shaddaDammatan FC5E diShadda,diDammatan
+shaddaKasra FC62 diShadda,diKasra
+shaddaKasratan FC5F diShadda,diKasratan
 
+hamzaaboveDamma EC31 diHamza.above,diDamma
+hamzaaboveDammatan EC32 diHamza.above,diDammatan
+hamzaaboveFatha EC33 diHamza.above,diFatha
+hamzaaboveFathatan EC34 diHamza.above,diFathatan
+hamzaaboveSukun EC35 diHamza.above,diSukun
+hamzabelowKasra EC36 diHamza.below,diKasra
+hamzabelowKasratan EC37 diHamza.below,diKasratan
 
 NULL 0000 NULL
 CR 000D CR
