@@ -107,12 +107,16 @@ class MaxifyUFO():
 
     def addAnchors(self, glyph, base):
         anchors = base.anchors
+        if glyph.name == 'shaddaKasra':
+            m = 1
+        markAnchors = ['markAbove','markBelow','markAbove_1','markAbove_2',
+                       'markBelow_1','markBelow_2','_markAbove','_markBelow',
+                       '_markAbove_1','_markAbove_2','_markBelow_1','_markBelow_2',
+                       '_hamzaAbove','hamzaAbove','_hamzaBelow','hamzaBelow'
+                       ]
         if len(anchors):
             for anchor in anchors:
-                if anchor.name in ['markAbove', 'markBelow', 'markAbove_1', 'markAbove_2', 'markBelow_1',
-                                   'markBelow_2','_markAbove', '_markBelow', '_markAbove_1', '_markAbove_2',
-                                   '_markBelow_1',  '_markBelow_2'#, '_markAboveDot','_markBelowDot','markAboveDot','markBelowDot'
-                                    ]:
+                if anchor.name in markAnchors:
                     #anc = glyph.instantiateAnchor()
                     #anc.x = anchor.x
                     #anc.y = anchor.y

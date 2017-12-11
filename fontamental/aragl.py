@@ -525,6 +525,8 @@ uni06F7.urd E6F7 dig7Urdu
 #Arabic Lam Alef Legatur
 uni06440627.isol FEFB legLA.isol
 uni06440627.fina FEFC legLA.fina
+uni0644EE31.isol FEFD legLAShort.isol
+uni0644EE31.fina FEFE legLAShort.fina
 uni06440622.isol FEF5 legLAShort.isol,diMadda
 uni06440622.fina FEF6 legLAShort.fina,diMadda
 uni06440623.isol FEF7 legLAShort.isol,diHamza.above
@@ -738,8 +740,8 @@ _arglRaw = """\
 202e wsRlo rlo rlo
 2002 wsEnspace enspace enspace
 2003 wsEmspace emspace emspace
-2009 wsThinspace thinsapce thinspace
-200a wsHairspace hairspcae hairspace
+2009 wsThinspace thinspace thinspace
+200a wsHairspace hairspace hairspace
 
 
 # Arabic Isol glyphs
