@@ -319,11 +319,13 @@ uni06C3.isol EEA6 arHeh.isol,di2Dot.above
 uni06C3.fina EEA6 arHeh.fina2,di2Dot.above
 
 #Yeh Barree Hamza
-uni06D3.isol 06D3 arYeh.isol2,diHamza
+uni06D3 06D3 arYeh.isol2,diHamza
+uni06D3.isol FBB0 arYeh.isol2,diHamza
 uni06D3.fina FBB1 arYeh.fina2,diHamza
 
 #Yeh Barree
-uni06D2.isol 06D2 arYeh.isol2
+uni06D2 06D2 arYeh.isol2
+uni06D2.isol FBAE arYeh.isol2
 uni06D2.fina FBAF arYeh.fina2
 
 
@@ -474,7 +476,7 @@ uni06CB.fina FBDF arWaw.fina,di3Dot.above
 uni06CC 06CC arYeh.isol
 uni06CC.isol FBFC arYeh.isol
 uni06CC.fina FBFD arYeh.fina
-uni06CC.init FBFE arBeh.intt,di2Dot.below
+uni06CC.init FBFE arBeh.init,di2Dot.below
 uni06CC.medi FBFF arBeh.medi,di2Dot.below
 
 #Yaa V
@@ -964,4 +966,13 @@ def _buildraws():
 
 
 _buildraws()
+
+
+def _buildFea():
+    ar600 = sorted(UV2AGL.keys())
+    for letter in ar600:
+        if letter >= 1548 and  letter <= 1784:
+            print (UV2AGL[letter])
+
+_buildFea()
 m = 1
