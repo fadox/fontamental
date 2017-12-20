@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: fontamental
+Version: 0.6.0
+Summary: Fontamental, build fonts from fundamintal glyphs
+Home-page: https://github.com/fadox/fontamental
+Author: Abbas Majeed
+Author-email: fadox@gmx.net
+License: Simplified BSD
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: fontamental
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5

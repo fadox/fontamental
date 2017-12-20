@@ -1,0 +1,1039 @@
+# -----------------------------------------------------------
+# Copyright 1997, 2017 Fadox.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or
+# without modification, are permitted provided that the
+# following conditions are met:
+#
+# Redistributions of source code must retain the above
+# copyright notice, this list of conditions and the following
+# disclaimer.
+#
+# Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following
+# disclaimer in the documentation and/or other materials
+# provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+# CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# -----------------------------------------------------------
+# Name:          Arabic Glyph List For Ali Uni Fonts
+# Table version: 1.0
+# Date:          December 10, 2016
+# last update:   December 16, 2017
+# URL:           http://fadox.net
+#
+#END
+
+
+########################################################### 060
+
+
+#0600 ....... ARABIC NUMBER SIGN
+#0601 ....... ARABIC SIGN SANAH
+#0602 ....... ARABIC FOOTNOTE MARKER
+#0603 ....... ARABIC SIGN SAFHA
+#0604 ....... ARABIC SIGN SAMVAT
+#0605 ....... ARABIC NUMBER MARK ABOVE
+#0606 ....... ARABIC-INDIC CUBE ROOT
+#0607 ....... ARABIC-INDIC FOURTH ROOT
+#0608 ....... ARABIC RAY
+#0609 ....... ARABIC-INDIC PER MILLE SIGN
+#060A ....... ARABIC-INDIC PER TEN THOUSAND SIGN
+#060B ....... AFGHANI SIGN
+
+# - ARABIC COMMA
+uni060C 060C maComma
+
+#060D ....... ARABIC DATE SEPARATOR
+#060E ....... ARABIC POETIC VERSE SIGN
+#060F ....... ARABIC SIGN MISRA
+
+
+########################################################### 061
+
+
+#0610 ....... ARABIC SIGN SALLALLAHOU ALAYHE WASSALLAM
+#0611 ....... ARABIC SIGN ALAYHE ASSALLAM
+#0612 ....... ARABIC SIGN RAHMATULLAH ALAYHE
+#0613 ....... ARABIC SIGN RADI ALLAHOU ANH
+#0614 ....... ARABIC SIGN TAKHALLUS
+
+#Small Tah Above
+uni0615 0615 diTah.above
+
+#0616 ....... ARABIC SMALL HIGH LIGATURE ALEF WITH LAM WITH YEH
+#0617 ....... ARABIC SMALL HIGH ZAIN
+#0618 ....... ARABIC SMALL FATHA
+#0619 ....... ARABIC SMALL DAMMA
+#061A ....... ARABIC SMALL KASRA
+
+#Semicolon Arabic
+uni061B 061B maSemicolon
+
+#061C .......
+#061D .......
+#061E .......  ------- small three dot above
+
+# - ARABIC QUESTION MARK
+uni061F 061F maQuestion
+
+
+########################################################### 062
+
+
+#0620 .......  ------- ARABIC LETTER KASHMIRI YEH
+
+# - ARABIC LETTER HAMZA ء
+uni0621 0621 arHamza.isol
+uni0621.isol FE80 arHamza.isol
+
+# - ARABIC LETTER ALEF WITH MADDA ABOVE آ
+uni0622 0622 arAlef.isol,diMadda
+uni0622.isol FE81 arAlef.isol,diMadda
+uni0622.fina FE82 arAlef.fina,diMadda
+
+# - ARABIC LETTER ALEF WITH HAMZA ABOVE أ
+uni0623 0623 arAlefShort.isol,diHamza.above
+uni0623.isol FE83 arAlefShort.isol,diHamza.above
+uni0623.fina FE84 arAlefShort.fina,diHamza.above
+
+# - ARABIC LETTER WAW WITH HAMZA ABOVE ؤ
+uni0624 0624 arWaw.isol,diHamza
+uni0624.isol FE85 arWaw.isol,diHamza
+uni0624.fina FE86 arWaw.fina,diHamza
+
+# - ARABIC LETTER ALEF WITH HAMZA BELOW إ
+uni0625 0625 arAlef.isol,diHamza.below
+uni0625.isol FE87 arAlef.isol,diHamza.below
+uni0625.fina FE88 arAlef.fina,diHamza.below
+
+# - ARABIC LETTER YEH WITH HAMZA ABOVE ئ
+uni0626 0626 arYeh.isol,diHamza
+uni0626.isol FE89 arYeh.isol,diHamza
+uni0626.fina FE8A arYeh.fina,diHamza
+uni0626.init FE8B arBeh.init,diHamza
+uni0626.medi FE8C arBeh.medi,diHamza
+
+# - ARABIC LETTER ALEF ا
+uni0627 0627 arAlef.isol
+uni0627.isol FE8D arAlef.isol
+uni0627.fina FE8E arAlef.fina
+
+# - ARABIC LETTER BEH ب
+uni0628 0628 arBeh.isol,di1Dot.below
+uni0628.isol FE8F arBeh.isol,di1Dot.below
+uni0628.fina FE90 arBeh.fina,di1Dot.below
+uni0628.init FE91 arBeh.init,di1Dot.below
+uni0628.medi FE92 arBeh.medi,di1Dot.below
+
+# - ARABIC LETTER TEH MARBUTA ة
+uni0629 0629 arHeh.isol,di2Dot.above
+uni0629.isol FE93 arHeh.isol,di2Dot.above
+uni0629.fina FE94 arHeh.fina,di2Dot.above
+
+# - ARABIC LETTER TEH ت
+uni062A 062A arBeh.isol,di2Dot.above
+uni062A.isol FE95 arBeh.isol,di2Dot.above
+uni062A.fina FE96 arBeh.fina,di2Dot.above
+uni062A.init FE97 arBeh.init,di2Dot.above
+uni062A.medi FE98 arBeh.medi,di2Dot.above
+
+# - ARABIC LETTER THEH ث
+uni062B 062B arBeh.isol,di3Dot.above
+uni062B.isol FE99 arBeh.isol,di3Dot.above
+uni062B.fina FE9A arBeh.fina,di3Dot.above
+uni062B.init FE9B arBeh.init,di3Dot.above
+uni062B.medi FE9C arBeh.medi,di3Dot.above
+
+
+# - ARABIC LETTER JEEM ج
+uni062C 062C arHah.isol,di1Dot.below
+uni062C.isol FE9D arHah.isol,di1Dot.below
+uni062C.fina FE9E arHah.fina,di1Dot.below
+uni062C.init FE9F arHah.init,di1Dot.below
+uni062C.medi FEA0 arHah.medi,di1Dot.below
+
+# - ARABIC LETTER HAH ح
+uni062D 062D arHah.isol
+uni062D.isol FEA1 arHah.isol
+uni062D.fina FEA2 arHah.fina
+uni062D.init FEA3 arHah.init
+uni062D.medi FEA4 arHah.medi
+
+# - ARABIC LETTER KHAH خ
+uni062E 062E arHah.isol,di1Dot.above
+uni062E.isol FEA5 arHah.isol,di1Dot.above
+uni062E.fina FEA6 arHah.fina,di1Dot.above
+uni062E.init FEA7 arHah.init,di1Dot.above
+uni062E.medi FEA8 arHah.medi,di1Dot.above
+
+# - ARABIC LETTER DAL د
+uni062F 062F arDal.isol
+uni062F.isol FEA9 arDal.isol
+uni062F.fina FEAA arDal.fina
+
+
+########################################################### 063
+
+
+# - ARABIC LETTER THAL ذ
+uni0630 0630 arDal.isol,di1Dot.above
+uni0630.isol FEAB arDal.isol,di1Dot.above
+uni0630.fina FEAC arDal.fina,di1Dot.above
+
+# - ARABIC LETTER REH ر
+uni0631 0631 arReh.isol
+uni0631.isol FEAD arReh.isol
+uni0631.fina FEAE arReh.fina
+
+# - ARABIC LETTER ZAIN ز
+uni0632 0632 arReh.isol,di1Dot.above
+uni0632.isol FEAF arReh.isol,di1Dot.above
+uni0632.fina FEB0 arReh.fina,di1Dot.above
+
+# - ARABIC LETTER SEEN س
+uni0633 0633 arSeen.isol
+uni0633.isol FEB1 arSeen.isol
+uni0633.fina FEB2 arSeen.fina
+uni0633.init FEB3 arSeen.init
+uni0633.medi FEB4 arSeen.medi
+
+# - ARABIC LETTER SHEEN ش
+uni0634 0634 arSeen.isol,di3Dot.above
+uni0634.isol FEB5 arSeen.isol,di3Dot.above
+uni0634.fina FEB6 arSeen.fina,di3Dot.above
+uni0634.init FEB7 arSeen.init,di3Dot.above
+uni0634.medi FEB8 arSeen.medi,di3Dot.above
+
+# - ARABIC LETTER SAD ص
+uni0635 0635 arSad.isol
+uni0635.isol FEB9 arSad.isol
+uni0635.fina FEBA arSad.fina
+uni0635.init FEBB arSad.init
+uni0635.medi FEBC arSad.medi
+
+# - ARABIC LETTER DAD ض
+uni0636 0636 arSad.isol,di1Dot.above
+uni0636.isol FEBD arSad.isol,di1Dot.above
+uni0636.fina FEBE arSad.fina,di1Dot.above
+uni0636.init FEBF arSad.init,di1Dot.above
+uni0636.medi FEC0 arSad.medi,di1Dot.above
+
+# - ARABIC LETTER TAH ط
+uni0637 0637 arTah.isol
+uni0637.isol FEC1 arTah.isol
+uni0637.fina FEC2 arTah.fina
+uni0637.init FEC3 arTah.init
+uni0637.medi FEC4 arTah.medi
+
+# - ARABIC LETTER ZAH ظ
+uni0638 0638 arTah.isol,di1Dot.above
+uni0638.isol FEC5 arTah.isol,di1Dot.above
+uni0638.fina FEC6 arTah.fina,di1Dot.above
+uni0638.init FEC7 arTah.init,di1Dot.above
+uni0638.medi FEC8 arTah.medi,di1Dot.above
+
+# - ARABIC LETTER AIN ع
+uni0639 0639 arAin.isol
+uni0639.isol FEC9 arAin.isol
+uni0639.fina FECA arAin.fina
+uni0639.init FECB arAin.init
+uni0639.medi FECC arAin.medi
+
+# - ARABIC LETTER GHAIN غ
+uni063A 063A arAin.isol,di1Dot.above
+uni063A.isol FECD arAin.isol,di1Dot.above
+uni063A.fina FECE arAin.fina,di1Dot.above
+uni063A.init FECF arAin.init,di1Dot.above
+uni063A.medi FED0 arAin.medi,di1Dot.above
+
+#063B ....... ARABIC LETTER KEHEH WITH TWO DOTS ABOVE
+#063C ....... ARABIC LETTER KEHEH WITH THREE DOTS BELOW
+#063D ....... ARABIC LETTER FARSI YEH WITH INVERTED V
+#063E ....... ARABIC LETTER FARSI YEH WITH TWO DOTS ABOVE
+#063F ....... ARABIC LETTER FARSI YEH WITH THREE DOTS ABOVE
+
+
+########################################################### 064
+
+
+# - ARABIC TATWEEL (Kashida)
+uni0640 0640 arKashida
+
+# - ARABIC LETTER FEH ف
+uni0641 0641 arFeh.isol,di1Dot.above
+uni0641.isol FED1 arFeh.isol,di1Dot.above
+uni0641.fina FED2 arFeh.fina,di1Dot.above
+uni0641.init FED3 arFeh.init,di1Dot.above
+uni0641.medi FED4 arFeh.medi,di1Dot.above
+
+# - ARABIC LETTER QAF ق
+uni0642 0642 arQaf.isol,di2Dot.above
+uni0642.isol FED5 arQaf.isol,di2Dot.above
+uni0642.fina FED6 arQaf.fina,di2Dot.above
+uni0642.init FED7 arFeh.init,di2Dot.above
+uni0642.medi FED8 arFeh.medi,di2Dot.above
+
+# - ARABIC LETTER KAF ك
+uni0643 0643 arKaf.isol
+uni0643.isol FED9 arKaf.isol
+uni0643.fina FEDA arKaf.fina
+uni0643.init FEDB arKaf.init
+uni0643.medi FEDC arKaf.medi
+
+# - ARABIC LETTER LAM ل
+uni0644 0644 arLam.isol
+uni0644.isol FEDD arLam.isol
+uni0644.fina FEDE arLam.fina
+uni0644.init FEDF arLam.init
+uni0644.medi FEE0 arLam.medi
+
+# - ARABIC LETTER MEEM م
+uni0645 0645 arMeem.isol
+uni0645.isol FEE1 arMeem.isol
+uni0645.fina FEE2 arMeem.fina
+uni0645.init FEE3 arMeem.init
+uni0645.medi FEE4 arMeem.medi
+
+# - ARABIC LETTER NOON ن
+uni0646 0646 arNoon.isol,di1Dot.above
+uni0646.isol FEE5 arNoon.isol,di1Dot.above
+uni0646.fina FEE6 arNoon.fina,di1Dot.above
+uni0646.init FEE7 arBeh.init,di1Dot.above
+uni0646.medi FEE8 arBeh.medi,di1Dot.above
+
+# ARABIC LETTER HEH هـ
+uni0647 0647 arHeh.isol
+uni0647.isol FEE9 arHeh.isol
+uni0647.fina FEEA arHeh.fina
+uni0647.init FEEB arHeh.init
+uni0647.medi FEEC arHeh.medi
+
+# - ARABIC LETTER WAW و
+uni0648 0648 arWaw.isol
+uni0648.isol FEED arWaw.isol
+uni0648.fina FEEE arWaw.fina
+
+# - ARABIC LETTER ALEF MAKSURA ى
+uni0649 0649 arYeh.isol
+uni0649.isol FEEF arYeh.isol
+uni0649.fina FEF0 arYeh.fina
+
+# - ARABIC LETTER YEH ي
+uni064A 064A arYeh.isol,di2Dot.below
+uni064A.isol FEF1 arYeh.isol,di2Dot.below
+uni064A.fina FEF2 arYeh.fina,di2Dot.below
+uni064A.init FEF3 arBeh.init,di2Dot.below
+uni064A.medi FEF4 arBeh.medi,di2Dot.below
+
+# - ARABIC FATHATAN
+uni064B 064B diFathatan
+
+# - ARABIC DAMMATAN
+uni064C 064C diDammatan
+
+# - ARABIC KASRATAN
+uni064D 064D diKasratan
+
+# - ARABIC FATHA
+uni064E 064E diFatha
+
+# - ARABIC DAMMA
+uni064F 064F diDamma
+
+
+########################################################### 065
+
+
+# - ARABIC KASRA
+uni0650 0650 diKasra
+
+# - ARABIC SHADDA
+uni0651 0651 diShadda
+
+# - ARABIC SUKUN
+uni0652 0652 diSukun
+
+# - ARABIC MADDAH ABOVE
+uni0653 0653 diMadda
+
+# - ARABIC HAMZA ABOVE
+uni0654 0654 diHamza.above
+
+# - ARABIC HAMZA BELOW
+uni0655 0655 diHamza.below
+
+# - ARABIC SUBSCRIPT ALEF
+uni0656 0656 diLonga.below
+
+#0657 ....... ARABIC INVERTED DAMMA
+#0658 ....... ARABIC MARK NOON GHUNNA
+#0659 ....... ARABIC ZWARAKAY
+
+# - ARABIC VOWEL SIGN SMALL V ABOVE
+uni065A 065A diSmallV.above
+
+#065B ....... ARABIC VOWEL SIGN INVERTED SMALL V ABOVE
+#065C ....... ARABIC VOWEL SIGN DOT BELOW
+#065D ....... ARABIC REVERSED DAMMA
+#065E ....... ARABIC FATHA WITH TWO DOTS
+#065F ....... ARABIC WAVY HAMZA BELOW
+
+
+########################################################### 066
+
+
+# =========== Arabic-Indic digits  ============== #
+
+
+# - ARABIC-INDIC DIGIT ZERO ٠
+uni0660 0660 dig0
+
+# - ARABIC-INDIC DIGIT ONE ۱
+uni0661 0661 dig1
+
+# - ARABIC-INDIC DIGIT TWO ۲
+uni0662 0662 dig2
+
+# - ARABIC-INDIC DIGIT THREE ۳
+uni0663 0663 dig3
+
+# - ARABIC-INDIC DIGIT FOUR ٤
+uni0664 0664 dig4
+
+# - ARABIC-INDIC DIGIT FIVE ۵
+uni0665 0665 dig5
+
+# - ARABIC-INDIC DIGIT SIX ٦
+uni0666 0666 dig6
+
+# - ARABIC-INDIC DIGIT SEVEN ۷
+uni0667 0667 dig7
+
+# - ARABIC-INDIC DIGIT EIGHT ۸
+uni0668 0668 dig8
+
+# - ARABIC-INDIC DIGIT NINE ۹
+uni0669 0669 dig9
+
+
+# =========== Punctuation  ============== #
+
+
+# - ARABIC PERCENT SIGN
+uni066A 066A maPercent
+
+# - ARABIC DECIMAL SEPARATOR
+uni066B 066B maDecimal
+
+# - ARABIC THOUSANDS SEPARATOR
+uni066C 066C maThousandsep
+
+# - ARABIC FIVE POINTED STAR
+uni066D 066D maAsterisk
+
+# - ARABIC LETTER DOTLESS BEH
+uni066E 066E arBeh.isol
+uni066E.isol E6E0 arBeh.isol
+uni066E.fina E6E1 arBeh.fina
+uni066E.init FBE8 arBeh.init
+uni066E.medi FBE9 arBeh.medi
+
+# - ARABIC LETTER DOTLESS QAF
+uni066F 066F arQaf.isol
+uni066F.isol E6F0 arQaf.isol
+uni066F.fina E6F1 arQaf.fina
+uni066F.init E6F2 arFeh.init
+uni066F.medi E6F3 arFeh.medi
+
+
+########################################################### 067
+
+
+# - ARABIC LETTER SUPERSCRIPT ALEF
+uni0670 0670 diLonga.above
+
+# - ARABIC LETTER ALEF WASLA
+uni0671 0671 arAlefShort.isol,diWasla
+uni0671.isol FB50 arAlefShort.isol,diWasla
+uni0671.fina FB51 arAlefShort.fina,diWasla
+
+#0672 ....... ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE
+#0673 ....... ARABIC LETTER ALEF WITH WAVY HAMZA BELOW
+#0674 ....... ARABIC LETTER HIGH HAMZA
+#0675 ....... ARABIC LETTER HIGH HAMZA ALEF
+#0676 ....... ARABIC LETTER HIGH HAMZA WAW
+#0677 ....... ARABIC LETTER U WITH HAMZA ABOVE
+#0678 ....... ARABIC LETTER HIGH HAMZA YEH
+
+# - ARABIC LETTER TTEH
+uni0679 0679 arBeh.isol,diTah.above
+uni0679.isol FB66 arBeh.isol,diTah.above
+uni0679.fina FB67 arBeh.fina,diTah.above
+uni0679.init FB68 arBeh.init,diTah.above
+uni0679.medi FB69 arBeh.medi,diTah.above
+
+#067A ....... ARABIC LETTER TTE
+#067B ....... ARABIC LETTER BEEH
+#067C ....... ARABIC LETTER TEH WITH RING
+#067D ....... ARABIC LETTER TEH WITH THREE DOTS ABOVE DOWNWARDS
+
+# - ARABIC LETTER PEH پ
+uni067E 067E arBeh.isol,di3IDot.below
+uni067E.isol FB56 arBeh.isol,di3IDot.below
+uni067E.fina FB57 arBeh.fina,di3IDot.below
+uni067E.init FB58 arBeh.init,di3IDot.below
+uni067E.medi FB59 arBeh.medi,di3IDot.below
+
+#067F ....... ARABIC LETTER TEHEH
+
+
+########################################################### 068
+
+
+#0680 ....... ARABIC LETTER BEHEH
+#0681 ....... ARABIC LETTER HAH WITH HAMZA ABOVE
+#0682 ....... ARABIC LETTER HAH WITH TWO DOTS VERTICAL ABOVE
+#0683 ....... ARABIC LETTER NYEH
+#0684 ....... ARABIC LETTER DYEH
+#0685 ....... ARABIC LETTER HAH WITH THREE DOTS ABOVE
+
+# - ARABIC LETTER TCHEH چ
+uni0686 0686 arHah.isol,di3IDot.below
+uni0686.isol FB7A arHah.isol,di3IDot.below
+uni0686.fina FB7B arHah.fina,di3IDot.below
+uni0686.init FB7C arHah.init,di3IDot.below
+uni0686.medi FB7D arHah.medi,di3IDot.below
+
+#0687 ....... ARABIC LETTER TCHEHEH
+
+# - ARABIC LETTER DDAL
+uni0688 0688 arDal.isol,diTah.above
+uni0688.isol FB88 arDal.isol,diTah.above
+uni0688.fina FB89 arDal.fina,diTah.above
+
+#0689 ....... ARABIC LETTER DAL WITH RING
+#068A ....... ARABIC LETTER DAL WITH DOT BELOW
+#068B ....... ARABIC LETTER DAL WITH DOT BELOW AND SMALL TAH
+#068C ....... ARABIC LETTER DAHAL
+#068D ....... ARABIC LETTER DDAHAL
+
+# - ARABIC LETTER DUL
+uni068E 068E arDal.isol,di3Dot.above
+uni068E.isol FB86 arDal.isol,di3Dot.above
+uni068E.fina FB87 arDal.fina,di3Dot.above
+
+#068F ....... ARABIC LETTER DAL WITH THREE DOTS ABOVE DOWNWARDS
+
+
+########################################################### 069
+
+
+#0690 ....... ARABIC LETTER DAL WITH FOUR DOTS ABOVE
+
+# - ARABIC LETTER RREH
+uni0691 0691 arReh.isol,diTah.above
+uni0691.isol FB8C arReh.isol,diTah.above
+uni0691.fina FB8D arReh.fina,diTah.above
+
+#0692 ....... ARABIC LETTER REH WITH SMALL V
+#0693 ....... ARABIC LETTER REH WITH RING
+#0694 ....... ARABIC LETTER REH WITH DOT BELOW
+
+# - ARABIC LETTER REH WITH SMALL V BEL ڕ
+uni0695 0695 arReh.isol,diSmallV.below
+uni0695.isol E950 arReh.isol,diSmallV.below
+uni0695.fina E951 arReh.fina,diSmallV.below
+
+#0696 ....... ARABIC LETTER REH WITH DOT BELOW AND DOT ABOVE
+#0697 ....... ARABIC LETTER REH WITH TWO DOTS ABOVE
+
+# - ARABIC LETTER JEH ژ
+uni0698 0698 arReh.isol,di3Dot.above
+uni0698.isol FB8A arReh.isol,di3Dot.above
+uni0698.fina FB8B arReh.fina,di3Dot.above
+
+#0699 ....... ARABIC LETTER REH WITH FOUR DOTS ABOVE
+#069A ....... ARABIC LETTER SEEN WITH DOT BELOW AND DOT ABOVE
+#069B ....... ARABIC LETTER SEEN WITH THREE DOTS BELOW
+#069C ....... ARABIC LETTER SEEN WITH THREE DOTS BELOW AND THREE DOTS ABOVE
+#069D ....... ARABIC LETTER SAD WITH TWO DOTS BELOW
+#069E ....... ARABIC LETTER SAD WITH THREE DOTS ABOVE
+#069F ....... ARABIC LETTER TAH WITH THREE DOTS ABOVE
+
+
+########################################################### 06A
+
+
+#06A0 ....... ARABIC LETTER AIN WITH THREE DOTS ABOVE
+
+# - ARABIC LETTER DOTLESS FEH
+uni06A1 06A1 arFeh.isol
+uni06A1.isol EA10 arFeh.isol
+uni06A1.fina EA11 arFeh.fina
+uni06A1.init EA12 arFeh.init
+uni06A1.medi EA13 arFeh.medi
+
+#06A2 ....... ARABIC LETTER FEH WITH DOT MOVED BELOW
+#06A3 ....... ARABIC LETTER FEH WITH DOT BELOW
+
+# - ARABIC LETTER VEH ڤ
+uni06A4 06A4 arFeh.isol,di3Dot.above
+uni06A4.isol FB6A arFeh.isol,di3Dot.above
+uni06A4.fina FB6B arFeh.fina,di3Dot.above
+uni06A4.init FB6C arFeh.init,di3Dot.above
+uni06A4.medi FB6D arFeh.medi,di3Dot.above
+
+#06A5 ....... ARABIC LETTER FEH WITH THREE DOTS BELOW
+#06A6 ....... ARABIC LETTER PEHEH
+#06A7 ....... ARABIC LETTER QAF WITH DOT ABOVE
+#06A8 ....... ARABIC LETTER QAF WITH THREE DOTS ABOVE
+
+# - ARABIC LETTER KEHEH
+uni06A9 06A9 arKeheh.isol ک
+uni06A9.isol FB8E arKeheh.isol
+uni06A9.fina FB8F arKeheh.fina
+uni06A9.init FB90 arKaf.init
+uni06A9.medi FB91 arKaf.medi
+
+#06AA ....... ARABIC LETTER SWASH KAF
+#06AB ....... ARABIC LETTER KAF WITH RING
+#06AC ....... ARABIC LETTER KAF WITH DOT ABOVE
+#06AD ....... ARABIC LETTER NG
+#06AE ....... ARABIC LETTER KAF WITH THREE DOTS BELOW
+
+# - ARABIC LETTER GAF گ
+uni06AF 06AF arKeheh.isol,diGaf.above
+uni06AF.isol FB92 arKeheh.isol,diGaf.above
+uni06AF.fina FB93 arKeheh.fina,diGaf.above
+uni06AF.init FB94 arKaf.init,diGaf.above
+uni06AF.medi FB95 arKaf.medi,diGaf.above
+
+
+########################################################### 06B
+
+
+#06B0 ....... ARABIC LETTER GAF WITH RING
+#06B1 ....... ARABIC LETTER NGOEH
+#06B2 ....... ARABIC LETTER GAF WITH TWO DOTS BELOW
+#06B3 ....... ARABIC LETTER GUEH
+#06B4 ....... ARABIC LETTER GAF WITH THREE DOTS ABOVE
+
+# - ARABIC LETTER LAM WITH SMALL V ڵ
+uni06B5 06B5 arLam.isol,diSmallV.above
+uni06B5.isol EB50 arLam.isol,diSmallV.above
+uni06B5.fina EB51 arLam.fina,diSmallV.above
+uni06B5.init EB52 arLam.init,diSmallV.above
+uni06B5.medi EB53 arLam.medi,diSmallV.above
+
+#06B6 ....... ARABIC LETTER LAM WITH DOT ABOVE
+#06B7 ....... ARABIC LETTER LAM WITH THREE DOTS ABOVE
+#06B8 ....... ARABIC LETTER LAM WITH THREE DOTS BELOW
+#06B9 ....... ARABIC LETTER NOON WITH DOT BELOW
+
+# - ARABIC LETTER NOON GHUNNA (DOTLESS)
+uni06BA 06BA arNoon.isol
+uni06BA.isol FB9E arNoon.isol
+uni06BA.fina FB9F arNoon.fina
+uni06BA.init EBA0 arBeh.init
+uni06BA.medi EBA1 arBeh.medi
+
+#06BB ....... ARABIC LETTER RNOON
+
+# - ARABIC LETTER NOON WITH RING
+uni06BC 06BC arNoon.isol,di1Dot.above,diRing.below
+uni06BC.isol EBC0 arNoon.isol,di1Dot.above,diRing.below
+uni06BC.fina EBC1 arNoon.fina,di1Dot.above,diRing.below
+uni06BC.init EBC2 arBeh.init,di1Dot.above,diRing.below
+uni06BC.medi EBC3 arBeh.medi,di1Dot.above,diRing.below
+
+#06BD ....... ARABIC LETTER NOON WITH THREE DOTS ABOVE
+
+# - ARABIC LETTER HEH DOACHASHMEE هـ
+uni06BE 06BE arHehDo.isol
+uni06BE.isol FBAA arHehDo.isol
+uni06BE.fina FBAB arHehDo.fina
+uni06BE.init FBAC arHeh.init
+uni06BE.medi FBAD arHeh.medi
+
+#06BF ....... ARABIC LETTER TCHEH WITH DOT ABOVE
+
+
+########################################################### 06C
+
+
+# - ARABIC LETTER HEH WITH YEH ABOVE
+uni06C0 06C0 arHeh.isol,diHamza
+uni06C0.isol FBA4 arHeh.isol,diHamza
+uni06C0.fina FBA5 arHeh.fina,diHamza
+
+# - ARABIC LETTER HEH GOAL
+uni06C1 06C1 arHeh.isol
+uni06C1.isol FBA6 arHeh.isol
+uni06C1.fina FBA7 arHeh.fina2
+uni06C1.init FBA8 arHeh.init2
+uni06C1.medi FBA9 arHeh.medi2
+
+# - ARABIC LETTER HEH GOAL WITH HAMZA ABOVE
+uni06C2 06C2 arHeh.isol,diHamza
+uni06C2.isol EC20 arHeh.isol,diHamza
+uni06C2.fina EC21 arHeh.fina2,diHamza
+
+# - ARABIC LETTER TEH MARBUTA GOAL
+uni06C3 06C3 arHeh.isol,di2Dot.above
+uni06C3.isol EC30 arHeh.isol,di2Dot.above
+uni06C3.fina EC31 arHeh.fina2,di2Dot.above
+
+#06C4 ....... ARABIC LETTER WAW WITH RI
+#06C5 ....... ARABIC LETTER KIRGHIZ OE
+
+
+# - ARABIC LETTER OE ۆ
+uni06C6 06C6 arWaw.isol,diSmallV.above
+uni06C6.isol FBD9 arWaw.isol,diSmallV.above
+uni06C6.fina FBDA arWaw.fina,diSmallV.above
+
+#06C7 ....... ARABIC LETTER U
+#06C8 ....... ARABIC LETTER YU
+#06C9 ....... ARABIC LETTER KIRGHIZ YU
+
+# - ARABIC LETTER WAW WITH TWO DOTS ABOVE
+uni06CA 06CA arWaw.isol,di2Dot.above
+uni06CA.isol ECA0 arWaw.isol,di2Dot.above
+uni06CA.fina ECA1 arWaw.fina,di2Dot.above
+
+# - ARABIC LETTER VE
+uni06CB 06CB arWaw.isol,di3Dot.above
+uni06CB.isol FBDE arWaw.isol,di3Dot.above
+uni06CB.fina FBDF arWaw.fina,di3Dot.above
+
+# - ARABIC LETTER FARSI YEH ی
+uni06CC 06CC arYeh.isol
+uni06CC.isol FBFC arYeh.isol
+uni06CC.fina FBFD arYeh.fina
+uni06CC.init FBFE arBeh.init,di2Dot.below
+uni06CC.medi FBFF arBeh.medi,di2Dot.below
+
+#06CD ....... ARABIC LETTER YEH WITH TAIL
+
+# - ARABIC LETTER YEH WITH SMALL V ێ
+uni06CE 06CE arYeh.isol,diSmallV.above
+uni06CE.isol ECE0 arYeh.isol,diSmallV.above
+uni06CE.fina ECE1 arYeh.fina,diSmallV.above
+uni06CE.init ECE2 arBeh.init,di2Dot.below,diSmallV.above
+uni06CE.medi ECE3 arBeh.medi,di2Dot.below,diSmallV.above
+
+#06CF ....... ARABIC LETTER WAW WITH DOT ABOVE
+
+
+########################################################### 06D
+
+
+# - ARABIC LETTER E
+uni06D0 06D0 arYeh.isol,di2VDot.below
+uni06D0.isol FBE4 arYeh.isol,di2VDot.below
+uni06D0.fina FBE5 arYeh.fina,di2VDot.below
+uni06D0.init FBE6 arBeh.init,di2VDot.below
+uni06D0.medi FBE7 arBeh.medi,di2VDot.below
+
+#06D1 ....... ARABIC LETTER YEH WITH THREE DOTS BELOW
+
+# - ARABIC LETTER YEH BARREE
+uni06D2 06D2 arYeh.isol2
+uni06D2.isol FBAE arYeh.isol2
+uni06D2.fina FBAF arYeh.fina2
+
+# - ARABIC LETTER YEH BARREE WITH HAMZA ABOVE
+uni06D3 06D3 arYeh.isol2,diHamza
+uni06D3.isol FBB0 arYeh.isol2,diHamza
+uni06D3.fina FBB1 arYeh.fina2,diHamza
+
+# - ARABIC FULL STOP
+uni06D4 06D4 maFullStop
+
+# - ARABIC LETTER AE (Kurdish Bzwin) ە
+uni06D5 06D5 arHeh.isol
+uni06D5.isol ED50 arHeh.isol
+uni06D5.fina ED51 arHeh.fina
+
+# ===== Koranic annotation signs  ===== #
+
+#06D1 ....... ARABIC SMALL HIGH LIGATURE SAD WITH LAM WITH ALEF MAKSURA
+#06D1 ....... ARABIC SMALL HIGH LIGATURE QAF WITH LAM WITH ALEF MAKSURA
+#06D1 ....... ARABIC SMALL HIGH MEEM INITIAL FORM
+#06D1 ....... ARABIC SMALL HIGH LAM ALEF
+#06D1 ....... ARABIC SMALL HIGH JEEM
+#06D1 ....... ARABIC SMALL HIGH THREE DOTS
+#06D1 ....... ARABIC SMALL HIGH SEEN
+#06D1 ....... ARABIC END OF AYAH
+#06D1 ....... ARABIC START OF RUB EL HIZB
+#06D1 ....... ARABIC SMALL HIGH ROUNDED ZERO
+
+
+########################################################### 06E
+
+
+#06E0 ....... ARABIC SMALL HIGH UPRIGHT RECTANGULAR ZERO
+#06E1 ....... ARABIC SMALL HIGH DOTLESS HEAD OF KHAH
+#06E2 ....... ARABIC SMALL HIGH MEEM ISOLATED FORM
+#06E3 ....... ARABIC SMALL LOW SEEN
+#06E4 ....... ARABIC SMALL HIGH MADDA
+#06E5 ....... ARABIC SMALL WAW
+#06E6 ....... ARABIC SMALL YEH
+#06E7 ....... ARABIC SMALL HIGH YEH
+#06E8 ....... ARABIC SMALL HIGH NOON
+#06E9 ....... ARABIC PLACE OF SAJDAH
+#06EA ....... ARABIC EMPTY CENTRE LOW STOP
+#06EB ....... ARABIC EMPTY CENTRE HIGH STOP
+#06EC ....... ARABIC ROUNDED HIGH STOP WITH FILLED CENTRE
+#06ED ....... ARABIC SMALL LOW MEEM
+#06EE ....... ARABIC LETTER DAL WITH INVERTED V
+#06EF ....... ARABIC LETTER REH WITH INVERTED V
+
+
+
+########################################################### 06F
+
+
+# - EXTENDED ARABIC-INDIC DIGIT ZERO ٠
+uni06F0 06F0 dig0
+
+# - EXTENDED ARABIC-INDIC DIGIT ONE ۱
+uni06F1 06F1 dig1
+
+# - EXTENDED ARABIC-INDIC DIGIT TWO ۲
+uni06F2 06F2 dig2
+
+# - EXTENDED ARABIC-INDIC DIGIT THREE ۳
+uni06F3 06F3 dig3
+
+# - EXTENDED ARABIC-INDIC DIGIT FOUR ٤
+uni06F4 06F4 dig4Farsi
+
+# - EXTENDED ARABIC-INDIC DIGIT FIVE ۵
+uni06F5 06F5 dig5Farsi
+
+# - EXTENDED ARABIC-INDIC DIGIT SIX ٦
+uni06F6 06F6 dig6Farsi
+
+# - EXTENDED ARABIC-INDIC DIGIT SEVEN ۷
+uni06F7 06F7 dig7
+
+# - EXTENDED ARABIC-INDIC DIGIT EIGHT ۸
+uni06F8 06F8 dig8
+
+# - EXTENDED ARABIC-INDIC DIGIT NINE ۹
+uni06F9 06F9 dig9
+
+#06FA ....... ARABIC LETTER SHEEN WITH DOT BELOW
+#06FB ....... ARABIC LETTER DAD WITH DOT BELOW
+#06FC ....... ARABIC LETTER GHAIN WITH DOT BELOW
+#06FD ....... ARABIC SIGN SINDHI AMPERSAND
+#06FE ....... ARABIC SIGN SINDHI POSTPOSITION MEN
+#06FF ....... ARABIC LETTER HEH WITH INVERTED V
+
+
+
+#######################################################
+######## End of Arabic Range: 0600–06FF  ##############
+#######################################################
+
+
+
+
+
+#######################################################
+########          Other Ranges           ##############
+#######################################################
+
+NULL 0000 NULL
+CR 000D CR
+space 0020 space
+base 25CC wsBase
+ZWNJ 200C wsZwnj
+ZWJ 200D wsZwj
+lrm 200E wsLrm
+rlm 200F wsRlm
+lre 202a wsLre
+rle 202b wsRle
+pdf 202c wsPdf
+lro 202d wsLro
+rlo 202e wsRlo
+enspace 2002 wsEnspace
+emspace 2003 wsEmspace
+thinspace 2009 wsThinspace
+hairspace 200a wsHairspace
+
+# - ARABIC SYMBOL DOT
+uniFBB2 FBB2 di1Dot.above
+uniFBB3 FBB3 di1Dot.below
+uniFBB4 FBB4 di2Dot.above
+uniFBB5 FBB5 di2Dot.below
+uniFBB6 FBB6 di3Dot.above
+uniFBB7 FBB7 di3Dot.below
+uniFBB8 FBB8 di3IDot.above
+uniFBB9 FBB9 di3IDot.below
+uniFBBA FBBA di4Dot.above
+uniFBBB FBBB di4Dot.below
+uniFBBD FBBD di2VDot.above
+uniFBBE FBBE di2VDot.below
+
+# - ARABIC SYMBOL RING
+uniFBBF FBBF diRing.below
+
+# - ORNATE LEFT PARENTHESIS
+uniFD3E FD3E maOrnateLeft
+
+# - ORNATE RIGHT PARENTHESIS
+uniFD3F FD3F maOrnateRight
+
+# - ARABIC LIGATURE ALLAH ISOLATED FORM
+uniFDF2 FDF2 legAllah
+
+# - ARABIC LIGATURE SALLALLAHOU ALAYHE
+uniFDFA FDFA legSalah
+
+
+#######################################################
+########      Components &   Alternates     ###########
+#######################################################
+
+
+# - ARABIC LETTER ALEF Short Isol
+uniE270 E270 arAlefShort.isol
+
+# - ARABIC LETTER ALEF Short Fina
+uniE271 E271 arAlefShort.fina
+
+
+
+# - Lega LA Isol Alef
+uni0627.la.isol E272 arAlef.isol.la
+
+# - Lega LA Isol Short Alev
+uniE270.la.isol E273 arAlefShort.isol.la
+
+
+# - Lega LA Fina Alef 0627
+uni0627.la.fina E274 arAlef.fina.la
+
+# - Lega LA Fina Short Alef
+uniE270.la.fina E275 arAlefShort.fina.la
+
+
+
+# - Lega LA Isol Alef 0622
+uni0622.la.isol E220 arAlef.isol.la,diMadda
+
+# - Lega LA Fina Alef 0622
+uni0622.la.fina E221 arAlef.fina.la,diMadda
+
+# - Lega LA Isol Alef 0623
+uni0623.la.isol E230 arAlef.isol.la,diHamza.above
+
+# - Lega LA Fina Alef 0623
+uni0623.la.fina E231 arAlef.fina.la,diHamza.above
+
+
+# - Lega LA Isol Alef 0625
+uni0625.la.isol E250 arAlefShort.isol.la,diHamza.below
+
+# - Lega LA Fina Alef 0625
+uni0625.la.fina E251 arAlefShort.fina.la,diHamza.below
+
+# - Lega LA Isol Alef 0671
+uni0671.la.isol E710 arAlef.isol.la,diWasla
+
+# - Lega LA Fina Alef 0671
+uni0671.la.fina E711 arAlef.fina.la,diWasla
+
+
+
+# - Lega LA Isol lam
+uni0644.init.la E440 arLam.init.la
+
+# - Lega LA fina lam
+uni0644.medi.la E441 arLam.medi.la
+
+
+# - Lega LA Isol lam
+uni06B5.init.la EB54 arLam.init.la,diSmallV.above
+
+# - Lega LA fina lam
+uni06B5.medi.la EB55 arLam.medi.la,diSmallV.above
+
+
+
+
+# - URDU ARABIC-INDIC DIGIT FOUR
+uni06F4.urd EF40 dig4Urdu
+
+# - URDU ARABIC-INDIC DIGIT SEVEN
+uni06F7.urd EF70 dig7Urdu
+
+#Component Gaf Above
+uniEE0B EAF0 diGaf.above
+
+#Component Hamza Above
+uniEE0A E740 diHamza
+
+#Component Small V Bellow
+uniEE0C E5A0 diSmallV.below
+
+#Component Wasla
+uniEE07 EE07 diWasla
+
+#uniFE91.yeh EE91 arBeh.init.yeh,di1Dot.below
+
+
+#######################################################
+########      L E G A T O R E S             ###########
+#######################################################
+
+#LegaDiacritic
+shaddaFatha FC60 diShadda,diFatha
+shaddaDamma FC61 diShadda,diDamma
+shaddaKasra FC62 diShadda,diKasra
+shaddaAlefAbove FC63 diShadda,diLonga.above
+shaddaFathatan E510 diShadda,diFathatan
+shaddaDammatan FC5E diShadda,diDammatan
+shaddaKasratan FC5F diShadda,diKasratan
+
+#hamzaaboveDamma E741 diHamza.above,diDamma
+#hamzaaboveDammatan E742 diHamza.above,diDammatan
+#hamzaaboveFatha E743 diHamza.above,diFatha
+#hamzaaboveFathatan E744 diHamza.above,diFathatan
+#hamzaaboveSukun E745 diHamza.above,diSukun
+#hamzabelowKasra E746 diHamza.below,diKasra
+#hamzabelowKasratan E747 diHamza.below,diKasratan
+
+#### Deprecated    XXXXXXXXXXXX
+
+#Arabic Lam Alef Legatur
+#uni06440627.isol FEFB legLA.isol
+#uni06440627.fina FEFC legLA.fina
+#uni0644EE31.isol FEFD legLAShort.isol
+#uni0644EE31.fina FEFE legLAShort.fina
+#uni06440622.isol FEF5 legLAShort.isol,diMadda
+#uni06440622.fina FEF6 legLAShort.fina,diMadda
+#uni06440623.isol FEF7 legLAShort.isol,diHamza.above
+#uni06440623.fina FEF8 legLAShort.fina,diHamza.above
+#uni06440625.isol FEF9 legLA.isol,diHamza.below
+#uni06440625.fina FEFA legLA.fina,diHamza.below
+#uni06B50627.isol EFFB legLA.isol,diSmallV.above
+#uni06B50627.fina EFFC legLA.fina,diSmallV.above
+#uni06440671.isol EFFD legLAShort.isol,diWasla
+#uni06440671.fina EFFE legLAShort.fina,diWasla

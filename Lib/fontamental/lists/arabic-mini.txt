@@ -1,0 +1,252 @@
+# -----------------------------------------------------------
+# Copyright 1997, 2017 Fadox.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or
+# without modification, are permitted provided that the
+# following conditions are met:
+#
+# Redistributions of source code must retain the above
+# copyright notice, this list of conditions and the following
+# disclaimer.
+#
+# Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following
+# disclaimer in the documentation and/or other materials
+# provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+# CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# -----------------------------------------------------------
+# Name:          Arabic Glyph List For Ali Uni Fonts
+# Table version: 1.0
+# Date:          December 10, 2016
+# last update:   December 16, 2017
+# URL:           http://fadox.net
+#
+#END
+
+# Spacing
+0000 Null NULL NULL
+000D CR CR CR
+25CC wsBase base base
+0020 space space space
+200C wsZwnj ZWNJ ZWNJ
+200D wsZwj ZWJ ZWJ
+200E wsLrm lrm lrm
+200F wsRlm rlm rlm
+202a wsLre lre lre
+202b wsRle rle rle
+202c wsPdf pdf pdf
+202d wsLro lro lro
+202e wsRlo rlo rlo
+2002 wsEnspace enspace enspace
+2003 wsEmspace emspace emspace
+2009 wsThinspace thinspace thinspace
+200a wsHairspace hairspace hairspace
+
+
+# Arabic Isol glyphs
+0621 arHamza.isol uni0621 uni0621,uni0621.isol
+0627 arAlef.isol uni0627 uni0627,uni0627.isol,uni0623,uni0623.isol,uni0625,uni0625.isol,uni0622,uni0622.isol
+062D arHah.isol uni062D uni062D,uni062D.isol,uni062E,uni062E.isol,uni062C,uni062C.isol,uni0686,uni0686.isol
+062F arDal.isol uni062F uni062F,uni062F.isol,uni0630,uni0630.isol,uni068E,uni068E.isol
+0631 arReh.isol uni0631 uni0631,uni0631.isol,uni0632,uni0632.isol,uni0695,uni0695.isol,uni0698,uni0698.isol
+0633 arSeen.isol uni0633 uni0633,uni0633.isol,uni0634,uni0634.isol
+0635 arSad.isol uni0635 uni0635,uni0635.isol,uni0636,uni0636.isol
+0637 arTah.isol uni0637 uni0637,uni0637.isol,uni0638,uni0638.isol
+0639 arAin.isol uni0639 uni0639,uni0639.isol,uni063A,uni063A.isol
+0643 arKaf.isol uni0643 uni0643,uni0643.isol
+0644 arLam.isol uni0644 uni0644,uni0644.isol,uni06B5,uni06B5.isol
+0645 arMeem.isol uni0645 uni0645,uni0645.isol
+0647 arHeh.isol uni0647 uni0647,uni0647.isol,uni06D5,uni06D5.isol,uni0629,uni0629.isol,uni06C0,uni06C0.isol
+0648 arWaw.isol uni0648 uni0648,uni0648.isol,uni0624,uni0624.isol,uni06C6,uni06C6.isol,uni06CA,uni06CA.isol,uni06CB,uni06CB.isol
+0649 arYeh.isol uni0649 uni0649,uni0649.isol,uni064A,uni064A.isol,uni06CE,uni06CE.isol,uni06D0,uni06D0.isol
+066E arBeh.isol uni066E uni066E,uni066E.isol,uni0628,uni0628.isol,uni062A,uni062A.isol,uni062B,uni062B.isol,uni067E,uni067E.isol
+066F arQaf.isol uni066F uni066F,uni066F.isol,uni0642,uni0642.isol
+06A1 arFeh.isol uni06A1 uni06A1,uni06A1.isol,uni0641,uni0641.isol,uni06A4,uni06A4.isol
+06A9 arKeheh.isol uni06A9 uni06A9,uni06A9.isol,uni06AF,uni06AF.isol
+#06AF arGaf.isol uni06AF uni06AF,uni06AF.isol
+06BA arNoon.isol uni06BA uni06BA,uni06BA.isol,uni0646,uni0646.isol,uni06BC,uni06BC.isol
+06BE arHehDo.isol uni06BE uni06BE,uni06BE.isol
+E270 arAlefShort.isol uniE270 uniE270,uni0623,uni0623.isol,uni0622,uni0622.isol
+
+
+# Arabic Presentations
+E6E1 arBeh.fina uni066E.fina uni066E.fina,uni0628.fina,uni062A.fina,uni062B.fina
+E6E2 arBeh.init uni066E.init uni066E.init,uni0628.init,uni062A.init,uni062B.init
+E6E3 arBeh.medi uni066E.medi uni066E.medi,uni0628.medi,uni062A.medi,uni062B.medi
+E6F1 arQaf.fina uni066F.fina uni066F.fina,uni0642.fina
+EA11 arFeh.fina uni06A1.fina uni06A1.fina,uni0641.fina,uni06A4.fina
+EA12 arFeh.init uni06A1.init uni06A1.init,uni0641.init,uni06A4.init
+EA13 arFeh.medi uni06A1.medi uni06A1.medi,uni0641.medi,uni06A4.medi
+FB8F arKeheh.fina uni06A9.fina uni06A9.fina,uni06AF.fina
+FB9F arNoon.fina uni06BA.fina uni06BA.fina,uni0646.fina,uni06BC.fina
+FBAB arHehDo.fina uni06BE.fina uni06BE.fina
+FE8E arAlef.fina uni0627.fina uni0627.fina,uni0623.fina,uni0625.fina,uni0622.fina
+FEA2 arHah.fina uni062D.fina uni062D.fina,uni062E.fina,uni062C.fina,uni0686.fina
+FEA3 arHah.init uni062D.init uni062D.init,uni062E.init,uni062C.init,uni0686.init
+FEA4 arHah.medi uni062D.medi uni062D.medi,uni062E.medi,uni062C.medi,uni0686.medi
+FEAA arDal.fina uni062F.fina uni062F.fina,uni0630.fina,uni068E.fina
+FEAE arReh.fina uni0631.fina uni0631.fina,uni0632.fina,uni0695.fina,uni0698.fina
+FEB2 arSeen.fina uni0633.fina uni0633.fina,uni0634.fina
+FEB3 arSeen.init uni0633.init uni0633.init,uni0634.init
+FEB4 arSeen.medi uni0633.medi uni0633.medi,uni0634.medi
+FEBA arSad.fina uni0635.fina uni0635.fina,uni0636.fina
+FEBB arSad.init uni0635.init uni0635.init,uni0636.init
+FEBC arSad.medi uni0635.medi uni0635.medi,uni0636.medi
+FEC2 arTah.fina uni0637.fina uni0637.fina,uni0638.fina
+FEC3 arTah.init uni0637.init uni0637.init,uni0638.init
+FEC4 arTah.medi uni0637.medi uni0637.medi,uni0638.medi
+FECA arAin.fina uni0639.fina uni0639.fina,uni063A.fina
+FECB arAin.init uni0639.init uni0639.init,uni063A.init
+FECC arAin.medi uni0639.medi uni0639.medi,uni063A.medi
+FEDA arKaf.fina uni0643.fina uni0643.fina
+FEDB arKaf.init uni0643.init uni0643.init
+FEDC arKaf.medi uni0643.medi uni0643.medi
+FEDE arLam.fina uni0644.fina uni0644.fina,uni06B5.fina
+FEDF arLam.init uni0644.init uni0644.init,uni06B5.init
+FEE0 arLam.medi uni0644.medi uni0644.medi,uni06B5.medi
+FEE2 arMeem.fina uni0645.fina uni0645.fina
+FEE3 arMeem.init uni0645.init uni0645.init
+FEE4 arMeem.medi uni0645.medi uni0645.medi
+FEEA arHeh.fina uni0647.fina uni0647.fina,uni0629.fina,uni06C0.fina,uni06D5.fina
+FEEB arHeh.init uni0647.init uni0647.init
+FEEC arHeh.medi uni0647.medi uni0647.medi
+FBA7 arHeh.fina2 uni06C1.fina uni06C1.fina uniFBA7,uni06C2.fina,uni06C3.fina
+FBA8 arHeh.init2 uni06C1.init uni06C1.init uniFBA8
+FBA9 arHeh.medi2 uni06C1.medi uni06C1.medi uniFBA9
+06D2 arYeh.isol2 uni06D2.isol uni06D2.isol uni06D2,uni06D3
+FBAF arYeh.fina2 uni06D2.fina uni06D2.fina uniFBAF,uniFBB1
+FEEE arWaw.fina uni0648.fina uni0648.fina,uni0624.fina,uni06C6.fina,uni06CA.fina,uni06CB.fina
+FEF0 arYeh.fina uni0649.fina uni0649.fina,uni064A.fina,uni06CE.fina,uni06D0.fina
+E271 arAlefShort.fina uniE271 uniE271,uni0623.fina,uni0622.fina
+
+#Arabic Lam Alef Legatur
+#FEFB legLA.isol uni06440627.isol uni06440627.isol,uni06440625.isol
+#FEFC legLA.fina uni06440627.fina uni06440627.fina,uni06440625.fina
+#FEFD legLAShort.isol uni0644EE31.isol uni0644EE31.isol,uni06440623.isol,uni06440622.isol
+#FEFE legLAShort.fina uni0644EE31.fina uni0644EE31.fina,uni06440623.fina,uni06440622.fina
+
+# isol la
+E272 arAlef.isol.la uni0627.la.isol uni0627.la.isol,uni06440625.isol
+E273 arAlefShort.isol.la uniE270.la.isol uniE270.la.isol,uni06440623.isol,uni06440622.isol
+E440 arLam.init.la uni0644.init.la uni0644.init.la,uni06440625.isol
+
+#fina la
+E274 arAlef.fina.la uni0627.la.fina uni0627.la.fina,uni06440625.fina
+E275 arAlefShort.fina.la uniE270.la.fina uniE270.la.fina,uni06440623.fina,uni06440622.fina
+E441 arLam.medi.la uni0644.medi.la uni0644.medi.la,uni06440625.fina
+
+#Arabic Legaturess
+#EE55 legBE.fina uni066E0649.fina uni066E0649.fina
+#FCCF legMG.init uni0645062D.init uni0645062D.init,uni0645062C.init,uni0645062E.init
+#FCD1 legMM.init uni06450645.init uni06450645.init
+#FD88 legLMG.init uni06440645062D.init uni06440645062D.init
+#FC42 legLM.isol uni06440645.isol uni06440645.isol
+#FCC1 legLG.init uni0644062D.init uni0644062D.init,uni0644062E.init,uni0644062C.init
+#FC40 legLG.isol uni0644062D.isol uni0644062D.isol,uni0644062C.isol,uni0644062E.isol
+#FC43 legLE.isol uni06440649.isol uni06440649.isol,uni0644064A.isol
+#FC86 legLE.fina uni06440649.fina uni06440649.fina,uni0644064A.fina
+#FCAA legGM.init uni062D0645.init uni062D0645.init,uni062E0645.init,uni062C0645.init
+#EE54 legBE.isol uni066E0649.isol uni066E0649.isol,uni0628064A.isol,uni062A064A.isol
+#EE58 legBG.init uni066E062D.init uni066E062D.init,uni064A062D.init,uni064A062C.init,uni064A062E.init
+#EE57 legBM.init uni066E0645.init uni066E0645.init,uni062A0645.init
+#EE56 legBM.isol uni066E0645.isol uni066E0645.isol
+#EE53 legBN.fina uni066E06BA.fina uni066E06BA.fina,uni064A0646.fina
+#EE52 legBR.fina uni066E0631.fina uni066E0631.fina,uni06280631.fina,uni062A0631.fina
+#EE50 legFE.isol uni06A10649.isol uni06A10649.isol,uni064A0649.isol
+#FC80 legSM.init uni06330645.init uni06330645.init
+#FCCC legLM.init uni06440645.init uni06440645.init
+FDF2 legAllah uniFDF2 uniFDF2
+FDFA legSalah uniFDFA uniFDFA
+
+
+# Punctation
+0640 arKashida uni0640
+
+060C maComma uni060C
+061B maSemicolon uni061B
+061F maQuestion uni061F
+06D4 maFullStop uni06D4
+
+066D maAsterisk uni066D
+066A maPercent uni066A
+066C maThousandsep uni066C
+066B maDecimal uni066B
+
+FD3E maOrnateLeft uniFD3E uniFD3E
+FD3F maOrnateRight uniFD3F uniFD3F
+E07B maBraceleft  braceleft.ar
+E07D maBraceright braceright.ar
+E05B maBracketleft bracketleft.ar
+E05D maBracketright bracketright.ar
+E028 maParenleft parenleft.ar ﻿parenleft.ar,parenleft
+E029 maParentright parenright.ar ﻿parenright.ar,parenright
+
+#Farsi Numbers
+06F4 dig4Farsi uni06F4
+06F5 dig5Farsi uni06F5
+06F6 dig6Farsi uni06F6
+E6F4 dig4Urdu uni06F4.urd
+E6F7 dig7Urdu uni06F7.urd
+
+#Arabic Numbers
+0660 dig0 uni0660
+0661 dig1 uni0661
+0662 dig2 uni0662
+0663 dig3 uni0663
+0664 dig4 uni0664
+0665 dig5 uni0665
+0666 dig6 uni0666
+0667 dig7 uni0667
+0668 dig8 uni0668
+0669 dig9 uni0669
+
+
+#diacritic
+EE0B diGaf.above uniEE0B uniEE0B,uni06AF.medi
+EE0A diHamza uniEE0A uniEE0A,uni0626.medi,uni0624.isol,uni0624.fina
+065A diSmallV.above uni065A uni065A,uni06C6,uni06C6.isol
+EE0C diSmallV.below uniEE0C uniEE0C,uni0595,uni0595.isol
+EE07 diWasla uniEE07 uniEE07,uni0671,uni0671.isol
+FBBF diRing.below uniFBBF uniFBBF,ring,uni06BC.init,uni0652
+064E diFatha uni064E
+0650 diKasra uni0650
+0651 diShadda uni0651
+064B diFathatan uni064B
+064C diDammatan uni064C
+064F diDamma uni064F
+0652 diSukun uni0652
+064D diKasratan uni064D
+0653 diMadda uni0653
+0654 diHamza.above uni0654
+0655 diHamza.below uni0655
+0670 diLonga.above uni0670
+0656 diLonga.below uni0656
+
+#Tanqeet
+FBB2 di1Dot.above uniFBB2 uniFBB2,uni0646.init
+FBB3 di1Dot.below uniFBB3 uniFBB3,uni0628.init
+FBB4 di2Dot.above uniFBB4 uniFBB4,uni062A.init
+FBB5 di2Dot.below uniFBB5 uniFBB5,uni064A.init
+FBB6 di3Dot.above uniFBB6 uniFBB6,uni062B.init
+FBB7 di3Dot.below uniFBB7
+FBB8 di3IDot.above uniFBB8
+FBB9 di3IDot.below uniFBB9 uniFBB9,uni067E.init
+FBBA di4Dot.above uniFBBA
+FBBB di4Dot.below uniFBBB
+FBBD di2VDot.above uniFBBD uniFBBD,uni06D0.init
+FBBE di2VDot.below uniFBBE uniFBBE,uni06D0.init
+0615 diTah.above uni0615
