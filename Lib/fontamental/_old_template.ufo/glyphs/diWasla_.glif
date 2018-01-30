@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diWasla" format="1">
+  <advance width="458"/>
+  <outline>
+    <contour>
+      <point x="-139.74" y="-14.2039" type="line"/>
+      <point x="-115.74" y="13.7961"/>
+      <point x="-95.7395" y="35.7961"/>
+      <point x="-87.7395" y="35.7961" type="curve" smooth="yes"/>
+      <point x="-72.7395" y="35.7961"/>
+      <point x="-14.7395" y="0.796098"/>
+      <point x="77.2605" y="0.796098" type="curve" smooth="yes"/>
+      <point x="214.26" y="0.796098"/>
+      <point x="228.26" y="141.796"/>
+      <point x="228.26" y="161.796" type="curve" smooth="yes"/>
+      <point x="228.26" y="249.796"/>
+      <point x="169.26" y="278.796"/>
+      <point x="129.26" y="278.796" type="curve" smooth="yes"/>
+      <point x="56.2605" y="278.796"/>
+      <point x="3.26049" y="223.796"/>
+      <point x="-54.7395" y="147.796" type="curve"/>
+      <point x="-73.7395" y="157.796"/>
+      <point x="-86.7395" y="162.796"/>
+      <point x="-95.7395" y="162.796" type="curve" smooth="yes"/>
+      <point x="-110.74" y="162.796"/>
+      <point x="-129.74" y="143.796"/>
+      <point x="-155.74" y="93.7961" type="curve"/>
+      <point x="-155.74" y="-3.2039" type="line"/>
+    </contour>
+    <contour>
+      <point x="-11.7395" y="126.796" type="curve"/>
+      <point x="21.2605" y="164.796"/>
+      <point x="59.2605" y="191.796"/>
+      <point x="103.26" y="191.796" type="curve" smooth="yes"/>
+      <point x="138.26" y="191.796"/>
+      <point x="165.26" y="168.796"/>
+      <point x="172.26" y="128.796" type="curve"/>
+      <point x="162.26" y="109.796"/>
+      <point x="136.26" y="101.796"/>
+      <point x="100.26" y="101.796" type="curve" smooth="yes"/>
+      <point x="67.2605" y="101.796"/>
+      <point x="29.2605" y="110.796"/>
+    </contour>
+    <contour>
+      <point x="-43.518" y="369.036" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="0" y="2" type="move" name="_hamzaAbove"/>
+    </contour>
+  </outline>
+</glyph>

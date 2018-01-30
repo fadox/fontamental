@@ -42,6 +42,7 @@ END
 """
 import os
 from glob import glob
+from feabuilder import FeaBuilder
 
 
 class GlyphsLib():
@@ -80,14 +81,29 @@ class GlyphsLib():
 
     TEXTLISTS = {}
 
-    def __init__(self):
+    def __init__(self, buildFea=False, roles=None):
         self._generateLists()
-        self._createMaxifyLists()
+        if roles:
+            self._generateRoles(roles)
         self._createMinifyLists()
+        self._createMaxifyLists()
+        if buildFea is not False:
+            self._buildFea()
+
+    def _generateRoles(self, rolesPath):
+        assert os.path.isfile(rolesPath)
+
+        with open(rolesPath) as f:
+            lines = f.read()
+            exec(lines)
+            for name,text in roles.items():
+                self._readText(name, text)
 
 
     def _createMaxifyLists(self):
         assert len(self.TEXTLISTS['arabic-max']) > 1
+        if 'arabic-max-ext' in self.TEXTLISTS:
+            self.TEXTLISTS['arabic-max'] = self.TEXTLISTS['arabic-max-ext'] + self.TEXTLISTS['arabic-max']
         for line in self.TEXTLISTS['arabic-max']:
             splitRaw = line.split()
 
@@ -110,6 +126,8 @@ class GlyphsLib():
 
     def _createMinifyLists(self):
         assert len(self.TEXTLISTS['arabic-mini']) > 1
+        if 'arabic-mini-ext' in self.TEXTLISTS:
+            self.TEXTLISTS['arabic-mini'] = self.TEXTLISTS['arabic-mini-ext'] + self.TEXTLISTS['arabic-mini']
         for line in self.TEXTLISTS['arabic-mini']:
             if "#" in line:
                 line = line.split('#')[0]
@@ -122,7 +140,8 @@ class GlyphsLib():
                 continue
             uniName = splitRaw[0]
             rawName = splitRaw[1]
-
+            if rawName in self.RAWN2U:
+                continue
             self.RAWU2N[uniName] = rawName
             self.RAWN2U[rawName] = uniName
             self.RAWN2G[rawName] = splitRaw[2]
@@ -140,6 +159,17 @@ class GlyphsLib():
             fileName = (fp[len(fp)-1]).split('.')[0]
             self._readTextFile(fileName, txtFile)
 
+    def _readText(self, name, text):
+
+        linesList = self.TEXTLISTS[name] = []
+
+        splitRaw = text.split("\n")
+        for line in splitRaw:
+            line = line.strip(' \t\n\r')
+            if not line or line[:1] == '#':
+                continue
+            linesList.append(line)
+
     def _readTextFile(self, fileName, filePath):
 
         assert os.path.isfile(filePath)
@@ -152,3 +182,14 @@ class GlyphsLib():
                 if not line or line[:1] == '#':
                     continue
                 linesList.append(line)
+    def _buildFea(self):
+        self.fea = FeaBuilder(self)
+
+
+    def getFea(self):
+        filePath = os.path.dirname(__file__)
+        with open(filePath+'/templates/main.fea') as f:
+            lines = f.read()
+
+
+        m = 1

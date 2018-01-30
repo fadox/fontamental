@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arLam.medi" format="1">
+  <advance width="430"/>
+  <outline>
+    <contour>
+      <point x="430" y="200" type="line"/>
+      <point x="410" y="200" type="line" smooth="yes"/>
+      <point x="305" y="200"/>
+      <point x="280" y="241"/>
+      <point x="280" y="336" type="curve" smooth="yes"/>
+      <point x="280" y="382"/>
+      <point x="282" y="471"/>
+      <point x="282" y="576" type="curve" smooth="yes"/>
+      <point x="282" y="716"/>
+      <point x="281" y="882"/>
+      <point x="265" y="1024" type="curve"/>
+      <point x="252" y="1030" type="line"/>
+      <point x="214" y="1000"/>
+      <point x="177" y="964"/>
+      <point x="139" y="926" type="curve"/>
+      <point x="158" y="738"/>
+      <point x="169" y="514"/>
+      <point x="169" y="334" type="curve" smooth="yes"/>
+      <point x="169" y="249"/>
+      <point x="124" y="200"/>
+      <point x="22" y="200" type="curve" smooth="yes"/>
+      <point x="0" y="200" type="line" smooth="yes"/>
+      <point x="-48" y="200"/>
+      <point x="-70" y="148"/>
+      <point x="-70" y="100" type="curve" smooth="yes"/>
+      <point x="-70" y="52"/>
+      <point x="-48" y="0"/>
+      <point x="0" y="0" type="curve" smooth="yes"/>
+      <point x="14" y="0" type="line" smooth="yes"/>
+      <point x="98" y="0"/>
+      <point x="159" y="40"/>
+      <point x="203" y="112" type="curve"/>
+      <point x="207" y="112" type="line"/>
+      <point x="251" y="27"/>
+      <point x="326" y="0"/>
+      <point x="416" y="0" type="curve" smooth="yes"/>
+      <point x="430" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="124.587" y="1114.94" type="move" name="smallVAbove"/>
+    </contour>
+    <contour>
+      <point x="65.8598" y="1290.55" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="102.055" y="-282.046" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="189.037" y="-121.427" type="move" name="dotBelow"/>
+    </contour>
+    <contour>
+      <point x="124.587" y="1155.9" type="move" name="dotAbove"/>
+    </contour>
+  </outline>
+</glyph>

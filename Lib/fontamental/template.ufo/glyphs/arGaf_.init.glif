@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arGaf.init" format="1">
+  <advance width="648" height="1368"/>
+  <unicode hex="FB94"/>
+  <outline>
+    <contour>
+      <point x="624" y="1022" type="line"/>
+      <point x="444" y="967"/>
+      <point x="279" y="909"/>
+      <point x="132" y="849" type="curve" smooth="yes"/>
+      <point x="37" y="810"/>
+      <point x="-1" y="754"/>
+      <point x="-1" y="683" type="curve" smooth="yes"/>
+      <point x="-1" y="650"/>
+      <point x="5" y="608"/>
+      <point x="21" y="554" type="curve"/>
+      <point x="202" y="466"/>
+      <point x="354" y="320"/>
+      <point x="354" y="269" type="curve" smooth="yes"/>
+      <point x="354" y="233"/>
+      <point x="229" y="200"/>
+      <point x="33" y="200" type="curve" smooth="yes"/>
+      <point x="0" y="200" type="line" smooth="yes"/>
+      <point x="-48" y="200"/>
+      <point x="-70" y="148"/>
+      <point x="-70" y="100" type="curve" smooth="yes"/>
+      <point x="-70" y="52"/>
+      <point x="-48" y="0"/>
+      <point x="0" y="0" type="curve" smooth="yes"/>
+      <point x="17" y="0" type="line" smooth="yes"/>
+      <point x="203" y="0"/>
+      <point x="326" y="30"/>
+      <point x="384" y="92" type="curve"/>
+      <point x="429" y="148"/>
+      <point x="457" y="220"/>
+      <point x="457" y="312" type="curve" smooth="yes"/>
+      <point x="457" y="412"/>
+      <point x="388" y="504"/>
+      <point x="268" y="588" type="curve"/>
+      <point x="302" y="662" type="line"/>
+      <point x="231" y="668"/>
+      <point x="160" y="676"/>
+      <point x="94" y="687" type="curve"/>
+      <point x="94" y="690" type="line"/>
+      <point x="253" y="757"/>
+      <point x="401" y="809"/>
+      <point x="536" y="847" type="curve"/>
+      <point x="570" y="903"/>
+      <point x="600" y="959"/>
+      <point x="628" y="1017" type="curve"/>
+    </contour>
+    <contour>
+      <point x="592" y="1153" type="line"/>
+      <point x="590" y="1156" type="line"/>
+      <point x="424" y="1108"/>
+      <point x="252" y="1050"/>
+      <point x="70" y="966" type="curve"/>
+      <point x="56" y="939"/>
+      <point x="44" y="910"/>
+      <point x="36" y="881" type="curve"/>
+      <point x="41" y="876" type="line"/>
+      <point x="176" y="944"/>
+      <point x="351" y="1010"/>
+      <point x="552" y="1073" type="curve"/>
+    </contour>
+    <contour>
+      <point x="365.227" y="1026.19" type="move" name="gafAbove"/>
+    </contour>
+    <contour>
+      <point x="279" y="1235.42" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="220.98" y="-200" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="293.547" y="1156" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="252.587" y="-200" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+</glyph>

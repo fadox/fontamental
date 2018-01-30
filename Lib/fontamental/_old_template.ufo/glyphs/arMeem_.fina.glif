@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arMeem.fina" format="1">
+  <advance width="887"/>
+  <outline>
+    <contour>
+      <point x="442" y="593" type="line"/>
+      <point x="397" y="527"/>
+      <point x="272" y="428"/>
+      <point x="189" y="344" type="curve" smooth="yes"/>
+      <point x="128" y="282"/>
+      <point x="92" y="209"/>
+      <point x="92" y="67" type="curve" smooth="yes"/>
+      <point x="92" y="-139"/>
+      <point x="262" y="-432"/>
+      <point x="308" y="-670" type="curve"/>
+      <point x="333" y="-670" type="line"/>
+      <point x="350" y="-603"/>
+      <point x="361" y="-540"/>
+      <point x="361" y="-489" type="curve" smooth="yes"/>
+      <point x="361" y="-399"/>
+      <point x="201" y="-3"/>
+      <point x="201" y="113" type="curve" smooth="yes"/>
+      <point x="201" y="161"/>
+      <point x="226" y="188"/>
+      <point x="273" y="236" type="curve"/>
+      <point x="276" y="236" type="line"/>
+      <point x="287" y="59"/>
+      <point x="417" y="-79"/>
+      <point x="541" y="-79" type="curve" smooth="yes"/>
+      <point x="616" y="-79"/>
+      <point x="684" y="-16"/>
+      <point x="700" y="72" type="curve"/>
+      <point x="705" y="72" type="line"/>
+      <point x="738" y="26"/>
+      <point x="792" y="0"/>
+      <point x="873" y="0" type="curve" smooth="yes"/>
+      <point x="887" y="0" type="line"/>
+      <point x="887" y="200" type="line"/>
+      <point x="873" y="200" type="line" smooth="yes"/>
+      <point x="803" y="200"/>
+      <point x="774" y="234"/>
+      <point x="736" y="278" type="curve"/>
+      <point x="632" y="415"/>
+      <point x="544" y="511"/>
+      <point x="458" y="593" type="curve"/>
+    </contour>
+    <contour>
+      <point x="441" y="385" type="curve"/>
+      <point x="559" y="276"/>
+      <point x="626" y="194"/>
+      <point x="626" y="153" type="curve" smooth="yes"/>
+      <point x="626" y="139"/>
+      <point x="602" y="125"/>
+      <point x="565" y="125" type="curve" smooth="yes"/>
+      <point x="469" y="125"/>
+      <point x="381" y="218"/>
+      <point x="381" y="304" type="curve" smooth="yes"/>
+      <point x="381" y="331"/>
+      <point x="405" y="357"/>
+    </contour>
+    <contour>
+      <point x="239.72" y="939.598" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="101.384" y="-674.277" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="440.732" y="769.195" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="539.307" y="-205.683" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+</glyph>

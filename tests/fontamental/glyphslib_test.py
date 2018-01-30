@@ -10,7 +10,10 @@ class IndexTest(unittest.TestCase):
 
     def setUp(self):
         # self.infoTab = NameTabWidget(None)
-        self.gl = GlyphsLib()
+        options = {
+            'buildFea': True,
+        }
+        self.gl = GlyphsLib(options)
 
 
     def tearDown(self):
@@ -18,8 +21,8 @@ class IndexTest(unittest.TestCase):
         pass
 
     def test_sample1(self):
-        val = self.gl.getAGL2UV()
-        self.assertEqual(1, 1)
+        val = self.gl.AGL2UV
+        self.assertTrue(len(val) >= 1)
 
     def test_sample2(self):
         self.assertEqual(2, 2)

@@ -1,0 +1,49 @@
+## Basic Arabic
+
+feature fina {
+  lookup fina_1 {
+    lookupflag RightToLeft;
+    sub @fina_isol by @fina;
+  } fina_1;
+
+
+  script arab; # Arabic
+    language ARA ; # Arabic
+    language URD ; # Urdu
+    language FAR ; # Farsi
+} fina;
+
+
+feature medi {
+    lookup medi_1 {
+      lookupflag RightToLeft;
+      sub @init_medi by @medi;
+  } medi_1;
+
+  script arab; # Arabic
+    language ARA ; # Arabic
+    language URD ; # Urdu
+    language FAR ; # Farsi
+} medi;
+
+
+feature init {
+    lookup init_1{
+        lookupflag RightToLeft;
+        sub @init_medi by @init;
+    } init_1;
+
+    script arab; # Arabic
+        language ARA ; # Arabic
+        language URD ; # Urdu
+        language FAR ; # Farsi
+} init;
+
+
+feature isol {
+  lookup isol_1 {
+    lookupflag RightToLeft;
+    sub @fina_isol by @isol;
+  } isol_1;
+ 
+} isol;

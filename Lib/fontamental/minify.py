@@ -8,9 +8,9 @@ import os
 
 
 class MinifyUFO():
-    def __init__(self, source, mask, template=None):
-        self.gl = GlyphsLib()
-        self.sUFO = source
+    def __init__(self, source, mask, template=None, buildFea=False, roles=None):
+        self.gl = GlyphsLib(buildFea, roles)
+        self.sUFO = Font(source)
         self.UFO = Font()
         self.layers = {}
         if mask is not None:
@@ -55,19 +55,29 @@ class MinifyUFO():
     def createGlyphs(self):
 
         self.UFO.newGlyph('.notdef')
+        missing = ''
 
         for glf in self.gl.RAWN2C:
+            glfUnicode = int(self.gl.RAWN2U[glf], 16)
+
+            print('')
             layer = 0
+            stopAt = 'arAlef.fina.la'
             glfSrc = self.gl.RAWN2C[glf].split(',')
-            #if glf == 'arHeh.medi':
-            #    m = 1
+            if glf == stopAt:
+                m = 1
+            log = (glf + ' ' * 50)[0:20]
             if glf in self.gl.RAWN2M:
                 try:
                     mgName = [self.gl.RAWN2M[glf]]
                     glyph = Glyph()
                     glyph.copyDataFromGlyph(self.sUFO[mgName[0]])
                     glyph.name = glf
-                    glyph.unicode = None
+                    if layer == 0:
+                        glyph.unicode = glfUnicode
+                        glyph.unicodes = [glfUnicode]
+                    else:
+                        glyph.unicode = None
                     glyph.anchors = []
                     glyph.decomposeAllComponents()
                     if layer > 0:
@@ -76,17 +86,34 @@ class MinifyUFO():
                     else:
                         self.UFO.insertGlyph(glyph)
                     layer += 1
-                    print(g + ' found :)' + '  L ' + str(layer))
+                    #print(g + ' found :)' + '  L ' + str(layer))
+
+                    gLog = log + (mgName[0] + ' ' * 50)[0:20]
+                    print(gLog + '[' + str(layer) + ']  *')
                 except:
                     pass
             for g in glfSrc:
+                mgName = None
+                gCode = None
+                gLog = log + (g + ' ' * 50)[0:20]
+
                 try:
-                    gCode = self.gl.AGL2UV[g]
-                    mgName = self.sUFO.unicodeData[gCode]
+                    try:
+                        gCode = self.gl.AGL2UV[g]
+                        mgName = self.sUFO.unicodeData[gCode]
+                    except:
+                        try:
+                            mgName = [g]
+                        except:
+                            pass
                     glyph = Glyph()
                     glyph.copyDataFromGlyph(self.sUFO[mgName[0]])
                     glyph.name = glf
-                    glyph.unicode = None
+                    if layer == 0:
+                        glyph.unicode = glfUnicode
+                        glyph.unicodes = [glfUnicode]
+                    else:
+                        glyph.unicode = None
                     glyph.anchors = []
                     glyph.decomposeAllComponents()
                     if layer > 0:
@@ -95,15 +122,23 @@ class MinifyUFO():
                     else:
                         self.UFO.insertGlyph(glyph)
                     layer += 1
-                    print(g + ' found :)' + '  L ' + str(layer))
+                    print(gLog + '[' + str(layer)+']')
                 except:
-                    print('x' * 13 + g + ' not found in font')
+                    print(gLog + '[ ]')
                 glyph = None
             if layer == 0:
                 self.UFO.newGlyph(glf)
+                missing += log + "\n"
+        if len(missing) > 1:
+            print('\n')
+            print('='*60)
+            print('Missing glyphes    ' + str(len(missing.splitlines())))
+            print('=' * 60)
+            print(missing)
+            print('=' * 60)
 
     def createAnchors(self):
-        factor = self.getFactorOfUPM()
+        factor = int(self.getFactorOfUPM())
         for g in self.UFO:
             try:
                 sampleGlyph = self.templateUFO[g.name]
@@ -123,7 +158,7 @@ class MinifyUFO():
     def getFactorOfUPM(self):
         standardUPM = 2048
         sourceFontUPM = self.UFO.info.unitsPerEm
-        factor = int(standardUPM) / int(sourceFontUPM)
+        factor = float(standardUPM) / float(sourceFontUPM)
         return factor
 
     def sortGlyphs(self):

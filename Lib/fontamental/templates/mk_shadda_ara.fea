@@ -1,0 +1,28 @@
+feature calt {
+    lookup calt_10 {
+        # GSUB lookup 49, type 12 (Multiple)
+        lookupflag  RightToLeft;
+        sub uni0651 uni064E by shaddaFatha;
+        sub uni064E uni0651 by shaddaFatha;
+        sub uni0651 uni064B by shaddaFathatan;
+        sub uni064B uni0651 by shaddaFathatan;
+        sub uni0651 uni0670 by shaddaAlefAbove;
+        sub uni0651 uni064F by shaddaDamma;
+        sub uni064F uni0651 by shaddaDamma;
+        sub uni0651 uni064C by shaddaDammatan;
+        sub uni064C uni0651 by shaddaDammatan;
+        sub uni0651 uni0650 by shaddaKasra;
+        sub uni0650 uni0651 by shaddaKasra;
+        sub uni0651 uni064D by shaddaKasratan;
+        sub uni064D uni0651 by shaddaKasratan;
+    } calt_10;
+
+    lookup calt_10;
+
+    script arab; # Arabic
+      language ARA ; # Arabic
+      language URD ; # Urdu
+      language FAR ; # Farsi
+} calt;
+
+

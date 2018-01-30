@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arKashida" format="1">
+  <advance width="400"/>
+  <outline>
+    <contour>
+      <point x="0" y="200" type="line" smooth="yes"/>
+      <point x="-48" y="200"/>
+      <point x="-70" y="148"/>
+      <point x="-70" y="100" type="curve" smooth="yes"/>
+      <point x="-70" y="52"/>
+      <point x="-48" y="0"/>
+      <point x="0" y="0" type="curve" smooth="yes"/>
+      <point x="400" y="0" type="line"/>
+      <point x="400" y="200" type="line"/>
+    </contour>
+    <contour>
+      <point x="191.147" y="453.091" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="208.213" y="-202.269" type="move" name="markBelow"/>
+    </contour>
+  </outline>
+</glyph>

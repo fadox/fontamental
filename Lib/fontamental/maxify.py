@@ -6,8 +6,8 @@ from fontamental.glyphslib import GlyphsLib
 import copy
 
 class MaxifyUFO():
-    def __init__(self, source):
-        self.gl = GlyphsLib()
+    def __init__(self, source, roles=None):
+        self.gl = GlyphsLib(True, roles)
         self.sUFO = source
         self.UFO = Font()
     def build(self):
@@ -97,7 +97,7 @@ class MaxifyUFO():
                 gName = self.gl.RAWN2G[g.name]
                 if gName == "uni0646.iso":
                     m = 1
-                print(gName)
+                #print(gName)
                 gUnicode = int(self.gl.RAWN2U[g.name], 16)
                 g.name = gName
                 g.unicode = gUnicode

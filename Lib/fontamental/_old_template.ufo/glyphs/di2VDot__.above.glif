@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="di2VDot.above" format="1">
+  <advance width="451"/>
+  <outline>
+    <contour>
+      <point x="-136.049" y="60.122" type="line"/>
+      <point x="-85.0488" y="25.122"/>
+      <point x="-37.0488" y="-10.878"/>
+      <point x="1.95122" y="-44.878" type="curve"/>
+      <point x="37.9512" y="-13.878"/>
+      <point x="65.9512" y="26.122"/>
+      <point x="86.9512" y="72.122" type="curve"/>
+      <point x="46.9512" y="111.122"/>
+      <point x="1.95122" y="149.122"/>
+      <point x="-49.0488" y="183.122" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-166.049" y="290.122" type="line"/>
+      <point x="-115.049" y="255.122"/>
+      <point x="-67.0488" y="219.122"/>
+      <point x="-28.0488" y="185.122" type="curve"/>
+      <point x="7.95122" y="216.122"/>
+      <point x="35.9512" y="256.122"/>
+      <point x="56.9512" y="302.122" type="curve"/>
+      <point x="16.9512" y="341.122"/>
+      <point x="-28.0488" y="379.122"/>
+      <point x="-79.0488" y="413.122" type="curve"/>
+    </contour>
+    <contour>
+      <point x="-51.128" y="652.451" type="move" name="markAboveDot"/>
+    </contour>
+    <contour>
+      <point x="0" y="4" type="move" name="_dotAbove"/>
+    </contour>
+  </outline>
+</glyph>

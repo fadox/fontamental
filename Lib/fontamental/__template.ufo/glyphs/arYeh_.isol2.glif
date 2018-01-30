@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arYeh.isol2" format="1">
+  <advance width="1683"/>
+  <outline>
+    <contour>
+      <point x="748" y="372" type="line"/>
+      <point x="781" y="446"/>
+      <point x="799" y="512"/>
+      <point x="799" y="567" type="curve" smooth="yes"/>
+      <point x="799" y="662"/>
+      <point x="762" y="749"/>
+      <point x="703" y="749" type="curve" smooth="yes"/>
+      <point x="661" y="749"/>
+      <point x="623" y="711"/>
+      <point x="594" y="664" type="curve" smooth="yes"/>
+      <point x="494" y="505"/>
+      <point x="310" y="553"/>
+      <point x="167" y="333" type="curve" smooth="yes"/>
+      <point x="126" y="269"/>
+      <point x="103" y="200"/>
+      <point x="103" y="158" type="curve" smooth="yes"/>
+      <point x="103" y="14"/>
+      <point x="343" y="-9"/>
+      <point x="604" y="-9" type="curve" smooth="yes"/>
+      <point x="881" y="-9"/>
+      <point x="1171" y="16"/>
+      <point x="1456" y="30" type="curve"/>
+      <point x="1520" y="88"/>
+      <point x="1582" y="150"/>
+      <point x="1640" y="208" type="curve"/>
+      <point x="1634" y="223" type="line"/>
+      <point x="1326" y="219"/>
+      <point x="1056" y="191"/>
+      <point x="725" y="191" type="curve" smooth="yes"/>
+      <point x="496" y="191"/>
+      <point x="249" y="226"/>
+      <point x="249" y="283" type="curve" smooth="yes"/>
+      <point x="249" y="306"/>
+      <point x="321" y="333"/>
+      <point x="414" y="374" type="curve" smooth="yes"/>
+      <point x="594" y="454"/>
+      <point x="580" y="549"/>
+      <point x="634" y="549" type="curve" smooth="yes"/>
+      <point x="670" y="549"/>
+      <point x="697" y="470"/>
+      <point x="728" y="374" type="curve"/>
+    </contour>
+    <contour>
+      <point x="580.267" y="882.147" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="651.947" y="951" type="move" name="smallVAbove"/>
+    </contour>
+    <contour>
+      <point x="631.467" y="902.627" type="move" name="hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="837.973" y="-178.717" type="move" name="dotBelow"/>
+    </contour>
+    <contour>
+      <point x="709.973" y="-131.613" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="703" y="886.243" type="move" name="dotAbove"/>
+    </contour>
+  </outline>
+</glyph>

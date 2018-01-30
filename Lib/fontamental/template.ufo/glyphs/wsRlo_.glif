@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="wsRlo" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="-6" y="1626" type="line"/>
+      <point x="213" y="1626" type="line"/>
+      <point x="213" y="1673" type="line"/>
+      <point x="-6" y="1673" type="line"/>
+      <point x="78" y="1757" type="line"/>
+      <point x="43" y="1792" type="line"/>
+      <point x="-96" y="1651" type="line"/>
+      <point x="43" y="1509" type="line"/>
+      <point x="78" y="1544" type="line"/>
+    </contour>
+    <contour>
+      <point x="-164" y="1651" type="line"/>
+      <point x="-57" y="1757" type="line"/>
+      <point x="-90" y="1792" type="line"/>
+      <point x="-231" y="1651" type="line"/>
+      <point x="-90" y="1509" type="line"/>
+      <point x="-57" y="1544" type="line"/>
+    </contour>
+  </outline>
+</glyph>

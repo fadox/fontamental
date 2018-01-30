@@ -1,0 +1,14 @@
+languagesystem DFLT dflt;
+languagesystem arab dflt;
+languagesystem arab ARA;
+languagesystem arab FAR;
+languagesystem arab URD;
+languagesystem latn dflt;
+#languagesystem latn TRK;
+
+#include "classes.fea"
+
+#include "local.fea"
+#include "lellah.fea"
+#include "stylisticsets.fea"
+#include "latin.fea"
