@@ -42,19 +42,21 @@ END
 """
 import os
 from glob import glob
-from feabuilder import FeaBuilder
+from fontamental.feabuilder import FeaBuilder
+import codecs
 
 
 class GlyphsLib():
-    ## AGL  = Production glyph name
-    ## UV   = Production glyph Unicode Value (decimal)
-    ## FEA  = Glyph Component List, with Master glyph Names
-    ## U    = Master glyph equivalent Production Unicode Value (hex)
-    ## RAWU = Master glyph equivalent Production Unicode Value (hex)
-    ## G    = Master glyph equivalent Production glyph name
-    ## RAWN = Master glyph Name
-    ## C    = Aliases of Master glyph in base font, comma seperated Base glyph names
-
+    """
+    AGL  = Production glyph name
+    UV   = Production glyph Unicode Value (decimal)
+    FEA  = Glyph Component List, with Master glyph Names
+    U    = Master glyph equivalent Production Unicode Value (hex)
+    RAWU = Master glyph equivalent Production Unicode Value (hex)
+    G    = Master glyph equivalent Production glyph name
+    RAWN = Master glyph Name
+    C    = Aliases of Master glyph in base font, comma seperated Base glyph names
+"""
     # Arabic Glyphs dict{}, Production glyph name : unicode value
     AGL2UV = {}
 
@@ -93,12 +95,15 @@ class GlyphsLib():
     def _generateRoles(self, rolesPath):
         assert os.path.isfile(rolesPath)
 
-        with open(rolesPath) as f:
+        with codecs.open(rolesPath, 'r', encoding='utf8') as f:
             lines = f.read()
-            exec(lines)
-            for name,text in roles.items():
-                self._readText(name, text)
-
+            ns = {}
+            code = compile(lines, '<string>', 'exec')
+            exec(code, ns)
+            allRules = ns['roles']
+            if isinstance(allRules, dict):
+                for name, text in allRules.items():
+                    self._readText(name, text)
 
     def _createMaxifyLists(self):
         assert len(self.TEXTLISTS['arabic-max']) > 1
@@ -121,7 +126,7 @@ class GlyphsLib():
                 try:
                     self.AGL2FEA[glyphName] = splitRaw[2].split(",")
                 except:
-                    pass
+                    continue
             self.UV2AGL[unicode] = glyphName
 
     def _createMinifyLists(self):
@@ -152,11 +157,11 @@ class GlyphsLib():
                 self.RAWN2C[rawName] = splitRaw[3]
 
     def _generateLists(self):
-        #read all *.txt files in ./lists
+        # read all *.txt files in ./lists
         filePath = os.path.dirname(__file__)
-        for txtFile in glob(filePath+"/lists/"+"*.txt"):
+        for txtFile in glob(filePath + os.sep + "lists" + os.sep + "*.txt"):
             fp = txtFile.split(os.sep)
-            fileName = (fp[len(fp)-1]).split('.')[0]
+            fileName = (fp[len(fp) - 1]).split('.')[0]
             self._readTextFile(fileName, txtFile)
 
     def _readText(self, name, text):
@@ -174,7 +179,7 @@ class GlyphsLib():
 
         assert os.path.isfile(filePath)
 
-        with open(filePath) as f:
+        with codecs.open(filePath, 'r', encoding='utf8') as f:
             linesList = self.TEXTLISTS[fileName] = []
             lines = f.read()
             splitRaw = lines.split("\n")
@@ -182,14 +187,9 @@ class GlyphsLib():
                 if not line or line[:1] == '#':
                     continue
                 linesList.append(line)
+
     def _buildFea(self):
         self.fea = FeaBuilder(self)
 
-
     def getFea(self):
-        filePath = os.path.dirname(__file__)
-        with open(filePath+'/templates/main.fea') as f:
-            lines = f.read()
-
-
-        m = 1
+        return self.fea
