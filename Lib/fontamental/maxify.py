@@ -10,6 +10,8 @@ class MaxifyUFO():
         self.gl = GlyphsLib(True, roles)
         self.sUFO = source
         self.UFO = Font()
+        self.transFields = ["xScale", "xyScale", "yxScale", "yScale", "xOffset", "yOffset"]
+
     def build(self):
         self.copyFontInfo()
         self.createGlyphs()
@@ -27,9 +29,12 @@ class MaxifyUFO():
         subs = self.getSubsets()
 
         for gName, pgNames in subs.items():
-            if gName == 'shaddaKasra':
+            gModz = {}
+            if gName == 'uni0686.fina':
                 m = 1
 
+            if gName in self.gl.MODZ.keys():
+                gModz = self.gl.MODZ[gName]
             try:
                 baseGlyph = self.UFO[pgNames[0]]
                 masterGlyph = self.sUFO[pgNames[0]]
@@ -41,6 +46,9 @@ class MaxifyUFO():
                     pass
                 else:
                     for partName in pgNames[1:]:
+                        pModz = []
+                        if partName in gModz.keys():
+                            pModz = gModz[partName]
                         partGlyph = self.UFO[partName]
                         masterPartGlyph = self.sUFO[partName]
 
@@ -55,7 +63,7 @@ class MaxifyUFO():
                         baseAnchor = [a for a in masterGlyph.anchors if a.name == anchorName][0]
                         xoff = baseAnchor.x - partAnchor.x
                         yoff = baseAnchor.y - partAnchor.y
-                        self.addComponent(glyph, partName, xoff, yoff)
+                        self.addComponent(glyph, partName, xoff, yoff, pModz)
                         self.updateAnchors(glyph, masterPartGlyph, xoff, yoff)
 
                         del baseAnchor, baseAnchors, a, xoff, yoff, partGlyph, anchorName,partName
@@ -105,10 +113,23 @@ class MaxifyUFO():
                 self.addAnchors(ng,g)
                 self.UFO.insertGlyph(ng)
 
-    def addComponent(self, glyph, name, xoff=0, yoff=0):
+    def addComponent(self, glyph, name, xoff=0, yoff=0, pModz=[]):
         component = glyph.instantiateComponent()
         component.baseGlyph = name
         component.move((xoff, yoff))
+        if len(pModz) > 0:
+            trans = component.transformation
+            dicts = [dict(zip(self.transFields, d)) for d in [trans]]
+            ct = dicts[0]
+            for prop in pModz:
+                if prop in ("xOffset", "yOffset"):
+                    ct[prop] += float(pModz[prop])
+                else:
+                    ct[prop] = float(pModz[prop])
+            newProps = []
+            for pn in self.transFields:
+                newProps.append(ct[pn])
+                component.transformation = tuple(newProps)
         glyph.appendComponent(component)
 
     def addAnchors(self, glyph, base):

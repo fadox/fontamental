@@ -79,6 +79,8 @@ class GlyphsLib():
     # Master Font Glyphs dict{}, master glyph name : mask
     RAWN2M = {}
 
+    MODZ = {}
+
     TEXTLISTS = {}
 
     def __init__(self, buildFea=False, roles=None):
@@ -87,6 +89,10 @@ class GlyphsLib():
             self._generateRoles(roles)
         self._createMinifyLists()
         self._createMaxifyLists()
+
+        if self.TEXTLISTS['mod'] is not None:
+            self._createModes()
+
         if buildFea is not False:
             self._buildFea()
 
@@ -98,6 +104,28 @@ class GlyphsLib():
             exec(lines)
             for name,text in roles.items():
                 self._readText(name, text)
+
+    def _createModes(self):
+        assert len(self.TEXTLISTS['mod']) > 1
+        for line in self.TEXTLISTS['mod']:
+            if "#" in line:
+                line = line.split('#')[0]
+            if not line:
+                continue
+            splitMod = line.split()
+            if len(splitMod) < 3:
+                continue
+            gName = splitMod[0]
+            cName = splitMod[1]
+            cName = self.RAWN2G[cName]
+            props = {}
+            properties = splitMod[2].split(';')
+            for p in properties:
+                splitP = p.split('=')
+                props[splitP[0]] = splitP[1]
+            self.MODZ[gName] = {cName:props}
+
+
 
 
     def _createMaxifyLists(self):
@@ -113,6 +141,9 @@ class GlyphsLib():
             assert len(unicode) == 4
             unicode = int(unicode, 16)
             glyphName = splitRaw[0]
+            if self.TEXTLISTS['ignore'] is not None:
+                if glyphName in self.TEXTLISTS['ignore']:
+                    continue
             if glyphName in self.AGL2UV:
                 # the above table contains identical duplicates
                 assert self.AGL2UV[glyphName] == unicode
@@ -123,6 +154,7 @@ class GlyphsLib():
                 except:
                     pass
             self.UV2AGL[unicode] = glyphName
+
 
     def _createMinifyLists(self):
         assert len(self.TEXTLISTS['arabic-mini']) > 1
