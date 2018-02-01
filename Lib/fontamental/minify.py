@@ -8,30 +8,16 @@ import os
 
 
 class MinifyUFO():
-    def __init__(self, source, mask, template=None, buildFea=False, roles=None):
-        self.gl = GlyphsLib(buildFea, roles)
+    def __init__(self, source, buildFea=False, template=None, config=None):
+        self.gl = GlyphsLib(buildFea, config)
         self.sUFO = Font(source)
         self.UFO = Font()
         self.layers = {}
-        if mask is not None:
-            self.applyMask(mask)
+
         if template is None:
             template = os.path.join(os.path.dirname(__file__), 'template.ufo')
         self.templateUFO = Font(template)
 
-    def applyMask(self, mask):
-        assert os.path.isfile(mask)
-        with open(mask) as f:
-            lines = f.read()
-            splitRaw = lines.split("\n")
-            for line in splitRaw:
-                try:
-                    lp = line.split()
-                    rawName = lp[0]
-                    maskName = lp[1]
-                    self.gl.RAWN2M[rawName] = maskName
-                except:
-                    pass
 
     def build(self):
         self.copyFontInfo()

@@ -41,12 +41,13 @@ URL:           http://fadox.net
 END
 """
 import os
+import sys
 from glob import glob
 from fontamental.feabuilder import FeaBuilder
 import codecs
 
 
-class GlyphsLib():
+class GlyphsLib:
     """
     AGL  = Production glyph name
     UV   = Production glyph Unicode Value (decimal)
@@ -81,89 +82,97 @@ class GlyphsLib():
     # Master Font Glyphs dict{}, master glyph name : mask
     RAWN2M = {}
 
+    # Post modifications
     MODZ = {}
 
-    TEXTLISTS = {}
+    CONFIGS = {}
 
-    def __init__(self, buildFea=False, roles=None):
-        self._generateLists()
-        if roles:
-            self._generateRoles(roles)
-        self._createMinifyLists()
-        self._createMaxifyLists()
-
-        if self.TEXTLISTS['mod'] is not None:
-            self._createModes()
+    def __init__(self, buildFea=False, config=None):
+        self._init_configs(config)
+        self._init_lists()
+        self._create_minify_lists()
+        self._create_maxify_lists()
+        self._applay_modifications()
+        self._applay_minify_mask()
 
         if buildFea is not False:
-            self._buildFea()
+            self._build_fea()
 
-    def _generateRoles(self, rolesPath):
-        assert os.path.isfile(rolesPath)
-
-        with codecs.open(rolesPath, 'r', encoding='utf8') as f:
-            lines = f.read()
+    def _init_configs(self, config):
+        """
+        read customized configuration of the font (optional)
+        """
+        if config:
+            lines = self._get_file_content(config)
             ns = {}
             code = compile(lines, '<string>', 'exec')
-            exec(code, ns)
-            allRules = ns['roles']
-            if isinstance(allRules, dict):
-                for name, text in allRules.items():
-                    self._readText(name, text)
+            exec (code, ns)
+            cnf = ns['configs']
+            if isinstance(cnf, dict):
+                for name, text in cnf.items():
+                    self._set_config(name, text)
 
-    def _createModes(self):
-        assert len(self.TEXTLISTS['mod']) > 1
-        for line in self.TEXTLISTS['mod']:
-            if "#" in line:
-                line = line.split('#')[0]
-            if not line:
+    def _init_lists(self):
+        """
+        read fontamental configuration files (all *.txt files) under /lists subfolder
+        """
+        dirPath = os.path.dirname(__file__)
+        for filePath in glob(dirPath + os.sep + "lists" + os.sep + "*.txt"):
+            fp = filePath.split(os.sep)
+            fileName = (fp[len(fp) - 1]).split('.')[0]
+            text = self._get_file_content(filePath)
+            self._set_config(fileName, text)
+
+    def _get_file_content(self, filePath):
+        """
+        read the content of given file path, and return the content as a string
+        """
+        assert os.path.isfile(filePath)
+        with codecs.open(filePath, 'r', encoding='utf8') as f:
+            lines = f.read()
+            return lines
+
+    def _set_config(self, name, text):
+        """
+        set a Config value, under a given index (name) from a plane text
+        """
+        linesList = self.CONFIGS[name] = []
+        splitRaw = text.split("\n")
+        for line in splitRaw:
+            line = line.strip(' \t\n\r')
+            if not line or line[:1] == '#':
                 continue
-            splitMod = line.split()
-            if len(splitMod) < 3:
-                continue
-            gName = splitMod[0]
-            cName = splitMod[1]
-            cName = self.RAWN2G[cName]
-            props = {}
-            properties = splitMod[2].split(';')
-            for p in properties:
-                splitP = p.split('=')
-                props[splitP[0]] = splitP[1]
-            self.MODZ[gName] = {cName:props}
+            linesList.append(line)
 
-    def _createMaxifyLists(self):
-        assert len(self.TEXTLISTS['arabic-max']) > 1
-        if 'arabic-max-ext' in self.TEXTLISTS:
-            self.TEXTLISTS['arabic-max'] = self.TEXTLISTS['arabic-max-ext'] + self.TEXTLISTS['arabic-max']
-        for line in self.TEXTLISTS['arabic-max']:
-            splitRaw = line.split()
+    def _get_config(self, index):
+        """
+        return the dict value of an index in Config dict.
+        will return an empty list if the index is not exist or is empty
+        """
+        if index in self.CONFIGS.keys():
+            if isinstance(self.CONFIGS[index], list):
+                if len(self.CONFIGS[index]) > 0:
+                    return self.CONFIGS[index]
+        return []
 
-            if len(splitRaw) < 2:
-                continue
-            unicode = splitRaw[1]
-            assert len(unicode) == 4
-            unicode = int(unicode, 16)
-            glyphName = splitRaw[0]
-            if self.TEXTLISTS['ignore'] is not None:
-                if glyphName in self.TEXTLISTS['ignore']:
-                    continue
-            if glyphName in self.AGL2UV:
-                # the above table contains identical duplicates
-                assert self.AGL2UV[glyphName] == unicode
-            else:
-                self.AGL2UV[glyphName] = unicode
-                try:
-                    self.AGL2FEA[glyphName] = splitRaw[2].split(",")
-                except:
-                    continue
-            self.UV2AGL[unicode] = glyphName
+    def _config_exists(self, index):
+        """
+        check if an index in exist in Config dict.
+        will return True if the index is exists or the value is not an empty list
+        """
+        if index in self.CONFIGS.keys():
+            if isinstance(self.CONFIGS[index], list):
+                if len(self.CONFIGS[index]) > 0:
+                    return True
+        return False
 
-
-    def _createMinifyLists(self):
-        assert len(self.TEXTLISTS['arabic-mini']) > 1
-        if 'arabic-mini-ext' in self.TEXTLISTS:
-            self.TEXTLISTS['arabic-mini'] = self.TEXTLISTS['arabic-mini-ext'] + self.TEXTLISTS['arabic-mini']
-        for line in self.TEXTLISTS['arabic-mini']:
+    def _create_minify_lists(self):
+        """
+        Create main Configuration Tables to minify an original base font to mini/master font
+        """
+        assert (self._config_exists('arabic-mini'))
+        lines = self._get_config('arabic-mini-ext') + self._get_config('arabic-mini')
+        for line in lines:
             if "#" in line:
                 line = line.split('#')[0]
             if not line:
@@ -186,40 +195,96 @@ class GlyphsLib():
             else:
                 self.RAWN2C[rawName] = splitRaw[3]
 
-    def _generateLists(self):
-        # read all *.txt files in ./lists
-        filePath = os.path.dirname(__file__)
-        for txtFile in glob(filePath + os.sep + "lists" + os.sep + "*.txt"):
-            fp = txtFile.split(os.sep)
-            fileName = (fp[len(fp) - 1]).split('.')[0]
-            self._readTextFile(fileName, txtFile)
+    def _create_maxify_lists(self):
+        """
+        Create main Configuration Tables to maxify a mini/master font
+        """
+        assert (self._config_exists('arabic-max'))
+        ignored = self._get_config('ignore')
+        lines = self._get_config('arabic-max-ext') + self._get_config('arabic-max')
+        for line in lines:
+            splitRaw = line.split()
 
-    def _readText(self, name, text):
-
-        linesList = self.TEXTLISTS[name] = []
-
-        splitRaw = text.split("\n")
-        for line in splitRaw:
-            line = line.strip(' \t\n\r')
-            if not line or line[:1] == '#':
+            if len(splitRaw) < 2:
                 continue
-            linesList.append(line)
+            unicode = splitRaw[1]
 
-    def _readTextFile(self, fileName, filePath):
+            assert len(unicode) == 4
 
-        assert os.path.isfile(filePath)
+            unicode = int(unicode, 16)
+            glyphName = splitRaw[0]
 
-        with codecs.open(filePath, 'r', encoding='utf8') as f:
-            linesList = self.TEXTLISTS[fileName] = []
-            lines = f.read()
-            splitRaw = lines.split("\n")
-            for line in splitRaw:
-                if not line or line[:1] == '#':
-                    continue
-                linesList.append(line)
+            if glyphName in ignored:
+                continue
 
-    def _buildFea(self):
+            if glyphName in self.AGL2UV:
+                # the above table contains identical duplicates
+                assert self.AGL2UV[glyphName] == unicode
+            else:
+                self.AGL2UV[glyphName] = unicode
+                try:
+                    self.AGL2FEA[glyphName] = splitRaw[2].split(",")
+                except Exception:
+                    sys.exc_clear()
+            self.UV2AGL[unicode] = glyphName
+
+    def _applay_modifications(self):
+        """
+        Applay post modifications on glyphs
+
+        This will defined the fine changes that will be applied on the given glyph component
+        like changing the position and the component scale
+        """
+        if not self._config_exists('mod'):
+            return
+
+        for line in self._get_config('mod'):
+            if "#" in line:
+                line = line.split('#')[0]
+            if not line:
+                continue
+            splitMod = line.split()
+            if len(splitMod) < 3:
+                continue
+            gName = splitMod[0]
+            cName = splitMod[1]
+            cName = self.RAWN2G[cName]
+            props = {}
+            properties = splitMod[2].split(';')
+            for p in properties:
+                splitP = p.split('=')
+                props[splitP[0]] = splitP[1]
+            self.MODZ[gName] = {cName: props}
+
+    def _applay_minify_mask(self):
+        """
+        Use a minify Mask
+
+        This function will set the alternative mapping to extract glyphs from base Font
+        The Mask values will set to the RAWN2M (Name to Mask) global variable
+        """
+        if not self._config_exists('mask'):
+            return
+
+        for line in self._get_config('mask'):
+            try:
+                lp = line.split()
+                rawName = lp[0]
+                maskName = lp[1]
+                self.gl.RAWN2M[rawName] = maskName
+            except Exception:
+                sys.exc_clear()
+
+    def _build_fea(self):
+        """
+        Setter: Create the OTF Features Tables for current font
+
+        """
         self.fea = FeaBuilder(self)
 
-    def getFea(self):
+    def get_fea(self):
+        """
+        Getter: return the content of the OTF Features Tables
+
+        """
         return self.fea
