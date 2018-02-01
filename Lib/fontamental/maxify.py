@@ -5,6 +5,7 @@ from defcon import Font, Color, Glyph, Contour
 from fontamental.glyphslib import GlyphsLib
 import copy
 
+
 class MaxifyUFO():
     def __init__(self, source, roles=None):
         self.gl = GlyphsLib(True, roles)
@@ -53,7 +54,8 @@ class MaxifyUFO():
                         masterPartGlyph = self.sUFO[partName]
 
                         # add parts like Dot, small V, Hamza on the Base Glyph
-                        partAnchors = [a.name.replace("_", "", 1) for a in masterPartGlyph.anchors if a.name.startswith("_")]
+                        partAnchors = [a.name.replace("_", "", 1) for a in masterPartGlyph.anchors if
+                                       a.name.startswith("_")]
                         baseAnchors = [a.name for a in masterGlyph.anchors if not a.name.startswith("_")]
 
                         anchorName = set(baseAnchors).intersection(partAnchors)
@@ -66,12 +68,10 @@ class MaxifyUFO():
                         self.addComponent(glyph, partName, xoff, yoff, pModz)
                         self.updateAnchors(glyph, masterPartGlyph, xoff, yoff)
 
-                        del baseAnchor, baseAnchors, a, xoff, yoff, partGlyph, anchorName,partName
+                        del baseAnchor, baseAnchors, a, xoff, yoff, partGlyph, anchorName, partName
 
             except:
                 pass
-
-
 
     def getSubsets(self):
         subs = {}
@@ -105,12 +105,12 @@ class MaxifyUFO():
                 gName = self.gl.RAWN2G[g.name]
                 if gName == "uni0646.iso":
                     m = 1
-                #print(gName)
+                # print(gName)
                 gUnicode = int(self.gl.RAWN2U[g.name], 16)
                 g.name = gName
                 g.unicode = gUnicode
                 ng = copy.deepcopy(g)
-                self.addAnchors(ng,g)
+                self.addAnchors(ng, g)
                 self.UFO.insertGlyph(ng)
 
     def addComponent(self, glyph, name, xoff=0, yoff=0, pModz=[]):
@@ -137,11 +137,11 @@ class MaxifyUFO():
         glyph.clearAnchors()
         if glyph.name == 'uniE272':
             m = 1
-        markAnchors = ['markAbove','markBelow','markAbove_1','markAbove_2',
-                       'markBelow_1','markBelow_2','_markAbove','_markBelow',
-                       '_markAbove_1','_markAbove_2','_markBelow_1','_markBelow_2',
-                       '_hamzaAbove','hamzaAbove','_hamzaBelow','hamzaBelow'
-                       #'markAboveMark','markBelowMark','_markAboveMark','_markBelowMark'
+        markAnchors = ['markAbove', 'markBelow', 'markAbove_1', 'markAbove_2',
+                       'markBelow_1', 'markBelow_2', '_markAbove', '_markBelow',
+                       '_markAbove_1', '_markAbove_2', '_markBelow_1', '_markBelow_2',
+                       '_hamzaAbove', 'hamzaAbove', '_hamzaBelow', 'hamzaBelow'
+                       # 'markAboveMark','markBelowMark','_markAboveMark','_markBelowMark'
                        ]
         if len(anchors):
             for anchor in anchors:
@@ -158,7 +158,6 @@ class MaxifyUFO():
 
                 else:
                     continue
-
 
     def updateAnchors(self, glyph, base, x, y):
         anchors = base.anchors
@@ -195,3 +194,43 @@ class MaxifyUFO():
 
     def sortGlyphs(self):
         self.UFO.lib['public.glyphOrder'].sort()
+
+
+def main():
+    print('max')
+
+    sourceFile = None
+    buildFea = False
+    template = None
+    config = None
+    output = "./mini.ufo"
+
+    parser = argparse.ArgumentParser(prog='minify')
+    parser.add_argument('-i', nargs='?', help='help for -i Source File, only UFO format supported')
+    parser.add_argument('-f', nargs='?', help='help for -f build OTF features')
+    parser.add_argument('-t', nargs='?', help='help for -t master template file path (optioinal)')
+    parser.add_argument('-c', nargs='?', help='help for -c custom configuration file path (optional)')
+    parser.add_argument('-o', nargs='?', help='help for -c output file path (optional)')
+
+    args = parser.parse_args()
+
+    if args.f:
+        buildFea = True
+    if args.o:
+        output = args.o
+    sourceFile = args.i
+    template = args.t
+    config = args.c
+
+    mini = MinifyUFO(sourceFile, buildFea, template, config)
+
+    ufo = mini.build()
+
+    if ufo is not None:
+        ufo.save(output)
+        print("Font Minified :)")
+    else:
+        return None
+
+if __name__ == "__main__":
+    main()

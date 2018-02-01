@@ -20,6 +20,11 @@ setup(
     url="https://github.com/fadox/fontamental",
     license="Simplified BSD",
     package_dir={"": "Lib"},
+    entry_points={
+        'console_scripts': [
+            'minify=fontamental.minify:main',
+            'maxify=fontamental.maxify:main'],
+    },
     packages=find_packages("Lib"),
     install_requires=install_requires,
     test_suite="tests",

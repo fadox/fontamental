@@ -5,11 +5,12 @@ from defcon import Font, Color, Glyph, Contour
 from fontamental.glyphslib import GlyphsLib
 import copy
 import os
+import argparse
 
 
 class MinifyUFO():
-    def __init__(self, source, buildFea=False, template=None, config=None):
-        self.gl = GlyphsLib(buildFea, config)
+    def __init__(self, source, template=None, config=None):
+        self.gl = GlyphsLib(False, config)  # buildFea set to false
         self.sUFO = Font(source)
         self.UFO = Font()
         self.layers = {}
@@ -17,7 +18,6 @@ class MinifyUFO():
         if template is None:
             template = os.path.join(os.path.dirname(__file__), 'template.ufo')
         self.templateUFO = Font(template)
-
 
     def build(self):
         self.copyFontInfo()
@@ -72,7 +72,7 @@ class MinifyUFO():
                     else:
                         self.UFO.insertGlyph(glyph)
                     layer += 1
-                    #print(g + ' found :)' + '  L ' + str(layer))
+                    # print(g + ' found :)' + '  L ' + str(layer))
 
                     gLog = log + (mgName[0] + ' ' * 50)[0:20]
                     print(gLog + '[' + str(layer) + ']  *')
@@ -108,7 +108,7 @@ class MinifyUFO():
                     else:
                         self.UFO.insertGlyph(glyph)
                     layer += 1
-                    print(gLog + '[' + str(layer)+']')
+                    print(gLog + '[' + str(layer) + ']')
                 except:
                     print(gLog + '[ ]')
                 glyph = None
@@ -117,7 +117,7 @@ class MinifyUFO():
                 missing += log + "\n"
         if len(missing) > 1:
             print('\n')
-            print('='*60)
+            print('=' * 60)
             print('Missing glyphes    ' + str(len(missing.splitlines())))
             print('=' * 60)
             print(missing)
@@ -149,3 +149,42 @@ class MinifyUFO():
 
     def sortGlyphs(self):
         self.UFO.lib['public.glyphOrder'].sort()
+
+
+def main():
+    source_file = None
+    template = None
+    config = None
+    output = "./mini.ufo"
+    source_path = os.getcwd()
+
+    if os.path.isfile(source_path + os.sep + 'config.py'):
+        config = source_path + os.sep + 'config.py'
+
+    parser = argparse.ArgumentParser(prog='minify')
+    parser.add_argument('source', metavar='"Source Font"', type=str,
+                        help='Source File, only UFO format supported')
+    parser.add_argument('-t', nargs='?', help='master template file path')
+    parser.add_argument('-c', nargs='?', help='custom configuration file path')
+    parser.add_argument('-o', nargs='?', help='output file path')
+
+    args = parser.parse_args()
+
+    if args.o is not None:
+        output = args.o
+    source_file = args.source
+    template = args.t
+    if args.c is not None:
+        config = args.c
+
+    mini = MinifyUFO(source_file, template, config)
+
+    ufo = mini.build()
+
+    if ufo is not None:
+        ufo.save(output)
+        print("Font Minified :)")
+
+
+if __name__ == "__main__":
+    main()
