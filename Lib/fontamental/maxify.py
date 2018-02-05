@@ -12,8 +12,8 @@ import argparse
 class MaxifyUFO():
 
     def __init__(self, source, config=None):
-        self.gl = GlyphsLib(True, config)
-        self.sUFO = Font(source)
+        self.GDB = GlyphsLib(True, config)
+        self.srcUFO = Font(source)
         self.UFO = Font()
         self.transFields = ["xScale", "xyScale", "yxScale", "yScale", "xOffset", "yOffset"]
 
@@ -26,11 +26,11 @@ class MaxifyUFO():
         return self.UFO
 
     def copyFontInfo(self):
-        data = self.sUFO.getDataForSerialization()
+        data = self.srcUFO.getDataForSerialization()
         self.UFO.setDataFromSerialization({'info': data['info']})
 
     def setFeatures(self):
-        self.UFO.features.text = self.gl.fea.fea_main
+        self.UFO.features.text = self.GDB.fea.fea_main
 
     def removeOverlap(self):
         """Removes overlap by combining overlapping contours. Not really necessary,
@@ -55,11 +55,11 @@ class MaxifyUFO():
             if gName == 'uni0686.fina':
                 m = 1
 
-            if gName in self.gl.IRREGULAR.keys():
-                gModz = self.gl.IRREGULAR[gName]
+            if gName in self.GDB.IRREGULAR.keys():
+                gModz = self.GDB.IRREGULAR[gName]
             try:
                 baseGlyph = self.UFO[pgNames[0]]
-                masterGlyph = self.sUFO[pgNames[0]]
+                masterGlyph = self.srcUFO[pgNames[0]]
 
                 if not gName in self.UFO.keys():
                     glyph = self.addGlyph(gName, baseGlyph)
@@ -72,7 +72,7 @@ class MaxifyUFO():
                         if partName in gModz.keys():
                             pModz = gModz[partName]
                         partGlyph = self.UFO[partName]
-                        masterPartGlyph = self.sUFO[partName]
+                        masterPartGlyph = self.srcUFO[partName]
 
                         # add parts like Dot, small V, Hamza on the Base Glyph
                         partAnchors = [a.name.replace("_", "", 1) for a in masterPartGlyph.anchors if
@@ -96,7 +96,7 @@ class MaxifyUFO():
 
     def getSubsets(self):
         subs = {}
-        for gName, pgNames in self.gl.AGL2FEA.items():
+        for gName, pgNames in self.GDB.Prod2Comp.items():
             rep = []
             for el in pgNames:
                 rep.append(self.getUniName(el))
@@ -104,15 +104,15 @@ class MaxifyUFO():
         return subs
 
     def getUniName(self, name):
-        if name in self.gl.RAWN2G:
-            return self.gl.RAWN2G[name]
+        if name in self.GDB.Master2Prod:
+            return self.GDB.Master2Prod[name]
         else:
             return name
 
     def addGlyph(self, gName, baseGlyph):
         glyph = self.UFO.newGlyph(gName)
-        if gName in self.gl.AGL2UV:
-            glyph.unicode = self.gl.AGL2UV[gName]
+        if gName in self.GDB.Prod2Decimal:
+            glyph.unicode = self.GDB.Prod2Decimal[gName]
         glyph.width = baseGlyph.width
         glyph.leftMargin = baseGlyph.leftMargin
         glyph.rightMargin = baseGlyph.rightMargin
@@ -121,13 +121,13 @@ class MaxifyUFO():
         return glyph
 
     def copyFundamentals(self):
-        for g in self.sUFO:
-            if g.name in self.gl.RAWN2U:
-                gName = self.gl.RAWN2G[g.name]
+        for g in self.srcUFO:
+            if g.name in self.GDB.Master2Unicode:
+                gName = self.GDB.Master2Prod[g.name]
                 if gName == "uni0646.iso":
                     m = 1
                 # print(gName)
-                gUnicode = int(self.gl.RAWN2U[g.name], 16)
+                gUnicode = int(self.GDB.Master2Unicode[g.name], 16)
                 g.name = gName
                 g.unicode = gUnicode
                 ng = copy.deepcopy(g)

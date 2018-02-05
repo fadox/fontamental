@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import os, io
+import os
+import io
 
 
 class FeaBuilder():
@@ -35,22 +36,22 @@ class FeaBuilder():
         try:
             available = []
             for gl in gclass:
-                if gl in self.LS.UV2AGL.values():
+                if gl in self.GDB.Decimal2Prod.values():
                     available.append(gl)
             return available
         except:
             pass
 
-    def __init__(self, lists, options=None):
+    def __init__(self, gdb, options=None):
 
         if options is not None:
             self.options = options
 
         filePath = os.path.dirname(__file__)
 
-        self.templatesPath = filePath + '/templates/'
+        self.database_path = filePath + '/database/'
 
-        self.LS = lists
+        self.GDB = gdb
 
         self.generateClasses()
 
@@ -84,30 +85,30 @@ class FeaBuilder():
             'fina': [],
             'fina_isol': []
         }
-        ar600 = sorted(self.LS.UV2AGL.keys())
+        ar600 = sorted(self.GDB.Decimal2Prod.keys())
         for letter in ar600:
             if letter >= 1548 and letter <= 1784:
-                blockName = self.LS.UV2AGL[letter]
+                blockName = self.GDB.Decimal2Prod[letter]
                 mediName = blockName + '.medi'
                 initName = blockName + '.init'
                 isolName = blockName + '.isol'
                 finaName = blockName + '.fina'
-                if mediName in self.LS.UV2AGL.values():
+                if mediName in self.GDB.Decimal2Prod.values():
                     FEA['init_medi'].append(blockName)
                     FEA['medi'].append(mediName)
                     FEA['init'].append(initName)
-                    assert initName in self.LS.UV2AGL.values()
+                    assert initName in self.GDB.Decimal2Prod.values()
                     FEA['fina_isol'].append(blockName)
                     FEA['isol'].append(isolName)
-                    assert isolName in self.LS.UV2AGL.values()
+                    assert isolName in self.GDB.Decimal2Prod.values()
                     FEA['fina'].append(finaName)
-                    assert finaName in self.LS.UV2AGL.values()
-                elif finaName in self.LS.UV2AGL.values():
+                    assert finaName in self.GDB.Decimal2Prod.values()
+                elif finaName in self.GDB.Decimal2Prod.values():
                     FEA['fina_isol'].append(blockName)
                     FEA['isol'].append(isolName)
-                    assert isolName in self.LS.UV2AGL.values()
+                    assert isolName in self.GDB.Decimal2Prod.values()
                     FEA['fina'].append(finaName)
-                    assert finaName in self.LS.UV2AGL.values()
+                    assert finaName in self.GDB.Decimal2Prod.values()
         self._writeClasses(FEA)
         self.fea_main += self._readFeaFile('basic_ara.fea')
 
@@ -123,8 +124,8 @@ class FeaBuilder():
         self.fea_main = self.fea_main.replace('#include "classes.fea"', self.fea_classes)
 
     def _readFeaFile(self, feaFile):
-        assert os.path.isfile(self.templatesPath + feaFile)
-        with io.open(self.templatesPath + feaFile, 'r', encoding='utf-8') as f:
+        assert os.path.isfile(self.database_path + feaFile)
+        with io.open(self.database_path + feaFile, 'r', encoding='utf-8') as f:
             return f.read()
 
     def _writeClasses(self, dict):

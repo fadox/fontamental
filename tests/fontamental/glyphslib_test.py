@@ -21,7 +21,7 @@ class IndexTest(unittest.TestCase):
         pass
 
     def test_sample1(self):
-        val = self.gl.AGL2UV
+        val = self.gl.Prod2Decimal
         self.assertTrue(len(val) >= 1)
 
     def test_sample2(self):

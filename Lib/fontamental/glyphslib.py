@@ -50,52 +50,43 @@ import io
 
 
 class GlyphsLib:
-    """
-    AGL  = Production glyph name
-    UV   = Production glyph Unicode Value (decimal)
-    FEA  = Glyph Component List, with Master glyph Names
-    U    = Master glyph equivalent Production Unicode Value (hex)
-    RAWU = Master glyph equivalent Production Unicode Value (hex)
-    G    = Master glyph equivalent Production glyph name
-    RAWN = Master glyph Name
-    C    = Aliases of Master glyph in base font, comma seperated Base glyph names
-"""
     # Arabic Glyphs dict{}, Production glyph name : unicode value
-    AGL2UV = {}
+    Prod2Decimal = {}
 
     # Arabic Glyphs dict{}, unicode value : production glyph name
-    UV2AGL = {}
+    Decimal2Prod = {}
 
     # Arabic Glyphs dict{}, production glyph name : equivalent master glyph names
-    AGL2FEA = {}
+    Prod2Comp = {}
 
     # Master Font Glyphs dict{}, unicode hex : master glyph name
-    RAWU2N = {}
+    Unicode2Master = {}
 
     # Master Font Glyphs dict{}, master glyph name : unicode hex
-    RAWN2U = {}
+    Master2Unicode = {}
 
     # Master Font Glyphs dict{}, master glyph name : production glyph name
-    RAWN2G = {}
+    Master2Prod = {}
 
     # Master Font Glyphs dict{}, master glyph name : search sequence
-    RAWN2C = {}
+    Master2Search = {}
 
-    # Master Font Glyphs dict{}, master glyph name : mask
-    RAWN2M = {}
+    # Master Font Glyphs dict{}, master glyph name : mapping
+    MAPPING = {}
 
     # Post modifications
     IRREGULAR = {}
 
+    # Configurations
     CONFIGS = {}
 
     def __init__(self, buildFea=False, config=None):
         self._init_configs(config)
-        self._init_lists()
+        self._init_glyphs_database()
         self._create_minify_lists()
         self._create_maxify_lists()
         self._init_irregulars()
-        self._init_minify_mask()
+        self._init_minify_mapping()
 
         if buildFea is not False:
             self._build_fea()
@@ -124,12 +115,12 @@ class GlyphsLib:
                         self._set_config(section, options)
 
 
-    def _init_lists(self):
+    def _init_glyphs_database(self):
         """
-        read fontamental configuration files (all *.txt files) under /lists subfolder
+        read fontamental configuration files (all *.txt files) under /database subfolder
         """
         dirPath = os.path.dirname(__file__)
-        for filePath in glob(dirPath + os.sep + "lists" + os.sep + "*.txt"):
+        for filePath in glob(dirPath + os.sep + "database" + os.sep + "*.txt"):
             fp = filePath.split(os.sep)
             fileName = (fp[len(fp) - 1]).split('.')[0]
             text = self._get_file_content(filePath)
@@ -203,16 +194,16 @@ class GlyphsLib:
                 continue
             uniName = splitRaw[0]
             rawName = splitRaw[1]
-            if rawName in self.RAWN2U:
+            if rawName in self.Master2Unicode:
                 continue
-            self.RAWU2N[uniName] = rawName
-            self.RAWN2U[rawName] = uniName
-            self.RAWN2G[rawName] = splitRaw[2]
+            self.Unicode2Master[uniName] = rawName
+            self.Master2Unicode[rawName] = uniName
+            self.Master2Prod[rawName] = splitRaw[2]
 
             if splitRaw[3] == '#':
-                self.RAWN2C[rawName] = splitRaw[2]
+                self.Master2Search[rawName] = splitRaw[2]
             else:
-                self.RAWN2C[rawName] = splitRaw[3]
+                self.Master2Search[rawName] = splitRaw[3]
 
     def _create_maxify_lists(self):
         """
@@ -236,16 +227,16 @@ class GlyphsLib:
             if glyphName in ignored:
                 continue
 
-            if glyphName in self.AGL2UV:
+            if glyphName in self.Prod2Decimal:
                 # the above table contains identical duplicates
-                assert self.AGL2UV[glyphName] == unicode
+                assert self.Prod2Decimal[glyphName] == unicode
             else:
-                self.AGL2UV[glyphName] = unicode
+                self.Prod2Decimal[glyphName] = unicode
                 try:
-                    self.AGL2FEA[glyphName] = splitRaw[2].split(",")
+                    self.Prod2Comp[glyphName] = splitRaw[2].split(",")
                 except Exception:
                     sys.exc_clear()
-            self.UV2AGL[unicode] = glyphName
+            self.Decimal2Prod[unicode] = glyphName
 
     def _init_irregulars(self):
         """
@@ -268,29 +259,29 @@ class GlyphsLib:
                 continue
             gName = splitMod[0]
             cName = splitMod[1]
-            cName = self.RAWN2G[cName]
+            cName = self.Master2Prod[cName]
             props = {}
             properties = splitMod[2].split(',')
             for index, p in list(enumerate(properties)):
                 props[transfer_props[index]] = p
             self.IRREGULAR[gName] = {cName: props}
 
-    def _init_minify_mask(self):
+    def _init_minify_mapping(self):
         """
-        Use a minify Mask
+        Use a minify mapping
 
         This function will set the alternative mapping to extract glyphs from base Font
-        The Mask values will set to the RAWN2M (Name to Mask) global variable
+        The mapping values will set to the MAPPING (Name to mapping) global variable
         """
-        if not self._config_exists('mask'):
+        if not self._config_exists('mapping'):
             return
 
-        for line in self._get_config('mask'):
+        for line in self._get_config('mapping'):
             try:
                 lp = line.split()
                 rawName = lp[0]
-                maskName = lp[1]
-                self.gl.RAWN2M[rawName] = maskName
+                mapping_name = lp[1]
+                self.gl.MAPPING[rawName] = mapping_name
             except Exception:
                 sys.exc_clear()
 

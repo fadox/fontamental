@@ -10,8 +10,8 @@ import argparse
 
 class MinifyUFO():
     def __init__(self, source, template=None, config=None):
-        self.gl = GlyphsLib(False, config)  # buildFea set to false
-        self.sUFO = Font(source)
+        self.GDB = GlyphsLib(False, config)  # buildFea set to false
+        self.srcUFO = Font(source)
         self.UFO = Font()
         self.layers = {}
 
@@ -35,7 +35,7 @@ class MinifyUFO():
         return self.layers[layerName]
 
     def copyFontInfo(self):
-        data = self.sUFO.getDataForSerialization()
+        data = self.srcUFO.getDataForSerialization()
         self.UFO.setDataFromSerialization({'info': data['info']})
 
     def createGlyphs(self):
@@ -43,21 +43,21 @@ class MinifyUFO():
         self.UFO.newGlyph('.notdef')
         missing = ''
 
-        for glf in self.gl.RAWN2C:
-            glfUnicode = int(self.gl.RAWN2U[glf], 16)
+        for glf in self.GDB.Master2Search:
+            glfUnicode = int(self.GDB.Master2Unicode[glf], 16)
 
             print('')
             layer = 0
             stopAt = 'arAlef.fina.la'
-            glfSrc = self.gl.RAWN2C[glf].split(',')
+            glfSrc = self.GDB.Master2Search[glf].split(',')
             if glf == stopAt:
                 m = 1
             log = (glf + ' ' * 50)[0:20]
-            if glf in self.gl.RAWN2M:
+            if glf in self.GDB.MAPPING:
                 try:
-                    mgName = [self.gl.RAWN2M[glf]]
+                    mgName = [self.GDB.MAPPING[glf]]
                     glyph = Glyph()
-                    glyph.copyDataFromGlyph(self.sUFO[mgName[0]])
+                    glyph.copyDataFromGlyph(self.srcUFO[mgName[0]])
                     glyph.name = glf
                     if layer == 0:
                         glyph.unicode = glfUnicode
@@ -85,15 +85,15 @@ class MinifyUFO():
 
                 try:
                     try:
-                        gCode = self.gl.AGL2UV[g]
-                        mgName = self.sUFO.unicodeData[gCode]
+                        gCode = self.GDB.Prod2Decimal[g]
+                        mgName = self.srcUFO.unicodeData[gCode]
                     except:
                         try:
                             mgName = [g]
                         except:
                             pass
                     glyph = Glyph()
-                    glyph.copyDataFromGlyph(self.sUFO[mgName[0]])
+                    glyph.copyDataFromGlyph(self.srcUFO[mgName[0]])
                     glyph.name = glf
                     if layer == 0:
                         glyph.unicode = glfUnicode
