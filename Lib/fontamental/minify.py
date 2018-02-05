@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 from defcon import Font, Color, Glyph, Contour
-from fontamental.glyphslib import GlyphsLib
+from fontamental.objects.glyphslib import GlyphsLib
 import copy
 import os
 import argparse
@@ -16,7 +16,7 @@ class MinifyUFO():
         self.layers = {}
 
         if template is None:
-            template = os.path.join(os.path.dirname(__file__), 'template.ufo')
+            template = os.path.join(os.path.dirname(__file__), 'database/template.ufo')
         self.templateUFO = Font(template)
 
     def build(self):

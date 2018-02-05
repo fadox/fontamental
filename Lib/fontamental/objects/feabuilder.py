@@ -47,9 +47,10 @@ class FeaBuilder():
         if options is not None:
             self.options = options
 
-        filePath = os.path.dirname(__file__)
 
-        self.database_path = filePath + '/database/'
+        self.lib_path = (os.sep).join((os.path.dirname(__file__).split(os.sep))[:-1])
+
+        self.database_path = self.lib_path + '/database/'
 
         self.GDB = gdb
 

@@ -2,9 +2,9 @@
 # encoding: utf-8
 
 from defcon import Font, Color, Glyph, Contour
-from fontamental.glyphslib import GlyphsLib
+from fontamental.objects.glyphslib import GlyphsLib
 from booleanOperations import BooleanOperationManager
-from ufo2ft import compileOTF, compileTTF
+from ufo2ft import compileOTF
 import copy
 import argparse
 

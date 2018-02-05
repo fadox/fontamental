@@ -43,7 +43,7 @@ END
 import os
 import sys
 from glob import glob
-from fontamental.feabuilder import FeaBuilder
+from fontamental.objects.feabuilder import FeaBuilder
 import codecs
 import configparser
 import io
@@ -81,6 +81,7 @@ class GlyphsLib:
     CONFIGS = {}
 
     def __init__(self, buildFea=False, config=None):
+        self.lib_path = (os.sep).join((os.path.dirname(__file__).split(os.sep))[:-1])
         self._init_configs(config)
         self._init_glyphs_database()
         self._create_minify_lists()
@@ -119,12 +120,11 @@ class GlyphsLib:
         """
         read fontamental configuration files (all *.txt files) under /database subfolder
         """
-        dirPath = os.path.dirname(__file__)
-        for filePath in glob(dirPath + os.sep + "database" + os.sep + "*.txt"):
+        for filePath in glob(self.lib_path + os.sep + "database" + os.sep + "*.txt"):
             fp = filePath.split(os.sep)
-            fileName = (fp[len(fp) - 1]).split('.')[0]
+            file_name = (fp[len(fp) - 1]).split('.')[0]
             text = self._get_file_content(filePath)
-            self._set_config_from_text(fileName, text)
+            self._set_config_from_text(file_name, text)
 
     def _get_file_content(self, filePath):
         """
