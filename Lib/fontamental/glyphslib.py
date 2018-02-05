@@ -45,7 +45,7 @@ import sys
 from glob import glob
 from fontamental.feabuilder import FeaBuilder
 import codecs
-import ConfigParser
+import configparser
 import io
 
 
@@ -85,7 +85,7 @@ class GlyphsLib:
     RAWN2M = {}
 
     # Post modifications
-    MODZ = {}
+    IRREGULAR = {}
 
     CONFIGS = {}
 
@@ -94,8 +94,8 @@ class GlyphsLib:
         self._init_lists()
         self._create_minify_lists()
         self._create_maxify_lists()
-        self._applay_modifications()
-        self._applay_minify_mask()
+        self._init_irregulars()
+        self._init_minify_mask()
 
         if buildFea is not False:
             self._build_fea()
@@ -107,11 +107,9 @@ class GlyphsLib:
 
         if configFile:
             # Load the configuration file
-            with open(configFile) as f:
-                sample_config = f.read()
-            config = ConfigParser.RawConfigParser(allow_no_value=True)
-            config.readfp(io.BytesIO(sample_config))
-
+            config = configparser.RawConfigParser(allow_no_value=True)
+            config.optionxform = str
+            config.read(configFile, encoding='utf8')
 
             for section in config.sections():
                 if "(dict)" in section:
@@ -221,7 +219,7 @@ class GlyphsLib:
         Create main Configuration Tables to maxify a mini/master font
         """
         assert (self._config_exists('arabic-max'))
-        ignored = self._get_config('ignore')
+        ignored = self._get_config('ignored')
         lines = self._get_config('arabic-max-ext') + self._get_config('arabic-max')
         for line in lines:
             splitRaw = line.split()
@@ -249,7 +247,7 @@ class GlyphsLib:
                     sys.exc_clear()
             self.UV2AGL[unicode] = glyphName
 
-    def _applay_modifications(self):
+    def _init_irregulars(self):
         """
         Applay irregular modifications on glyphs
 
@@ -258,6 +256,7 @@ class GlyphsLib:
         """
         if not self._config_exists('irregular'):
             return
+        transfer_props = ["xScale","yScale", "xOffset", "yOffset"]
 
         for line in self._get_config('irregular'):
             if "#" in line:
@@ -272,9 +271,11 @@ class GlyphsLib:
             cName = self.RAWN2G[cName]
             props = {}
             properties = splitMod[2].split(',')
-            self.MODZ[gName] = {cName: properties}
+            for index, p in list(enumerate(properties)):
+                props[transfer_props[index]] = p
+            self.IRREGULAR[gName] = {cName: props}
 
-    def _applay_minify_mask(self):
+    def _init_minify_mask(self):
         """
         Use a minify Mask
 

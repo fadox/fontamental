@@ -4,7 +4,9 @@
 from defcon import Font, Color, Glyph, Contour
 from fontamental.glyphslib import GlyphsLib
 from booleanOperations import BooleanOperationManager
+from ufo2ft import compileOTF, compileTTF
 import copy
+import argparse
 
 
 class MaxifyUFO():
@@ -53,8 +55,8 @@ class MaxifyUFO():
             if gName == 'uni0686.fina':
                 m = 1
 
-            if gName in self.gl.MODZ.keys():
-                gModz = self.gl.MODZ[gName]
+            if gName in self.gl.IRREGULAR.keys():
+                gModz = self.gl.IRREGULAR[gName]
             try:
                 baseGlyph = self.UFO[pgNames[0]]
                 masterGlyph = self.sUFO[pgNames[0]]
@@ -216,40 +218,34 @@ class MaxifyUFO():
 
 
 def main():
-    print('max')
+    source_file = None
+    config = "./config.ini"
+    output = "./build_font.otf"
 
-    sourceFile = None
-    buildFea = False
-    template = None
-    config = None
-    output = "./mini.ufo"
-
-    parser = argparse.ArgumentParser(prog='minify')
-    parser.add_argument('-i', nargs='?', help='help for -i Source File, only UFO format supported')
-    parser.add_argument('-f', nargs='?', help='help for -f build OTF features')
-    parser.add_argument('-t', nargs='?', help='help for -t master template file path (optioinal)')
+    parser = argparse.ArgumentParser(prog='maxify')
+    parser.add_argument('source', metavar='"Source Font"', type=str,  help='Source File, only UFO format supported')
     parser.add_argument('-c', nargs='?', help='help for -c custom configuration file path (optional)')
     parser.add_argument('-o', nargs='?', help='help for -c output file path (optional)')
 
     args = parser.parse_args()
 
-    if args.f:
-        buildFea = True
-    if args.o:
+    if args.o is not None:
         output = args.o
-    sourceFile = args.i
-    template = args.t
-    config = args.c
+    source_file = args.source
 
-    mini = MinifyUFO(sourceFile, buildFea, template, config)
+    if args.c is not None:
+        config = args.c
 
-    ufo = mini.build()
+    maxi = MaxifyUFO(source_file, config)
+
+    ufo = maxi.build()
 
     if ufo is not None:
-        ufo.save(output)
-        print("Font Minified :)")
-    else:
-        return None
+        otf = compileOTF(ufo, useProductionNames=False)
+        if otf is not None:
+            # save generated font to file
+            otf.save(output)
+            print("The Font (" + output + ") created successfully !")
 
 if __name__ == "__main__":
     main()

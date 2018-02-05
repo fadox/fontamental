@@ -153,7 +153,6 @@ class MinifyUFO():
 
 def main():
     source_file = None
-    template = None
     config = None
     output = "./_mini.ufo"
     source_path = os.getcwd()
