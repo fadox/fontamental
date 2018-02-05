@@ -155,7 +155,7 @@ def main():
     source_file = None
     template = None
     config = None
-    output = "./mini.ufo"
+    output = "./_mini.ufo"
     source_path = os.getcwd()
 
     if os.path.isfile(source_path + os.sep + 'config.py'):

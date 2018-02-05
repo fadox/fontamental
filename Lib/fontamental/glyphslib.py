@@ -45,6 +45,8 @@ import sys
 from glob import glob
 from fontamental.feabuilder import FeaBuilder
 import codecs
+import ConfigParser
+import io
 
 
 class GlyphsLib:
@@ -98,19 +100,31 @@ class GlyphsLib:
         if buildFea is not False:
             self._build_fea()
 
-    def _init_configs(self, config):
+    def _init_configs(self, configFile):
         """
         read customized configuration of the font (optional)
         """
-        if config:
-            lines = self._get_file_content(config)
-            ns = {}
-            code = compile(lines, '<string>', 'exec')
-            exec (code, ns)
-            cnf = ns['configs']
-            if isinstance(cnf, dict):
-                for name, text in cnf.items():
-                    self._set_config(name, text)
+
+        if configFile:
+            # Load the configuration file
+            with open(configFile) as f:
+                sample_config = f.read()
+            config = ConfigParser.RawConfigParser(allow_no_value=True)
+            config.readfp(io.BytesIO(sample_config))
+
+
+            for section in config.sections():
+                if "(dict)" in section:
+                    section_name = section.replace('(dict)','')
+                    options_dict = {}
+                    for options in config.options(section):
+                        options_dict[options] = config.get(section, options)
+                    self.CONFIGS[section_name] = options_dict
+                else:
+                    self.CONFIGS[section] = []
+                    for options in config.options(section):
+                        self._set_config(section, options)
+
 
     def _init_lists(self):
         """
@@ -121,7 +135,7 @@ class GlyphsLib:
             fp = filePath.split(os.sep)
             fileName = (fp[len(fp) - 1]).split('.')[0]
             text = self._get_file_content(filePath)
-            self._set_config(fileName, text)
+            self._set_config_from_text(fileName, text)
 
     def _get_file_content(self, filePath):
         """
@@ -132,7 +146,14 @@ class GlyphsLib:
             lines = f.read()
             return lines
 
-    def _set_config(self, name, text):
+    def _set_config(self, section, option):
+        """
+        set a Config value, under a given index (name) from a plane text
+        """
+        linesList = self.CONFIGS[section]
+        linesList.append(option)
+
+    def _set_config_from_text(self, name, text):
         """
         set a Config value, under a given index (name) from a plane text
         """
@@ -230,15 +251,15 @@ class GlyphsLib:
 
     def _applay_modifications(self):
         """
-        Applay post modifications on glyphs
+        Applay irregular modifications on glyphs
 
         This will defined the fine changes that will be applied on the given glyph component
         like changing the position and the component scale
         """
-        if not self._config_exists('mod'):
+        if not self._config_exists('irregular'):
             return
 
-        for line in self._get_config('mod'):
+        for line in self._get_config('irregular'):
             if "#" in line:
                 line = line.split('#')[0]
             if not line:
@@ -250,11 +271,8 @@ class GlyphsLib:
             cName = splitMod[1]
             cName = self.RAWN2G[cName]
             props = {}
-            properties = splitMod[2].split(';')
-            for p in properties:
-                splitP = p.split('=')
-                props[splitP[0]] = splitP[1]
-            self.MODZ[gName] = {cName: props}
+            properties = splitMod[2].split(',')
+            self.MODZ[gName] = {cName: properties}
 
     def _applay_minify_mask(self):
         """

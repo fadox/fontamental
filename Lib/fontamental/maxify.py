@@ -3,25 +3,44 @@
 
 from defcon import Font, Color, Glyph, Contour
 from fontamental.glyphslib import GlyphsLib
+from booleanOperations import BooleanOperationManager
 import copy
 
 
 class MaxifyUFO():
-    def __init__(self, source, roles=None):
-        self.gl = GlyphsLib(True, roles)
-        self.sUFO = source
+
+    def __init__(self, source, config=None):
+        self.gl = GlyphsLib(True, config)
+        self.sUFO = Font(source)
         self.UFO = Font()
         self.transFields = ["xScale", "xyScale", "yxScale", "yScale", "xOffset", "yOffset"]
 
     def build(self):
         self.copyFontInfo()
         self.createGlyphs()
+        self.removeOverlap()
+        self.setFeatures()
         self.sortGlyphs()
         return self.UFO
 
     def copyFontInfo(self):
         data = self.sUFO.getDataForSerialization()
         self.UFO.setDataFromSerialization({'info': data['info']})
+
+    def setFeatures(self):
+        self.UFO.features.text = self.gl.fea.fea_main
+
+    def removeOverlap(self):
+        """Removes overlap by combining overlapping contours. Not really necessary,
+        but some font rendering systems need this."""
+        manager = BooleanOperationManager()
+        for glyph in self.UFO:
+            contours = list(glyph)
+            glyph.clearContours()
+            try:
+                manager.union(contours, glyph.getPointPen())
+            except:
+                m = 1
 
     def createGlyphs(self):
 
