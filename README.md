@@ -63,6 +63,10 @@ One of the main functions of this script, to extract the main Arabic glyphs shap
 To do this, you need to save a font to UFO format, say to **base.ufo** as example.
 to meinify this font, change to the folder where the font saved, and run this command
 ```sh
+$ fontamental --minify base.ufo
+```
+or
+```sh
 $ minify base.ufo
 ```
 this will generate the minified version of the font named **_mini.ufo**
@@ -70,6 +74,12 @@ this will generate the minified version of the font named **_mini.ufo**
 ## Maxify a Font
 You can to edit the _mini.ufo font in any font editor that supported this format.
 After finishing with your changes, you will use it to generate the whole range of Arabic glyphs, using our **maxify** command
+
+```sh
+$ fontamental _mini.ufo
+```
+or
+
 ```sh
 $ maxify _mini.ufo
 ```
