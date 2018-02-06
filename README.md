@@ -65,23 +65,14 @@ to meinify this font, change to the folder where the font saved, and run this co
 ```sh
 $ fontamental --minify base.ufo
 ```
-or
-```sh
-$ minify base.ufo
-```
 this will generate the minified version of the font named **_mini.ufo**
 
 ## Maxify a Font
 You can to edit the _mini.ufo font in any font editor that supported this format.
-After finishing with your changes, you will use it to generate the whole range of Arabic glyphs, using our **maxify** command
+After finishing with your changes, you will use it to generate the whole range of Arabic glyphs, using our **fontamental** command
 
 ```sh
 $ fontamental _mini.ufo
-```
-or
-
-```sh
-$ maxify _mini.ufo
 ```
 this will generate an OTF font in the same folder, which containes all necessary OTF features to use the font directly in any text editing programm.
 
