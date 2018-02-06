@@ -1,4 +1,5 @@
 [console_scripts]
+fontamental = fontamental.__main__:main
 maxify = fontamental.maxify:main
 minify = fontamental.minify:main
 

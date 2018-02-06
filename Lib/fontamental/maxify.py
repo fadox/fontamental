@@ -218,28 +218,20 @@ class MaxifyUFO():
 
 
 def main():
-    source_file = None
     config = "./config.ini"
     output = "./build_font.otf"
-
     parser = argparse.ArgumentParser(prog='maxify')
     parser.add_argument('source', metavar='"Source Font"', type=str,  help='Source File, only UFO format supported')
-    parser.add_argument('-c', nargs='?', help='help for -c custom configuration file path (optional)')
-    parser.add_argument('-o', nargs='?', help='help for -c output file path (optional)')
-
+    parser.add_argument('-c', nargs='?', help='user configuration file path')
+    parser.add_argument('-o', nargs='?', help='output file')
     args = parser.parse_args()
-
     if args.o is not None:
         output = args.o
     source_file = args.source
-
     if args.c is not None:
         config = args.c
-
     maxi = MaxifyUFO(source_file, config)
-
     ufo = maxi.build()
-
     if ufo is not None:
         otf = compileOTF(ufo, useProductionNames=False)
         if otf is not None:

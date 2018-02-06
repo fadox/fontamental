@@ -8,9 +8,7 @@ requirements.txt
 setup.cfg
 setup.py
 Lib/fontamental/__init__.py
-Lib/fontamental/aragl.py
-Lib/fontamental/feabuilder.py
-Lib/fontamental/glyphslib.py
+Lib/fontamental/__main__.py
 Lib/fontamental/maxify.py
 Lib/fontamental/minify.py
 Lib/fontamental.egg-info/PKG-INFO
@@ -20,6 +18,9 @@ Lib/fontamental.egg-info/entry_points.txt
 Lib/fontamental.egg-info/not-zip-safe
 Lib/fontamental.egg-info/requires.txt
 Lib/fontamental.egg-info/top_level.txt
+Lib/fontamental/objects/__init__.py
+Lib/fontamental/objects/feabuilder.py
+Lib/fontamental/objects/glyphslib.py
 tests/__init__.py
 tests/fontamental/__init__.py
 tests/fontamental/aragl_test.py
