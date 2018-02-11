@@ -2,7 +2,7 @@
 
 Fontamental, is a python library to extract the Fundamental glyphs of font, in a small abstract font, which can use in the re-production of the original font in new ways and weights.
 
-The abstract font format and glyph names are inspired by the project of "Ali Uni font", and the "Mada" project by Khaled Hosni.
+The abstract font format and glyph names are inspired by the project of "Ali Uni font", and the "Mada" project by Khaled Hosny.
 
 Goal in the first stage is to cover the entire Arabic glyphs range in the unicode standard.
 
@@ -18,13 +18,13 @@ Fontamentals requires Python 3.5 (or later).
 
 Set up a new Python virtual environment. Although this is not required, it's highly recommended, since Fontamentals has some of dependencies, which may (or may not) conflict with other modules you installed globally.
 
-To create a new virtual environment in ENV_DIR:
+To create a new virtual environment in `ENV_DIR`:
 ```sh
 $ python3 -m venv ENV_DIR
 ```
 
-This creates a new ENV_DIR folder (you can choose the name you want). 
-The bin subfolder (or Scripts if you are on Windows) contains a new python executable, and the pip installer linked to that.
+This creates a new `ENV_DIR` folder (you can choose the name you want). 
+The `bin` subfolder (or `Scripts` if you are on Windows) contains a new python executable, and the pip installer linked to that.
 
 Activate the newly created environment:
 
@@ -38,9 +38,9 @@ $ source ENV_DIR/bin/activate
 ENV_DIR\Scripts\activate.bat
 ```
 
-This temporarily adds the virtual environment's scripts folder to your console's PATH, so you can access python, pip and the Fontamental script from anywhere.
+This temporarily adds the virtual environment's scripts folder to your console's `PATH`, so you can access python, pip and the Fontamental script from anywhere.
 
-Run deactivate when you wish to exit the virtual environment. This restores the default system PATH.
+Run deactivate when you wish to exit the virtual environment. This restores the default system `PATH`.
 
 ##### clone the repositroy:
 git clone https://github.com/fadox/fontamental.git
