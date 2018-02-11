@@ -2,7 +2,8 @@
 from setuptools import setup, find_packages
 from sys import version_info
 
-install_requires=["fonttools>=3.17.0","defcon>=0.3.4"]
+install_requires=["fonttools>=3.17.0","defcon>=0.3.4",
+                  "booleanOperations>=0.8.0", "ufo2ft>=1.0.0"]
 
 if not (version_info[0] == 3 and version_info[1] >= 4):
     install_requires.append("singledispatch")

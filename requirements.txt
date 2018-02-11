@@ -1,2 +1,4 @@
 defcon==0.2.0
 fonttools==3.2.1
+booleanOperations==0.8.0
+ufo2ft==1.1.0
