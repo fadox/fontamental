@@ -173,38 +173,28 @@ class MinifyUFO():
 
 
 def main():
-    source_file = None
-    config = None
-    output = "./_mini.ufo"
-    source_path = os.getcwd()
-
-    if os.path.isfile(source_path + os.sep + 'config.py'):
-        config = source_path + os.sep + 'config.py'
-
+    config = "./config.ini"
+    output = "./build_font.otf"
     parser = argparse.ArgumentParser(prog='minify')
+
     parser.add_argument('source', metavar='"Source Font"', type=str,
                         help='Source File, supported formats: UFO, ttf, otf, woff, woff2, ttx, type1')
+
     parser.add_argument('-t', nargs='?', help='master template file path')
     parser.add_argument('-c', nargs='?', help='custom configuration file path')
     parser.add_argument('-o', nargs='?', help='output file path')
-
     args = parser.parse_args()
-
-    if args.o is not None:
-        output = args.o
     source_file = args.source
     template = args.t
+    if args.o is not None:
+        output = args.o
     if args.c is not None:
         config = args.c
-
     mini = MinifyUFO(source_file, template, config)
-
     ufo = mini.build()
-
     if ufo is not None:
         ufo.save(output)
         print("Font Minified :)")
-
 
 if __name__ == "__main__":
     main()

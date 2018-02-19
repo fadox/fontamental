@@ -22,6 +22,7 @@ setup(
     package_dir={"": "Lib"},
     entry_points={
         'console_scripts': [
+            'fontamental=fontamental.__main__:main',
             'minify=fontamental.minify:main',
             'maxify=fontamental.maxify:main'],
     },
