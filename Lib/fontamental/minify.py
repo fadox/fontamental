@@ -8,16 +8,32 @@ import os
 import argparse
 
 
+
 class MinifyUFO():
     def __init__(self, source, template=None, config=None):
         self.GDB = GlyphsLib(False, config)  # buildFea set to false
-        self.srcUFO = Font(source)
+        self.srcUFO = self.sourceFont(source)
         self.UFO = Font()
         self.layers = {}
 
         if template is None:
             template = os.path.join(os.path.dirname(__file__), 'database/template.ufo')
         self.templateUFO = Font(template)
+
+    def sourceFont(self, source):
+        if source is None:
+            raise Exception('font-file argument missing')
+
+        font_type = source.split('.')[-1].lower()
+        if font_type == "ufo":
+            src = Font(source)
+        elif font_type in  ["otf", "ttf", "woff", "woff2", "ttx", "pfa"]:
+            import extractor
+            src = Font()
+            extractor.extractUFO(source, src)
+        else:
+            raise Exception('font-file in format ' + font_type + " is not supported")
+        return src
 
     def build(self):
         self.copyFontInfo()
@@ -124,7 +140,7 @@ class MinifyUFO():
             print('=' * 60)
 
     def createAnchors(self):
-        factor = int(self.getFactorOfUPM())
+        factor = self.getFactorOfUPM()
         for g in self.UFO:
             try:
                 sampleGlyph = self.templateUFO[g.name]
@@ -142,9 +158,14 @@ class MinifyUFO():
                 pass
 
     def getFactorOfUPM(self):
-        standardUPM = 2048
+        templateUPM = self.templateUFO.info.unitsPerEm
         sourceFontUPM = self.UFO.info.unitsPerEm
-        factor = float(standardUPM) / float(sourceFontUPM)
+        if sourceFontUPM > templateUPM:
+            factor = float(templateUPM) /  float(sourceFontUPM)
+        elif templateUPM > sourceFontUPM:
+            factor = float(sourceFontUPM) /float(templateUPM)
+        else:
+            factor = 1
         return factor
 
     def sortGlyphs(self):
@@ -162,7 +183,7 @@ def main():
 
     parser = argparse.ArgumentParser(prog='minify')
     parser.add_argument('source', metavar='"Source Font"', type=str,
-                        help='Source File, only UFO format supported')
+                        help='Source File, supported formats: UFO, ttf, otf, woff, woff2, ttx, type1')
     parser.add_argument('-t', nargs='?', help='master template file path')
     parser.add_argument('-c', nargs='?', help='custom configuration file path')
     parser.add_argument('-o', nargs='?', help='output file path')
