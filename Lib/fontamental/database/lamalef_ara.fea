@@ -1,3 +1,30 @@
+## yeh
+lookup YehNoonFina {
+    sub @aBaa.medi by @aBaa.medi.yeh;
+    sub uni0646.fina by uni0646.fina.yeh;
+}YehNoonFina;
+
+
+feature calt {
+  lookupflag IgnoreMarks;
+      sub [@aBaa.medi]' lookup YehNoonFina
+      [uni0646.fina]' lookup YehNoonFina;
+} calt;
+
+
+## Raa
+lookup YehRaaFina {
+    sub @aBaa.medi by @aBaa.medi.yeh;
+    sub @aRaa.fina by @aRaa.fina.yeh;
+}YehRaaFina;
+
+
+feature calt {
+  lookupflag IgnoreMarks;
+      sub [@aBaa.medi]' lookup YehRaaFina
+      [@aRaa.fina]' lookup YehRaaFina;
+} calt;
+
 ## Lam Alef
 
 lookup LamAlfFina {

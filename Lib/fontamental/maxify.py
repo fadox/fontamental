@@ -52,7 +52,7 @@ class MaxifyUFO():
 
         for gName, pgNames in subs.items():
             gModz = {}
-            if gName == 'uni0686.fina':
+            if gName == 'uni062B.medi.yeh':
                 m = 1
 
             if gName in self.GDB.IRREGULAR.keys():
