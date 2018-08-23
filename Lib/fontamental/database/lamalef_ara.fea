@@ -1,5 +1,6 @@
 ## yeh
 lookup YehNoonFina {
+lookupflag IgnoreMarks;
     sub @aBaa.medi by @aBaa.medi.yeh;
     sub uni0646.fina by uni0646.fina.yeh;
 }YehNoonFina;
@@ -14,6 +15,7 @@ feature calt {
 
 ## Raa
 lookup YehRaaFina {
+lookupflag IgnoreMarks;
     sub @aBaa.medi by @aBaa.medi.yeh;
     sub @aRaa.fina by @aRaa.fina.yeh;
 }YehRaaFina;
@@ -28,6 +30,7 @@ feature calt {
 ## Lam Alef
 
 lookup LamAlfFina {
+lookupflag IgnoreMarks;
   sub @aAlf.fina by @aAlf.fina_LA_fina;
   sub @aLam.medi by @aLam.medi_LA_fina;
 } LamAlfFina;

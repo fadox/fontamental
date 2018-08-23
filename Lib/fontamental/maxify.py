@@ -7,11 +7,12 @@ from booleanOperations import BooleanOperationManager
 from ufo2ft import compileOTF
 import copy
 import argparse
-
+import os
 
 class MaxifyUFO():
 
     def __init__(self, source, config=None):
+        self.sourcesDir =os.sep.join(source.split(os.sep)[:-1])
         self.GDB = GlyphsLib(True, config)
         self.srcUFO = Font(source)
         self.UFO = Font()
@@ -30,7 +31,11 @@ class MaxifyUFO():
         self.UFO.setDataFromSerialization({'info': data['info']})
 
     def setFeatures(self):
-        self.UFO.features.text = self.GDB.fea.fea_main
+        featuresText = self.GDB.fea.fea_main
+        userFeaFile = self.sourcesDir + os.sep + "font.fea"
+        if os.path.isfile(userFeaFile):
+            featuresText += self.GDB.get_file_content(userFeaFile)
+        self.UFO.features.text = featuresText
 
     def removeOverlap(self):
         """Removes overlap by combining overlapping contours. Not really necessary,
@@ -47,6 +52,7 @@ class MaxifyUFO():
     def createGlyphs(self):
 
         self.copyFundamentals()
+        self.createWhiteSpacesGlyphs()
 
         subs = self.getSubsets()
 
@@ -133,6 +139,68 @@ class MaxifyUFO():
                 ng = copy.deepcopy(g)
                 self.addAnchors(ng, g)
                 self.UFO.insertGlyph(ng)
+
+    def createWhiteSpacesGlyphs(self):
+        spaceGlyph = self.UFO['space']
+        try:
+            spaceWidth = self.GDB.CONFIGS['info']['spaceWidth']
+            spaceGlyph.width = int(spaceWidth)
+        except:
+            print('missing spaceWidth config value')
+
+        space = spaceGlyph.width
+        em = self.UFO.info.unitsPerEm
+
+        # no-Break-space 0x00A0
+        width = int(space / 2)
+        self.createSpaceGlyphe(spaceGlyph, 'nbsp', '00A0', width)
+
+        # en space
+        width = int(em / 2)
+        self.createSpaceGlyphe(spaceGlyph, 'enspace', '2002', width)
+
+        # em space
+        self.createSpaceGlyphe(spaceGlyph, 'emspace', '2003', em)
+
+        # thinspace 0x2009
+        width = int(space / 5)
+        self.createSpaceGlyphe(spaceGlyph, 'thinspace', '2009', width)
+
+        # hairspace 0x200A
+        width = int(space / 7)
+        self.createSpaceGlyphe(spaceGlyph, 'hairspace', '200A', width)
+
+        # ZERO WIDTH SPACE 200B
+        width = int(space / 7)
+        self.createSpaceGlyphe(spaceGlyph, 'hairspace', '200B', 0)
+
+        # ZWNJ 200C
+        self.createSpaceGlyphe(spaceGlyph, 'zwnj', '200C', 0)
+
+        # ZWJ 200D
+        self.createSpaceGlyphe(spaceGlyph, 'zwj', '200D', 0)
+
+        # lrm  200E
+        self.createSpaceGlyphe(spaceGlyph, 'lrm', '200E', 0)
+
+        # rlm 200F
+        self.createSpaceGlyphe(spaceGlyph, 'rlm', '200F', 0)
+
+        # ZERO WIDTH NO-BREAK SPACE FEFF
+        width = int(space / 7)
+        self.createSpaceGlyphe(spaceGlyph, 'zwnbsp', 'FEFF', 0)
+
+
+
+
+        m= 1
+    def createSpaceGlyphe(self, spGlyph, name, unicode, width):
+        glyph = copy.deepcopy(spGlyph)
+        glyph.width = int(width)
+        glyph.name = name
+        glyph.unicodes = tuple()
+        glyph.unicode = int(unicode, 16)
+        self.UFO.insertGlyph(glyph)
 
     def addComponent(self, glyph, name, xoff=0, yoff=0, pModz=[]):
         component = glyph.instantiateComponent()

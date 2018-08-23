@@ -862,22 +862,23 @@ uni06F9 06F9 dig9
 #######################################################
 
 NULL 0000 NULL
-CR 000D CR
+#CR 000D CR
 space 0020 space
+nbsp 00A0 nbsp
 base 25CC wsBase
-ZWNJ 200C wsZwnj
-ZWJ 200D wsZwj
-lrm 200E wsLrm
-rlm 200F wsRlm
-lre 202a wsLre
-rle 202b wsRle
-pdf 202c wsPdf
-lro 202d wsLro
-rlo 202e wsRlo
-enspace 2002 wsEnspace
-emspace 2003 wsEmspace
-thinspace 2009 wsThinspace
-hairspace 200a wsHairspace
+#ZWNJ 200C wsZwnj
+#ZWJ 200D wsZwj
+#lrm 200E wsLrm
+#rlm 200F wsRlm
+#lre 202a wsLre
+#rle 202b wsRle
+#pdf 202c wsPdf
+#lro 202d wsLro
+#rlo 202e wsRlo
+#enspace 2002 wsEnspace
+#emspace 2003 wsEmspace
+#thinspace 2009 wsThinspace
+#hairspace 200a wsHairspace
 
 # - ARABIC SYMBOL DOT
 uniFBB2 FBB2 di1Dot.above

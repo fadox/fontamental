@@ -2,7 +2,6 @@
 
 feature fina {
   lookup fina_1 {
-    lookupflag RightToLeft;
     sub @fina_isol by @fina;
   } fina_1;
 
@@ -16,7 +15,6 @@ feature fina {
 
 feature medi {
     lookup medi_1 {
-      lookupflag RightToLeft;
       sub @init_medi by @medi;
   } medi_1;
 
@@ -29,7 +27,6 @@ feature medi {
 
 feature init {
     lookup init_1{
-        lookupflag RightToLeft;
         sub @init_medi by @init;
     } init_1;
 
@@ -42,7 +39,6 @@ feature init {
 
 feature isol {
   lookup isol_1 {
-    lookupflag RightToLeft;
     sub @fina_isol by @isol;
   } isol_1;
  

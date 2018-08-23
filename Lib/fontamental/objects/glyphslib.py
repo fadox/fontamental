@@ -87,7 +87,7 @@ class GlyphsLib:
         self._create_minify_lists()
         self._create_maxify_lists()
         self._init_irregulars()
-        self._init_minify_mapping()
+        #self._init_minify_mapping()
 
         if buildFea is not False:
             self._build_fea()
@@ -123,15 +123,15 @@ class GlyphsLib:
         for filePath in glob(self.lib_path + os.sep + "database" + os.sep + "*.txt"):
             fp = filePath.split(os.sep)
             file_name = (fp[len(fp) - 1]).split('.')[0]
-            text = self._get_file_content(filePath)
+            text = self.get_file_content(filePath)
             self._set_config_from_text(file_name, text)
 
-    def _get_file_content(self, filePath):
+    def get_file_content(self, filePath):
         """
         read the content of given file path, and return the content as a string
         """
         assert os.path.isfile(filePath)
-        with codecs.open(filePath, 'r', encoding='utf8') as f:
+        with codecs.open(filePath, 'r', encoding='utf-8-sig') as f:
             lines = f.read()
             return lines
 

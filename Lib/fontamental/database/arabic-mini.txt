@@ -38,23 +38,24 @@
 #END
 
 # Spacing
-0000 Null NULL NULL
-000D CR CR CR
+#0000 Null NULL NULL
+#000D CR CR CR
 25CC wsBase base base
 0020 space space space
-200C wsZwnj ZWNJ ZWNJ
-200D wsZwj ZWJ ZWJ
-200E wsLrm lrm lrm
-200F wsRlm rlm rlm
-202a wsLre lre lre
-202b wsRle rle rle
-202c wsPdf pdf pdf
-202d wsLro lro lro
-202e wsRlo rlo rlo
-2002 wsEnspace enspace enspace
-2003 wsEmspace emspace emspace
-2009 wsThinspace thinspace thinspace
-200a wsHairspace hairspace hairspace
+00A0 nbsp nbsp nbsp
+#200C wsZwnj ZWNJ ZWNJ
+#200D wsZwj ZWJ ZWJ
+#200E wsLrm lrm lrm
+#200F wsRlm rlm rlm
+#202a wsLre lre lre
+#202b wsRle rle rle
+#202c wsPdf pdf pdf
+#202d wsLro lro lro
+#202e wsRlo rlo rlo
+#2002 wsEnspace enspace enspace
+#2003 wsEmspace emspace emspace
+#2009 wsThinspace thinspace thinspace
+#200a wsHairspace hairspace hairspace
 
 
 # Arabic Isol glyphs
