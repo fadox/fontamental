@@ -2,7 +2,7 @@
 # encoding: utf-8
 """
 -----------------------------------------------------------
-Copyright 1997, 2017 Fadox.
+Copyright 1997, 2018 Fadox.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or
@@ -35,7 +35,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Name:          Arabic Glyph List For Ali Uni Fonts
 Table version: 1.0
 Date:          December 10, 2016
-last update:   December 16, 2017
+last update:   August 24, 2018
 URL:           http://fadox.net
 
 END
@@ -87,7 +87,7 @@ class GlyphsLib:
         self._create_minify_lists()
         self._create_maxify_lists()
         self._init_irregulars()
-        #self._init_minify_mapping()
+        self._init_minify_mapping()
 
         if buildFea is not False:
             self._build_fea()
@@ -281,7 +281,7 @@ class GlyphsLib:
                 lp = line.split()
                 rawName = lp[0]
                 mapping_name = lp[1]
-                self.gl.MAPPING[rawName] = mapping_name
+                self.MAPPING[rawName] = mapping_name
             except Exception:
                 sys.exc_clear()
 
