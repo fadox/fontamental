@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arAin.fina" format="1">
+  <advance width="396"/>
+  <unicode hex="FECA"/>
+  <outline>
+    <contour>
+      <point x="273.926" y="180.176" type="line"/>
+      <point x="399.902" y="180.176" type="line"/>
+      <point x="399.902" y="0" type="line"/>
+      <point x="224.121" y="0" type="line" smooth="yes"/>
+      <point x="221.191" y="0"/>
+      <point x="209.961" y="19.043"/>
+      <point x="188.965" y="58.1055" type="curve"/>
+      <point x="177.246" y="90.8203" type="line"/>
+      <point x="163.086" y="139.16" type="line"/>
+      <point x="150.879" y="131.836" type="line"/>
+      <point x="140.137" y="124.023" type="line"/>
+      <point x="112.793" y="100.098" type="line" smooth="yes"/>
+      <point x="108.887" y="96.1914"/>
+      <point x="99.1211" y="77.1484"/>
+      <point x="83.9844" y="42.9688" type="curve"/>
+      <point x="81.0547" y="30.7617"/>
+      <point x="80.0781" y="19.043"/>
+      <point x="80.0781" y="7.8125" type="curve" smooth="yes"/>
+      <point x="80.0781" y="-66.8945"/>
+      <point x="143.066" y="-129.883"/>
+      <point x="229.98" y="-143.066" type="curve"/>
+      <point x="344.238" y="-149.902" type="line"/>
+      <point x="350.098" y="-149.902"/>
+      <point x="354.98" y="-150.879"/>
+      <point x="359.863" y="-151.856" type="curve"/>
+      <point x="365.234" y="-171.875"/>
+      <point x="280.762" y="-270.02"/>
+      <point x="236.816" y="-283.203" type="curve"/>
+      <point x="195.801" y="-280.762" type="line"/>
+      <point x="184.082" y="-280.762" type="line"/>
+      <point x="162.109" y="-275.879" type="line" smooth="yes"/>
+      <point x="109.863" y="-265.137"/>
+      <point x="63.9648" y="-240.234"/>
+      <point x="30.7617" y="-150.879" type="curve"/>
+      <point x="22.9492" y="-122.07"/>
+      <point x="19.0429" y="-82.0313"/>
+      <point x="19.0429" y="-32.2266" type="curve" smooth="yes"/>
+      <point x="19.0429" y="55.1757"/>
+      <point x="63.9648" y="144.043"/>
+      <point x="125" y="216.797" type="curve"/>
+      <point x="116.211" y="227.051" type="line"/>
+      <point x="104.98" y="232.91" type="line"/>
+      <point x="75.1953" y="240.234" type="line"/>
+      <point x="62.0117" y="244.141" type="line"/>
+      <point x="57.1289" y="245.117"/>
+      <point x="52.2461" y="246.094"/>
+      <point x="48.8281" y="249.023" type="curve"/>
+      <point x="64.9414" y="336.914"/>
+      <point x="57.1289" y="325.195"/>
+      <point x="101.074" y="390.137" type="curve"/>
+      <point x="104.004" y="393.066"/>
+      <point x="115.234" y="397.949"/>
+      <point x="133.789" y="407.227" type="curve"/>
+      <point x="149.902" y="412.109" type="line"/>
+      <point x="166.992" y="415.039" type="line"/>
+      <point x="185.059" y="415.039"/>
+      <point x="211.914" y="405.762"/>
+      <point x="248.047" y="389.16" type="curve"/>
+      <point x="291.016" y="359.863"/>
+      <point x="310.059" y="339.844"/>
+      <point x="310.059" y="295.898" type="curve" smooth="yes"/>
+      <point x="310.059" y="289.063" type="line"/>
+      <point x="309.082" y="279.785" type="line"/>
+      <point x="309.082" y="274.902"/>
+      <point x="308.105" y="269.043"/>
+      <point x="305.176" y="262.207" type="curve"/>
+      <point x="295.898" y="236.816" type="line"/>
+      <point x="283.203" y="207.031" type="line"/>
+      <point x="274.902" y="207.031"/>
+      <point x="273.926" y="207.031"/>
+      <point x="265.137" y="203.125" type="curve"/>
+      <point x="252.93" y="191.895" type="line"/>
+      <point x="257.812" y="186.035" type="line"/>
+      <point x="266.113" y="182.129" type="line"/>
+    </contour>
+    <contour>
+      <point x="160.452" y="568.547" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="159.198" y="582.341" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="166.992" y="-312.282" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="222.168" y="-35.5977" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+</glyph>

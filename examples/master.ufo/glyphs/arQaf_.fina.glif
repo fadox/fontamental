@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arQaf.fina" format="1">
+  <advance width="465"/>
+  <unicode hex="E6F1"/>
+  <outline>
+    <contour>
+      <point x="416.992" y="208.984" type="curve"/>
+      <point x="417.969" y="195.801"/>
+      <point x="419.922" y="187.012"/>
+      <point x="420.898" y="180.176" type="curve"/>
+      <point x="467.773" y="180.176" type="line"/>
+      <point x="467.773" y="0" type="line"/>
+      <point x="404.785" y="0" type="line"/>
+      <point x="381.384" y="-127.73"/>
+      <point x="297.031" y="-194.824"/>
+      <point x="167.969" y="-194.824" type="curve" smooth="yes"/>
+      <point x="72.1919" y="-194.824"/>
+      <point x="19.9927" y="-114.488"/>
+      <point x="18.0664" y="-25.8789" type="curve"/>
+      <point x="18.0664" y="-4.88281"/>
+      <point x="20.0195" y="8.78906"/>
+      <point x="20.9961" y="19.043" type="curve"/>
+      <point x="21.9727" y="23.9258"/>
+      <point x="22.9493" y="28.8086"/>
+      <point x="23.9259" y="34.1797" type="curve" smooth="yes"/>
+      <point x="24.9025" y="39.0625"/>
+      <point x="24.9025" y="43.9453"/>
+      <point x="25.8791" y="49.8047" type="curve"/>
+      <point x="25.8791" y="61.0352"/>
+      <point x="30.7619" y="79.1016"/>
+      <point x="38.0862" y="100.098" type="curve" smooth="yes"/>
+      <point x="50.5993" y="138.53"/>
+      <point x="63.3093" y="177.433"/>
+      <point x="83.008" y="212.891" type="curve"/>
+      <point x="89.844" y="222.168"/>
+      <point x="104.981" y="230.957"/>
+      <point x="116.211" y="234.863" type="curve"/>
+      <point x="92.7737" y="183.105"/>
+      <point x="83.008" y="125"/>
+      <point x="83.008" y="67.8711" type="curve" smooth="yes"/>
+      <point x="83.008" y="-25.5019"/>
+      <point x="135.445" y="-58.1055"/>
+      <point x="223.145" y="-58.1055" type="curve" smooth="yes"/>
+      <point x="252.389" y="-58.1055"/>
+      <point x="355.957" y="-47.4561"/>
+      <point x="355.957" y="-3.90625" type="curve"/>
+      <point x="354.981" y="2.92968" type="line"/>
+      <point x="288.052" y="2.92968"/>
+      <point x="198.242" y="11.0286"/>
+      <point x="198.242" y="98.1445" type="curve" smooth="yes"/>
+      <point x="198.242" y="160.438"/>
+      <point x="232.654" y="269.627"/>
+      <point x="263.184" y="323.242" type="curve"/>
+      <point x="282.227" y="357.91"/>
+      <point x="306.153" y="381.836"/>
+      <point x="331.055" y="381.836" type="curve" smooth="yes"/>
+      <point x="351.074" y="381.836"/>
+      <point x="368.164" y="362.793"/>
+      <point x="380.86" y="337.891" type="curve"/>
+      <point x="393.067" y="312.988"/>
+      <point x="401.856" y="278.809"/>
+      <point x="409.18" y="250" type="curve"/>
+      <point x="412.11" y="234.863"/>
+      <point x="415.039" y="222.168"/>
+    </contour>
+    <contour>
+      <point x="328.125" y="178.223" type="curve" smooth="yes"/>
+      <point x="331.055" y="178.223"/>
+      <point x="333.008" y="178.223"/>
+      <point x="334.961" y="179.199" type="curve" smooth="yes"/>
+      <point x="336.914" y="180.176"/>
+      <point x="338.867" y="180.176"/>
+      <point x="341.797" y="180.176" type="curve"/>
+      <point x="341.797" y="191.895"/>
+      <point x="335.937" y="204.102"/>
+      <point x="329.101" y="213.867" type="curve"/>
+      <point x="320.801" y="224.121"/>
+      <point x="311.035" y="230.957"/>
+      <point x="302.246" y="237.793" type="curve"/>
+      <point x="293.076" y="236.126"/>
+      <point x="272.949" y="222.271"/>
+      <point x="272.949" y="211.914" type="curve" smooth="yes"/>
+      <point x="272.949" y="193.325"/>
+      <point x="312.831" y="178.223"/>
+    </contour>
+    <contour>
+      <point x="272.694" y="538.829" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="128.559" y="422.785" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="168.465" y="-254.326" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="327.5" y="-245.097" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

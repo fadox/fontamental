@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="maAsterisk" format="1">
+  <advance width="284"/>
+  <unicode hex="066D"/>
+  <outline>
+    <contour>
+      <point x="275" y="296" type="line"/>
+      <point x="241" y="355" type="line"/>
+      <point x="151" y="272" type="line"/>
+      <point x="178" y="393" type="line"/>
+      <point x="110" y="393" type="line"/>
+      <point x="137" y="272" type="line"/>
+      <point x="46" y="355" type="line"/>
+      <point x="12" y="296" type="line"/>
+      <point x="131" y="260" type="line"/>
+      <point x="12" y="222" type="line"/>
+      <point x="46" y="164" type="line"/>
+      <point x="136" y="247" type="line"/>
+      <point x="109" y="126" type="line"/>
+      <point x="177" y="126" type="line"/>
+      <point x="151" y="247" type="line"/>
+      <point x="241" y="164" type="line"/>
+      <point x="275" y="222" type="line"/>
+      <point x="157" y="260" type="line"/>
+    </contour>
+  </outline>
+</glyph>

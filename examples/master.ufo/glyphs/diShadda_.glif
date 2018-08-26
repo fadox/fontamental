@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diShadda" format="1">
+  <advance width="0"/>
+  <unicode hex="0651"/>
+  <outline>
+    <contour>
+      <point x="96.6797" y="688.477" type="line"/>
+      <point x="103.027" y="662.598" type="line"/>
+      <point x="104.004" y="641.602" type="line"/>
+      <point x="104.004" y="590.332"/>
+      <point x="84.961" y="559.57"/>
+      <point x="52.7344" y="559.57" type="curve"/>
+      <point x="38.086" y="561.523" type="line"/>
+      <point x="29.7852" y="564.453" type="line"/>
+      <point x="21.9727" y="570.312" type="line"/>
+      <point x="18.0664" y="547.363"/>
+      <point x="-6.34762" y="528.32"/>
+      <point x="-29.2968" y="528.32" type="curve" smooth="yes"/>
+      <point x="-38.0859" y="528.32"/>
+      <point x="-47.3632" y="533.203"/>
+      <point x="-58.1054" y="542.48" type="curve"/>
+      <point x="-64.9414" y="553.223"/>
+      <point x="-69.3359" y="565.43"/>
+      <point x="-69.3359" y="580.566" type="curve" smooth="yes"/>
+      <point x="-69.3359" y="591.309"/>
+      <point x="-69.3359" y="598.145"/>
+      <point x="-68.3593" y="599.121" type="curve"/>
+      <point x="-62.9882" y="613.281" type="line"/>
+      <point x="-58.1054" y="630.371" type="line"/>
+      <point x="-47.3632" y="632.324" type="line"/>
+      <point x="-47.3632" y="621.167"/>
+      <point x="-45.288" y="578.125"/>
+      <point x="-28.3202" y="578.125" type="curve" smooth="yes"/>
+      <point x="-18.0663" y="578.125"/>
+      <point x="-9.97253" y="584.287"/>
+      <point x="-2.92961" y="595.215" type="curve" smooth="yes"/>
+      <point x="4.19234" y="606.265"/>
+      <point x="9.7657" y="627.441"/>
+      <point x="16.1134" y="657.227" type="curve"/>
+      <point x="24.9024" y="660.156" type="line"/>
+      <point x="28.8087" y="642.578"/>
+      <point x="32.7149" y="629.395"/>
+      <point x="37.1095" y="622.559" type="curve"/>
+      <point x="41.9923" y="615.234"/>
+      <point x="46.8751" y="612.305"/>
+      <point x="52.7345" y="612.305" type="curve" smooth="yes"/>
+      <point x="74.7071" y="612.305"/>
+      <point x="85.9376" y="636.23"/>
+      <point x="85.9376" y="683.594" type="curve"/>
+    </contour>
+    <contour>
+      <point x="29.7852" y="543.088" type="move" name="_markAbove"/>
+    </contour>
+    <contour>
+      <point x="24.3633" y="540.334" type="move" name="_markAboveDot"/>
+    </contour>
+    <contour>
+      <point x="18.5172" y="663.768" type="move" name="markAboveMark"/>
+    </contour>
+    <contour>
+      <point x="22.4824" y="550.992" type="move" name="markBelowMark"/>
+    </contour>
+  </outline>
+</glyph>

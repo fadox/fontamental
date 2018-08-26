@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arBeh.medi2" format="1">
+  <advance width="327.731"/>
+  <unicode hex="E490"/>
+  <outline>
+    <contour>
+      <point x="145.5" y="149.024" type="curve"/>
+      <point x="128.697" y="117.746"/>
+      <point x="99.008" y="78.4344"/>
+      <point x="54.0076" y="78.4344" type="curve" smooth="yes"/>
+      <point x="-0.297411" y="78.4344"/>
+      <point x="-16.3982" y="135.683"/>
+      <point x="-16.3982" y="175.974" type="curve" smooth="yes"/>
+      <point x="-16.3982" y="223.79"/>
+      <point x="-10.6225" y="263.115"/>
+      <point x="-3.02301" y="303.548" type="curve"/>
+      <point x="13.2244" y="274.817"/>
+      <point x="42.4144" y="239.222"/>
+      <point x="90.3918" y="239.222" type="curve" smooth="yes"/>
+      <point x="131.421" y="239.222"/>
+      <point x="143.225" y="265.254"/>
+      <point x="157.8" y="301.012" type="curve" smooth="yes"/>
+      <point x="169.52" y="329.767"/>
+      <point x="177.205" y="350.512"/>
+      <point x="185.207" y="371.088" type="curve"/>
+      <point x="193.541" y="375.99" type="line"/>
+      <point x="206.915" y="309.002"/>
+      <point x="214.542" y="260.663"/>
+      <point x="222.808" y="201.15" type="curve" smooth="yes"/>
+      <point x="225.15" y="184.286"/>
+      <point x="230.007" y="180.396"/>
+      <point x="243.542" y="180.396" type="curve" smooth="yes"/>
+      <point x="336.681" y="180.396" type="line"/>
+      <point x="336.681" y="-0" type="line"/>
+      <point x="213.149" y="0" type="line" smooth="yes"/>
+      <point x="168.607" y="0"/>
+      <point x="146.537" y="142.737"/>
+    </contour>
+    <contour>
+      <point x="138.318" y="544.063" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="99.3906" y="526.369" type="move" name="smallVAbove"/>
+    </contour>
+    <contour>
+      <point x="87.1287" y="594.849" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="114.642" y="-125.043" type="move" name="dotBelow"/>
+    </contour>
+    <contour>
+      <point x="145.5" y="-190.412" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="254.965" y="-21" type="move" name="ringBelow"/>
+    </contour>
+    <contour>
+      <point x="43.4288" y="434.378" type="move" name="hamzaAbove"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>angle</key>
+      <real>0</real>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>179.82</real>
+    </dict>
+  </array>
+  </dict>
+  </lib>
+</glyph>

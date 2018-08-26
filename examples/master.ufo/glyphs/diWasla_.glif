@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diWasla" format="1">
+  <advance width="0"/>
+  <unicode hex="EE07"/>
+  <outline>
+    <contour>
+      <point x="187.988" y="616.699" type="curve" smooth="yes"/>
+      <point x="187.988" y="589.8"/>
+      <point x="173.714" y="583.301"/>
+      <point x="151.367" y="574.707" type="curve"/>
+      <point x="134.277" y="571.777" type="line"/>
+      <point x="98.1445" y="569.824" type="line"/>
+      <point x="65.4297" y="574.707" type="line"/>
+      <point x="62.0117" y="574.707"/>
+      <point x="59.082" y="575.684"/>
+      <point x="56.1523" y="577.637" type="curve"/>
+      <point x="30.2734" y="558.594" type="line"/>
+      <point x="25.3906" y="565.918" type="line"/>
+      <point x="35.1562" y="584.961" type="line"/>
+      <point x="20.9961" y="591.797" type="line" smooth="yes"/>
+      <point x="14.1601" y="594.727"/>
+      <point x="8.30076" y="596.68"/>
+      <point x="2.44138" y="596.68" type="curve" smooth="yes"/>
+      <point x="-0" y="596.68"/>
+      <point x="-2.9297" y="595.703"/>
+      <point x="-5.8594" y="593.75" type="curve"/>
+      <point x="-14.6485" y="589.844" type="line" smooth="yes"/>
+      <point x="-20.9961" y="586.914"/>
+      <point x="-25.8789" y="581.543"/>
+      <point x="-30.7617" y="576.66" type="curve"/>
+      <point x="-36.6211" y="576.66" type="line"/>
+      <point x="-38.5742" y="583.008" type="line"/>
+      <point x="-36.6211" y="591.797" type="line"/>
+      <point x="-27.8321" y="604.98" type="line" smooth="yes"/>
+      <point x="-22.9492" y="611.816"/>
+      <point x="-16.6016" y="617.676"/>
+      <point x="-9.76565" y="622.559" type="curve"/>
+      <point x="-1.95315" y="625" type="line"/>
+      <point x="7.32419" y="625.977" type="line"/>
+      <point x="18.0664" y="625.977"/>
+      <point x="38.0859" y="622.559"/>
+      <point x="58.1054" y="607.91" type="curve"/>
+      <point x="68.3594" y="618.652"/>
+      <point x="82.0312" y="629.883"/>
+      <point x="99.1211" y="641.602" type="curve"/>
+      <point x="112.305" y="648.926"/>
+      <point x="124.023" y="654.785"/>
+      <point x="136.23" y="657.715" type="curve" smooth="yes"/>
+      <point x="143.066" y="659.668" type="line"/>
+      <point x="149.414" y="659.668" type="line" smooth="yes"/>
+      <point x="173.34" y="659.668"/>
+      <point x="187.988" y="637.695"/>
+    </contour>
+    <contour>
+      <point x="112.305" y="595.703" type="curve" smooth="yes"/>
+      <point x="132.324" y="595.703"/>
+      <point x="155.273" y="601.562"/>
+      <point x="155.273" y="613.77" type="curve"/>
+      <point x="154.297" y="618.652" type="line"/>
+      <point x="150.391" y="625.977"/>
+      <point x="144.043" y="629.883"/>
+      <point x="135.254" y="629.883" type="curve"/>
+      <point x="125" y="628.906" type="line"/>
+      <point x="122.07" y="628.906"/>
+      <point x="118.164" y="626.953"/>
+      <point x="111.328" y="623.535" type="curve"/>
+      <point x="91.3086" y="611.816" type="line"/>
+      <point x="83.9844" y="606.934" type="line"/>
+      <point x="78.125" y="600.586" type="line"/>
+      <point x="89.3555" y="597.656"/>
+      <point x="100.098" y="595.703"/>
+    </contour>
+    <contour>
+      <point x="-0.5664" y="506.069" type="move" name="_hamzaAbove"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

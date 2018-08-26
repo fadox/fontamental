@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diGaf.above" format="1">
+  <advance width="0"/>
+  <unicode hex="EE0B"/>
+  <outline>
+    <contour>
+      <point x="-40.0391" y="517.09" type="line"/>
+      <point x="70.8008" y="551.27" type="line"/>
+      <point x="145.996" y="575.195" type="line"/>
+      <point x="146.973" y="566.406" type="line"/>
+      <point x="146.973" y="545.41"/>
+      <point x="133.789" y="508.301"/>
+      <point x="125" y="500.977" type="curve"/>
+      <point x="-7.32422" y="460.449" type="line"/>
+      <point x="-82.0312" y="437.012"/>
+      <point x="-125" y="423.34"/>
+      <point x="-136.23" y="417.969" type="curve"/>
+      <point x="-136.23" y="425.293"/>
+      <point x="-133.301" y="435.059"/>
+      <point x="-128.418" y="450.195" type="curve" smooth="yes"/>
+      <point x="-114.258" y="493.164" type="line"/>
+    </contour>
+    <contour>
+      <point x="3.33333" y="429.402" type="move" name="_gafAbove"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

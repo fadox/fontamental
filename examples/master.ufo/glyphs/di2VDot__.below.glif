@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="di2VDot.below" format="1">
+  <advance width="0"/>
+  <unicode hex="FBBE"/>
+  <outline>
+    <contour>
+      <point x="-51.801" y="-50.6988" type="curve"/>
+      <point x="-35.8605" y="-62.47"/>
+      <point x="-20.1717" y="-74.5879"/>
+      <point x="-4.85855" y="-87.1664" type="curve"/>
+      <point x="-11.5122" y="-93.9274"/>
+      <point x="-53.7407" y="-154.187"/>
+      <point x="-53.7407" y="-156.998" type="curve" smooth="yes"/>
+      <point x="-53.7407" y="-168.511"/>
+      <point x="9.27352" y="-203.096"/>
+      <point x="18.4187" y="-208.209" type="curve"/>
+      <point x="70.7928" y="-137.213" type="line"/>
+      <point x="63.6702" y="-127.904"/>
+      <point x="21.9103" y="-100.868"/>
+      <point x="21.9103" y="-94.1498" type="curve" smooth="yes"/>
+      <point x="21.9103" y="-83.5906"/>
+      <point x="58.5136" y="-39.3442"/>
+      <point x="68.8531" y="-31.3009" type="curve"/>
+      <point x="46.0292" y="-13.3278"/>
+      <point x="22.5073" y="3.75073"/>
+      <point x="-1.36698" y="20.2971" type="curve"/>
+      <point x="-15.5836" y="9.84567"/>
+      <point x="-45.5524" y="-33.602"/>
+    </contour>
+    <contour>
+      <point x="1.835" y="-184.903" type="move" name="markBelowDot"/>
+    </contour>
+    <contour>
+      <point x="0" y="-0.9766" type="move" name="_dotBelow"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

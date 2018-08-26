@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="maDecimal" format="1">
+  <advance width="355"/>
+  <unicode hex="066B"/>
+  <outline>
+    <contour>
+      <point x="208.008" y="105.957" type="line"/>
+      <point x="238.77" y="81.0547"/>
+      <point x="254.883" y="66.8945"/>
+      <point x="257.813" y="62.9883" type="curve"/>
+      <point x="247.07" y="23.9258"/>
+      <point x="216.797" y="-37.1094"/>
+      <point x="172.852" y="-108.887" type="curve" smooth="yes"/>
+      <point x="157.227" y="-134.766" type="line"/>
+      <point x="150.879" y="-143.066" type="line"/>
+      <point x="131.836" y="-130.859" type="line"/>
+      <point x="140.137" y="-113.77" type="line"/>
+      <point x="147.949" y="-89.8438" type="line"/>
+      <point x="150.879" y="-70.8008" type="line"/>
+      <point x="152.832" y="-53.2227" type="line"/>
+      <point x="152.832" y="-28.8086"/>
+      <point x="147.949" y="-13.1836"/>
+      <point x="141.113" y="-5.85938" type="curve" smooth="yes"/>
+      <point x="119.141" y="17.0898" type="line"/>
+      <point x="99.1211" y="35.1562" type="line"/>
+      <point x="163.086" y="144.043" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diLonga.below" format="1">
+  <advance width="0"/>
+  <unicode hex="0656"/>
+  <outline>
+    <contour>
+      <point x="22.4609" y="-413.086" type="curve" smooth="yes"/>
+      <point x="22.4609" y="-373.047"/>
+      <point x="1.46484" y="-307.129"/>
+      <point x="-23.4375" y="-260.254" type="curve"/>
+      <point x="8.30078" y="-200.195" type="line"/>
+      <point x="36.6211" y="-248.047"/>
+      <point x="55.6641" y="-317.871"/>
+      <point x="55.6641" y="-366.211" type="curve" smooth="yes"/>
+      <point x="55.6641" y="-390.396"/>
+      <point x="48.5098" y="-428.843"/>
+      <point x="33.6914" y="-449.219" type="curve" smooth="yes"/>
+      <point x="29.2969" y="-455.078"/>
+      <point x="26.3672" y="-458.008"/>
+      <point x="24.4141" y="-458.008" type="curve" smooth="yes"/>
+      <point x="21.4844" y="-458.008"/>
+      <point x="19.5313" y="-456.055"/>
+      <point x="19.5313" y="-452.148" type="curve" smooth="yes"/>
+      <point x="19.5313" y="-450.195"/>
+      <point x="19.5313" y="-445.801"/>
+      <point x="20.5079" y="-439.941" type="curve" smooth="yes"/>
+      <point x="21.4845" y="-432.129"/>
+      <point x="22.4611" y="-422.852"/>
+    </contour>
+    <contour>
+      <point x="1.25" y="-171.875" type="move" name="_hamzaBelow"/>
+    </contour>
+    <contour>
+      <point x="0.4167" y="-171.875" type="move" name="_markBelowMark"/>
+    </contour>
+  </outline>
+</glyph>

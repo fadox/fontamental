@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="maFullStop" format="1">
+  <advance width="390"/>
+  <unicode hex="06D4"/>
+  <outline>
+    <contour>
+      <point x="142" y="191" type="curve" smooth="yes"/>
+      <point x="128.322" y="191"/>
+      <point x="47" y="105.942"/>
+      <point x="47" y="92" type="curve" smooth="yes"/>
+      <point x="47" y="78.1274"/>
+      <point x="129.259" y="-6"/>
+      <point x="143" y="-6" type="curve" smooth="yes"/>
+      <point x="159.588" y="-6"/>
+      <point x="244" y="76.5015"/>
+      <point x="244" y="93" type="curve" smooth="yes"/>
+      <point x="244" y="102.457"/>
+      <point x="151.934" y="191"/>
+    </contour>
+  </outline>
+</glyph>

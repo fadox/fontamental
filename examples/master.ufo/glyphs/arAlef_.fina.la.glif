@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arAlef.fina.la" format="1">
+  <advance width="264.648"/>
+  <outline>
+    <contour>
+      <point x="293" y="86.2388" type="curve"/>
+      <point x="309.705" y="94.4053"/>
+      <point x="308.552" y="131"/>
+      <point x="308" y="163" type="curve"/>
+      <point x="307" y="221" type="line"/>
+      <point x="303" y="266" type="line"/>
+      <point x="293" y="309" type="line"/>
+      <point x="290" y="325" type="line"/>
+      <point x="274" y="369" type="line"/>
+      <point x="242" y="427" type="line"/>
+      <point x="229" y="447" type="line"/>
+      <point x="218" y="465" type="line"/>
+      <point x="185" y="504" type="line"/>
+      <point x="147" y="541.002" type="line"/>
+      <point x="114" y="568" type="line"/>
+      <point x="91" y="583" type="line"/>
+      <point x="83" y="562.004" type="line"/>
+      <point x="75" y="539" type="line"/>
+      <point x="63" y="495" type="line"/>
+      <point x="60" y="475"/>
+      <point x="57" y="459"/>
+      <point x="56" y="446" type="curve"/>
+      <point x="54" y="433"/>
+      <point x="53" y="424"/>
+      <point x="53" y="419" type="curve" smooth="yes"/>
+      <point x="53" y="410"/>
+      <point x="54" y="401"/>
+      <point x="56" y="393" type="curve"/>
+      <point x="61" y="382"/>
+      <point x="68" y="371"/>
+      <point x="77" y="362" type="curve"/>
+      <point x="116" y="328" type="line"/>
+      <point x="158" y="293" type="line"/>
+      <point x="167" y="312" type="line"/>
+      <point x="170" y="328" type="line"/>
+      <point x="193" y="307"/>
+      <point x="225" y="263"/>
+      <point x="225" y="256" type="curve"/>
+      <point x="232" y="248"/>
+      <point x="239" y="237"/>
+      <point x="244" y="220" type="curve"/>
+      <point x="254" y="193" type="line"/>
+      <point x="259" y="176" type="line"/>
+      <point x="261" y="173"/>
+      <point x="262" y="168"/>
+      <point x="262" y="161" type="curve" smooth="yes"/>
+      <point x="262" y="152"/>
+      <point x="265.647" y="138.865"/>
+      <point x="269.276" y="131.606" type="curve"/>
+      <point x="271.091" y="115.274"/>
+      <point x="279.257" y="99.8491"/>
+    </contour>
+    <contour>
+      <point x="67.9648" y="602.051" type="move" name="hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="68.8174" y="592.451" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="128.958" y="-176.014" type="move" name="hamzaBelow"/>
+    </contour>
+    <contour>
+      <point x="103.9" y="-67.4263" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="82.1821" y="645.908" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="125.617" y="-125.896" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+</glyph>

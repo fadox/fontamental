@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diHamza.above" format="1">
+  <advance width="0"/>
+  <unicode hex="0654"/>
+  <outline>
+    <contour>
+      <point x="101.562" y="602.051" type="line"/>
+      <point x="122.559" y="602.051" type="line"/>
+      <point x="135.254" y="601.074" type="line"/>
+      <point x="133.301" y="589.844"/>
+      <point x="129.395" y="581.055"/>
+      <point x="123.535" y="573.73" type="curve" smooth="yes"/>
+      <point x="110.352" y="558.105" type="line"/>
+      <point x="82.5196" y="550.781" type="line"/>
+      <point x="75.1953" y="547.852"/>
+      <point x="69.336" y="544.922"/>
+      <point x="62.5" y="541.992" type="curve"/>
+      <point x="53.2227" y="537.109" type="line"/>
+      <point x="48.3399" y="535.156"/>
+      <point x="43.4571" y="531.738"/>
+      <point x="38.5742" y="526.855" type="curve"/>
+      <point x="25.3907" y="517.09" type="line"/>
+      <point x="9.27737" y="502.93" type="line"/>
+      <point x="9.27737" y="502.441"/>
+      <point x="8.78907" y="502.441"/>
+      <point x="8.30077" y="502.441" type="curve"/>
+      <point x="7.32417" y="502.441"/>
+      <point x="5.85937" y="503.418"/>
+      <point x="4.39457" y="504.883" type="curve"/>
+      <point x="2.44147" y="513.184" type="line"/>
+      <point x="2.44147" y="516.113" type="line"/>
+      <point x="38.5743" y="556.152" type="line"/>
+      <point x="14.6485" y="562.988" type="line"/>
+      <point x="-1.46478" y="569.824"/>
+      <point x="-4.39448" y="576.172"/>
+      <point x="-4.39448" y="592.773" type="curve" smooth="yes"/>
+      <point x="-4.39448" y="631.836"/>
+      <point x="35.6446" y="691.894"/>
+      <point x="67.3829" y="691.894" type="curve" smooth="yes"/>
+      <point x="82.5196" y="691.894"/>
+      <point x="98.6329" y="683.105"/>
+      <point x="98.6329" y="666.992" type="curve"/>
+      <point x="97.6563" y="655.762" type="line"/>
+      <point x="92.2852" y="642.09" type="line"/>
+      <point x="89.3555" y="636.719"/>
+      <point x="86.4258" y="629.883"/>
+      <point x="81.543" y="623.047" type="curve"/>
+      <point x="67.3828" y="636.719" type="line"/>
+      <point x="62.5" y="641.113"/>
+      <point x="56.6406" y="643.066"/>
+      <point x="51.2695" y="643.066" type="curve"/>
+      <point x="43.457" y="642.09" type="line"/>
+      <point x="38.5742" y="640.137" type="line"/>
+      <point x="27.3437" y="626.953" type="line"/>
+      <point x="26.3671" y="623.047"/>
+      <point x="28.3202" y="619.141"/>
+      <point x="34.6679" y="615.723" type="curve"/>
+      <point x="37.5976" y="612.793"/>
+      <point x="44.4335" y="608.887"/>
+      <point x="53.2226" y="605.957" type="curve"/>
+      <point x="76.6601" y="603.027" type="line"/>
+    </contour>
+    <contour>
+      <point x="0.8333" y="506.069" type="move" name="_hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="54.1443" y="704.599" type="move" name="markAboveMark"/>
+    </contour>
+    <contour>
+      <point x="62.5" y="534.377" type="move" name="markBelowMark"/>
+    </contour>
+  </outline>
+</glyph>

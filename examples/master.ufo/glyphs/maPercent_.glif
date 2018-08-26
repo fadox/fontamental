@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="maPercent" format="1">
+  <advance width="526.001"/>
+  <unicode hex="066A"/>
+  <outline>
+    <contour>
+      <point x="75" y="38" type="line"/>
+      <point x="101" y="1" type="line"/>
+      <point x="396" y="521" type="line"/>
+      <point x="371" y="556" type="line"/>
+    </contour>
+    <contour>
+      <point x="25" y="413" type="line"/>
+      <point x="121" y="333" type="line"/>
+      <point x="185" y="441" type="line"/>
+      <point x="88" y="524" type="line"/>
+    </contour>
+    <contour>
+      <point x="299" y="105" type="line"/>
+      <point x="394" y="25" type="line"/>
+      <point x="458" y="133" type="line"/>
+      <point x="362" y="217" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arLam.init" format="1">
+  <advance width="199.35"/>
+  <unicode hex="FEDF"/>
+  <outline>
+    <contour>
+      <point x="112.436" y="16.1133" type="curve" smooth="yes"/>
+      <point x="108.53" y="6.83594"/>
+      <point x="100.229" y="0"/>
+      <point x="88.5104" y="0" type="curve" smooth="yes"/>
+      <point x="-1.19666" y="0" type="line"/>
+      <point x="-1.19666" y="180.176" type="line"/>
+      <point x="66.5377" y="180.176" type="line"/>
+      <point x="70.444" y="182.129" type="line"/>
+      <point x="71.4206" y="184.082" type="line"/>
+      <point x="71.4206" y="271.973"/>
+      <point x="57.2604" y="371.094"/>
+      <point x="40.1706" y="397.949" type="curve"/>
+      <point x="36.2643" y="409.18" type="line"/>
+      <point x="35.2877" y="414.062"/>
+      <point x="32.358" y="417.969"/>
+      <point x="29.4283" y="422.852" type="curve"/>
+      <point x="24.5455" y="434.082"/>
+      <point x="18.1978" y="442.871"/>
+      <point x="12.3385" y="450.195" type="curve"/>
+      <point x="20.151" y="485.84"/>
+      <point x="43.5885" y="529.785"/>
+      <point x="84.1158" y="588.867" type="curve"/>
+      <point x="92.4166" y="583.008" type="line"/>
+      <point x="91.44" y="571.777" type="line"/>
+      <point x="91.44" y="560.059" type="line"/>
+      <point x="94.3697" y="548.828" type="line" smooth="yes"/>
+      <point x="95.3463" y="543.945"/>
+      <point x="98.276" y="539.062"/>
+      <point x="103.159" y="533.203" type="curve"/>
+      <point x="158.335" y="479.004" type="line"/>
+      <point x="194.467" y="440.918" type="line"/>
+      <point x="128.549" y="337.891" type="line"/>
+      <point x="129.526" y="296.875" type="line"/>
+      <point x="131.479" y="271.973" type="line"/>
+      <point x="135.385" y="237.793" type="line"/>
+      <point x="138.315" y="181.152" type="line"/>
+      <point x="138.315" y="155.762" type="line"/>
+      <point x="126.596" y="66.8945" type="line"/>
+      <point x="122.202" y="43.9453"/>
+      <point x="117.319" y="26.8554"/>
+    </contour>
+    <contour>
+      <point x="53.3081" y="626.228" type="move" name="smallVAbove"/>
+    </contour>
+    <contour>
+      <point x="88.5104" y="626.228" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="29.2122" y="-141.181" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="76.2817" y="-106.574" type="move" name="dotBelow"/>
+    </contour>
+    <contour>
+      <point x="65.6696" y="667.554" type="move" name="dotAbove"/>
+    </contour>
+  </outline>
+</glyph>

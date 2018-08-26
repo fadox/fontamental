@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="di1Dot.above" format="1">
+  <advance width="0"/>
+  <unicode hex="FBB2"/>
+  <outline>
+    <contour>
+      <point x="-6.95777" y="109.424" type="line"/>
+      <point x="1.86515" y="98.0802"/>
+      <point x="18.2506" y="83.3752"/>
+      <point x="41.3583" y="66.9898" type="curve"/>
+      <point x="74.9694" y="44.7223" type="line"/>
+      <point x="46.4001" y="9.43058" type="line"/>
+      <point x="11.1082" y="-32.5834" type="line"/>
+      <point x="-22.5029" y="-11.9965" type="line"/>
+      <point x="-45.6108" y="4.38889"/>
+      <point x="-61.9963" y="16.573"/>
+      <point x="-71.2393" y="25.816" type="curve"/>
+      <point x="-67.0377" y="36.3195"/>
+      <point x="-55.6941" y="51.8647"/>
+      <point x="-37.628" y="73.292" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="1.8651" y="154.426" type="move" name="markAboveDot"/>
+    </contour>
+    <contour>
+      <point x="2.0723" y="55.0562" type="move" name="_dotAbove"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

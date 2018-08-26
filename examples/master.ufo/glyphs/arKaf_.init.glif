@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arKaf.init" format="1">
+  <advance width="314"/>
+  <unicode hex="FEDB"/>
+  <outline>
+    <contour>
+      <point x="32.2266" y="477.051" type="line" smooth="yes"/>
+      <point x="38.0859" y="500"/>
+      <point x="43.9453" y="518.066"/>
+      <point x="49.8047" y="530.762" type="curve"/>
+      <point x="310.059" y="612.793" type="line"/>
+      <point x="308.105" y="595.215" type="line"/>
+      <point x="290.039" y="492.188" type="line"/>
+      <point x="282.227" y="487.793"/>
+      <point x="263.184" y="480.957"/>
+      <point x="232.91" y="470.215" type="curve"/>
+      <point x="106.934" y="421.875" type="line"/>
+      <point x="208.984" y="320.801" type="line"/>
+      <point x="244.141" y="274.902" type="line"/>
+      <point x="274.902" y="237.793"/>
+      <point x="294.922" y="208.984"/>
+      <point x="304.199" y="187.012" type="curve"/>
+      <point x="291.992" y="113.77" type="line" smooth="yes"/>
+      <point x="280.762" y="48.8281"/>
+      <point x="273.926" y="15.1367"/>
+      <point x="271.973" y="11.2305" type="curve"/>
+      <point x="270.996" y="7.8125" type="line"/>
+      <point x="268.066" y="3.90625" type="line"/>
+      <point x="257.813" y="0" type="line"/>
+      <point x="0" y="0" type="line"/>
+      <point x="0" y="180.176" type="line"/>
+      <point x="198.242" y="180.176" type="line"/>
+      <point x="141.113" y="233.887" type="line"/>
+      <point x="92.7734" y="273.926" type="line"/>
+      <point x="87.8906" y="267.09" type="line" smooth="yes"/>
+      <point x="84.9609" y="262.207"/>
+      <point x="82.0312" y="258.789"/>
+      <point x="80.0781" y="257.812" type="curve"/>
+      <point x="19.043" y="340.82" type="line"/>
+      <point x="6.83594" y="360.84" type="line"/>
+      <point x="5.85934" y="365.234"/>
+      <point x="9.76559" y="387.207"/>
+      <point x="19.0429" y="427.246" type="curve"/>
+    </contour>
+    <contour>
+      <point x="181.941" y="561.05" type="move" name="gafAbove"/>
+    </contour>
+    <contour>
+      <point x="155.029" y="655.933" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="106.934" y="-92.4849" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="167.689" y="682.642" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="125.823" y="-112.809" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+</glyph>

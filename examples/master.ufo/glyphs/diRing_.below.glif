@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diRing.below" format="1">
+  <advance width="0"/>
+  <unicode hex="FBBF"/>
+  <outline>
+    <contour>
+      <point x="-67.2767" y="216.309" type="curve" smooth="yes"/>
+      <point x="-67.2767" y="256.56"/>
+      <point x="-40.4425" y="283.394"/>
+      <point x="-0.191097" y="283.394" type="curve" smooth="yes"/>
+      <point x="40.0603" y="283.394"/>
+      <point x="66.8945" y="256.56"/>
+      <point x="66.8945" y="216.309" type="curve" smooth="yes"/>
+      <point x="66.8945" y="176.057"/>
+      <point x="40.0603" y="149.223"/>
+      <point x="-0.191097" y="149.223" type="curve" smooth="yes"/>
+      <point x="-40.4425" y="149.223"/>
+      <point x="-67.2767" y="176.057"/>
+    </contour>
+    <contour>
+      <point x="-42.5335" y="217.158" type="curve" smooth="yes"/>
+      <point x="-42.5335" y="191.752"/>
+      <point x="-25.5966" y="174.815"/>
+      <point x="-0.191099" y="174.815" type="curve" smooth="yes"/>
+      <point x="25.2144" y="174.815"/>
+      <point x="42.1513" y="191.752"/>
+      <point x="42.1513" y="217.158" type="curve" smooth="yes"/>
+      <point x="42.1513" y="242.563"/>
+      <point x="25.2144" y="259.5"/>
+      <point x="-0.191099" y="259.5" type="curve" smooth="yes"/>
+      <point x="-25.5966" y="259.5"/>
+      <point x="-42.5335" y="242.563"/>
+    </contour>
+    <contour>
+      <point x="1.058" y="216.161" type="move" name="_ringBelow"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

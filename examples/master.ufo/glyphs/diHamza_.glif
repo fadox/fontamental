@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diHamza" format="1">
+  <advance width="0"/>
+  <unicode hex="EE0A"/>
+  <outline>
+    <contour>
+      <point x="63.4766" y="457.031" type="curve"/>
+      <point x="83.4961" y="453.125" type="line"/>
+      <point x="126.465" y="451.172" type="line"/>
+      <point x="117.676" y="417.969" type="line"/>
+      <point x="115.723" y="407.227" type="line"/>
+      <point x="111.328" y="398.926" type="line"/>
+      <point x="102.539" y="375.977" type="line"/>
+      <point x="94.7266" y="375.977" type="line"/>
+      <point x="68.3594" y="369.141" type="line" smooth="yes"/>
+      <point x="63.4766" y="368.164"/>
+      <point x="60.5469" y="366.211"/>
+      <point x="58.5938" y="364.746" type="curve" smooth="yes"/>
+      <point x="47.3633" y="358.887" type="line" smooth="yes"/>
+      <point x="38.5743" y="354.004"/>
+      <point x="22.461" y="340.82"/>
+      <point x="-0.488244" y="318.848" type="curve"/>
+      <point x="-2.44134" y="321.777" type="line"/>
+      <point x="-2.44134" y="329.102"/>
+      <point x="1.46491" y="340.82"/>
+      <point x="8.30084" y="357.91" type="curve"/>
+      <point x="15.6251" y="370.117"/>
+      <point x="22.461" y="377.93"/>
+      <point x="30.2735" y="381.836" type="curve"/>
+      <point x="20.5079" y="384.766" type="line"/>
+      <point x="12.6954" y="389.16" type="line"/>
+      <point x="0.488344" y="394.043"/>
+      <point x="-3.41791" y="400.879"/>
+      <point x="-3.41791" y="416.016" type="curve" smooth="yes"/>
+      <point x="-3.41791" y="428.223" type="line"/>
+      <point x="-1.46481" y="439.941" type="line"/>
+      <point x="8.30082" y="478.027" type="line"/>
+      <point x="17.5782" y="499.024" type="line" smooth="yes"/>
+      <point x="19.5313" y="503.906"/>
+      <point x="22.461" y="506.836"/>
+      <point x="26.3672" y="509.766" type="curve"/>
+      <point x="35.6446" y="522.949" type="line"/>
+      <point x="46.3867" y="533.203" type="line"/>
+      <point x="59.5703" y="541.016" type="line"/>
+      <point x="66.4063" y="542.969" type="line"/>
+      <point x="73.7305" y="543.945" type="line"/>
+      <point x="83.4961" y="541.992" type="line"/>
+      <point x="90.3321" y="540.039"/>
+      <point x="95.7032" y="535.156"/>
+      <point x="99.6094" y="526.856" type="curve"/>
+      <point x="104.492" y="506.836" type="line"/>
+      <point x="94.7266" y="485.84" type="line"/>
+      <point x="84.4727" y="466.797" type="line"/>
+      <point x="71.2891" y="479.004" type="line"/>
+      <point x="61.5235" y="484.863" type="line"/>
+      <point x="53.711" y="486.817" type="line"/>
+      <point x="41.5039" y="484.863" type="line"/>
+      <point x="39.5508" y="483.887"/>
+      <point x="38.5742" y="482.91"/>
+      <point x="37.5976" y="481.934" type="curve" smooth="yes"/>
+      <point x="31.25" y="474.121" type="line"/>
+      <point x="32.7148" y="473.145"/>
+      <point x="43.457" y="466.797"/>
+    </contour>
+    <contour>
+      <point x="6.66665" y="292.736" type="move" name="_hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="47.8085" y="540.569" type="move" name="markAboveMark"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.986</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

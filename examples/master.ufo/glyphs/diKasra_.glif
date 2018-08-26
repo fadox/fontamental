@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diKasra" format="1">
+  <advance width="0"/>
+  <unicode hex="0650"/>
+  <outline>
+    <contour>
+      <point x="-64.9414" y="-297.852" type="line"/>
+      <point x="-64.9414" y="-273.926"/>
+      <point x="-61.0352" y="-264.648"/>
+      <point x="-32.7148" y="-249.023" type="curve"/>
+      <point x="100.098" y="-171.875" type="line"/>
+      <point x="100.098" y="-193.848"/>
+      <point x="94.2383" y="-208.008"/>
+      <point x="83.0078" y="-213.867" type="curve"/>
+    </contour>
+    <contour>
+      <point x="0.4167" y="-171.875" type="move" name="_markBelow"/>
+    </contour>
+    <contour>
+      <point x="0" y="-171.875" type="move" name="_markBelowDot"/>
+    </contour>
+    <contour>
+      <point x="0.4167" y="-171.875" type="move" name="_markBelowMark"/>
+    </contour>
+    <contour>
+      <point x="4.70361" y="-305.674" type="move" name="_markAboveAlt"/>
+    </contour>
+  </outline>
+</glyph>

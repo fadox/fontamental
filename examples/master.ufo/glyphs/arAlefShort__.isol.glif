@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arAlefShort.isol" format="1">
+  <advance width="207"/>
+  <outline>
+    <contour>
+      <point x="179.199" y="145.02" type="line"/>
+      <point x="178.223" y="134.766" type="line"/>
+      <point x="174.805" y="119.141" type="line"/>
+      <point x="171.875" y="95.2148"/>
+      <point x="167.969" y="81.0547"/>
+      <point x="160.156" y="65.918" type="curve" smooth="yes"/>
+      <point x="118.164" y="-14.1602" type="line"/>
+      <point x="108.887" y="-7.8125" type="line"/>
+      <point x="108.887" y="43.9453"/>
+      <point x="105.957" y="88.8672"/>
+      <point x="100.098" y="126.953" type="curve"/>
+      <point x="83.0078" y="293.945" type="line"/>
+      <point x="76.1718" y="374.023" type="line"/>
+      <point x="73.2421" y="425.781" type="line"/>
+      <point x="104.004" y="486.816" type="line"/>
+      <point x="150.879" y="577.148" type="line"/>
+      <point x="159.18" y="565.918" type="line"/>
+      <point x="159.18" y="546.875" type="line"/>
+      <point x="161.133" y="521.973" type="line"/>
+      <point x="165.039" y="484.863" type="line"/>
+      <point x="171.875" y="402.832" type="line"/>
+      <point x="171.875" y="386.23" type="line"/>
+      <point x="172.852" y="369.141" type="line"/>
+      <point x="175.781" y="333.008" type="line"/>
+      <point x="175.781" y="306.152" type="line"/>
+      <point x="180.176" y="204.102" type="line"/>
+      <point x="179.199" y="151.855" type="line"/>
+    </contour>
+    <contour>
+      <point x="38.733" y="558.208" type="move" name="hamzaAbove"/>
+    </contour>
+    <contour>
+      <point x="100.559" y="600.806" type="move" name="markAbove"/>
+    </contour>
+    <contour>
+      <point x="126.053" y="-204.414" type="move" name="hamzaBelow"/>
+    </contour>
+    <contour>
+      <point x="110.582" y="-82.4614" type="move" name="markBelow"/>
+    </contour>
+    <contour>
+      <point x="118" y="646.074" type="move" name="dotAbove"/>
+    </contour>
+    <contour>
+      <point x="126.5" y="-121.545" type="move" name="dotBelow"/>
+    </contour>
+  </outline>
+</glyph>

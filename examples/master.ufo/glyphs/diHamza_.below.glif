@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="diHamza.below" format="1">
+  <advance width="0"/>
+  <unicode hex="0655"/>
+  <outline>
+    <contour>
+      <point x="-41.9922" y="-202.148" type="line"/>
+      <point x="-44.1076" y="-202.148"/>
+      <point x="-45.3297" y="-201.741"/>
+      <point x="-46.8751" y="-200.195" type="curve"/>
+      <point x="-48.8282" y="-191.895" type="line"/>
+      <point x="-48.8282" y="-187.988" type="line"/>
+      <point x="-13.1837" y="-148.926" type="line"/>
+      <point x="-37.1094" y="-142.09" type="line"/>
+      <point x="-53.2227" y="-134.766"/>
+      <point x="-56.1524" y="-127.93"/>
+      <point x="-56.1524" y="-111.816" type="curve" smooth="yes"/>
+      <point x="-56.1524" y="-71.7774"/>
+      <point x="-16.1134" y="-13.1836"/>
+      <point x="16.1132" y="-13.1836" type="curve" smooth="yes"/>
+      <point x="30.7616" y="-13.1836"/>
+      <point x="45.8984" y="-21.9727"/>
+      <point x="45.8984" y="-38.086" type="curve" smooth="yes"/>
+      <point x="45.8984" y="-48.8281" type="line"/>
+      <point x="41.0156" y="-62.0117" type="line"/>
+      <point x="38.0859" y="-67.8711"/>
+      <point x="35.1562" y="-75.1953"/>
+      <point x="29.7851" y="-82.0313" type="curve"/>
+      <point x="16.1132" y="-67.8711" type="line" smooth="yes"/>
+      <point x="11.2304" y="-62.9883"/>
+      <point x="4.88271" y="-61.0352"/>
+      <point x="-0" y="-61.0352" type="curve"/>
+      <point x="-7.8125" y="-62.0118" type="line"/>
+      <point x="-17.0898" y="-67.8712" type="line"/>
+      <point x="-23.9258" y="-78.1251" type="line"/>
+      <point x="-26.8555" y="-84.961"/>
+      <point x="-17.0899" y="-91.797"/>
+      <point x="1.95311" y="-99.1212" type="curve"/>
+      <point x="24.9023" y="-102.051" type="line"/>
+      <point x="49.8047" y="-103.027" type="line"/>
+      <point x="83.9844" y="-103.027" type="line"/>
+      <point x="82.0313" y="-113.77"/>
+      <point x="78.125" y="-124.024"/>
+      <point x="71.7774" y="-130.86" type="curve"/>
+      <point x="59.082" y="-146.973" type="line"/>
+      <point x="30.7617" y="-153.809" type="line"/>
+      <point x="23.9258" y="-157.227"/>
+      <point x="18.0664" y="-160.156"/>
+      <point x="11.2305" y="-163.086" type="curve"/>
+      <point x="1.95314" y="-167.969" type="line"/>
+      <point x="-2.92967" y="-169.922"/>
+      <point x="-7.81249" y="-172.852"/>
+      <point x="-13.1836" y="-178.223" type="curve"/>
+      <point x="-25.8789" y="-187.012" type="line"/>
+    </contour>
+    <contour>
+      <point x="0.4167" y="-171.875" type="move" name="_hamzaBelow"/>
+    </contour>
+    <contour>
+      <point x="11" y="-168" type="move" name="markBelowMark"/>
+    </contour>
+  </outline>
+</glyph>
