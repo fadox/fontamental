@@ -2,8 +2,8 @@ booleanOperations==0.8.0
 compreffor==0.4.6.post1
 cu2qu==1.5.0
 defcon==0.5.2
-Extractor==0.5
 fonttools==3.29.0
 pyclipper==1.1.0.post1
 ufo2ft==2.2.0
 ufoLib==2.3.1
+ufo-extractor==0.2.0
